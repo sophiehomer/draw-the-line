@@ -20,9 +20,7 @@
   ## Contribution
   Just fork and make a pull request
   ## Tests
-  ```
-  NA
-  ```
+
   ## License 
   This applicaiton is licensed under the The Unlicense license.
   ## Questions
