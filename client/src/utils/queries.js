@@ -133,7 +133,10 @@ query Query($username: String!) {
   userByName(username: $username) {
     username
     _id
-    posts
+    posts {
+      postText
+      postTitle
+    }
   }
 }
 `;

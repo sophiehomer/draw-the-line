@@ -16,11 +16,14 @@ function SearchPeople() {
             <div id="hamburger">
                 <Header />
             </div>
-            <section class="search-friend-section">
+            <section className="search-friend-section">
             <form id="search-friend-form" onSubmit={async (e) => {
                 e.preventDefault();
+                console.log("hello world")
                 const inquiryUser = await document.getElementById('search-bar').value
-                await findUser({ variables: { username: inquiryUser } })
+                console.log(inquiryUser)
+                const user = await findUser({ variables: { username: inquiryUser } })
+                console.log(user)
             }
             }>
                 

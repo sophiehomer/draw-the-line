@@ -1,3 +1,18 @@
+.landingPageLogo {
+position: absolute;
+left: 4%;
+top: 4%;
+font-size: 1.5em;
+
+}
+
+.aboutLoginMain {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  padding:15%;
+}
+
 #login-section {
     display: flex;
     flex-direction: column;
@@ -7,12 +22,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid white;
+    border: 1.5px solid black;
     width: 300px;
     height: 350px;
     border-radius: 10px;
-    margin-top: 100%;
-    margin-bottom: 60%;
+    /* margin-top: 100%; */
+    /* margin-bottom: 60%; */
   }
 
   input#email {
@@ -20,8 +35,9 @@
   justify-content: center;
   margin-bottom: 5%;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1.5px solid black;
   background-color: transparent !important;
+  font-size: 1em;
   }
 
   input#email:focus {
@@ -32,7 +48,7 @@
     width: 78%;
     margin-bottom: 15%;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1.5px solid black;
     background-color: transparent !important;
   }
 
@@ -52,11 +68,11 @@
     width: 50%;
     height: 35px;
     background: transparent;
-    border: 1px solid white;
-    font-size: 15px;
+    border: 1.5px solid black;
+    font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
+    color: black;
   }
   
   .login-button:hover {
@@ -75,11 +91,11 @@
 
   .link:hover {
     text-decoration: underline;
-    color: white;
+    color: black;
   } 
 
   .loginLinkText {
-    color: white;
+    color: black;
     text-align: center;
     font-size: 15px;
     font-weight: lighter;
