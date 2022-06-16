@@ -63,7 +63,7 @@ input:-webkit-autofill:active  {
 }
 
 ::placeholder {
-  color: white;
+  color: #111111
 }
 
 .signupText {

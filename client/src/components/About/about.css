@@ -2,7 +2,7 @@
    text-align: center;
    text-decoration: none;
    border: none;
-   color: white;
+   color: #111111;
    padding-top: 4%;
    padding-bottom: 2%;
    opacity: 0;
@@ -24,7 +24,7 @@
     font-size: 16px;
     line-height: 2;
     /* padding-top: 30px; */
-    color: white;
+    color: #111111;
     width: 80%;
     opacity: 0;
     animation: fadeinup ease 0.4s forwards;  

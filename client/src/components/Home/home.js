@@ -27,17 +27,18 @@ function Home() {
                     <section id="loggedInView">
                     <h2 className="welcomeText">Welcome, {username}!</h2>                        
                         {postData.map((post, index) =>
-                        (   <Accordion key={index}>
-                            <Accordion.Item eventKey="0">
+                        (  
+                            //  <Accordion key={index}>
+                            // <Accordion.Item eventKey="0">
                             <section className="discussion-post" key={index}>
-                            <Accordion.Header>
+                            {/* <Accordion.Header> */}
                             <div className="accordionHeaderDiv"> 
                             <h4 id="userTitle-post"><Link to={`/Single-post/${post._id}`}>{post.postTitle}</Link></h4>
                             <h3 id="username-post">{post.username}</h3>
                             <p>{post.createdAt}</p>
                             </div>    
-                                </Accordion.Header>
-                                <Accordion.Body>
+                                {/* </Accordion.Header>
+                                <Accordion.Body> */}
                                 <p id="postText">{post.postText}</p>
                                 <div id="likes-dislikes">
                                     {post.likesLength}<a className='voteBtn'>  👍</a>
@@ -45,10 +46,10 @@ function Home() {
                                 </div>
                                 <p id="ban-meter-p">Ban Meter: </p>
                                 <progress id="banMeter" value={post.banMeter} max="0.6">{post.banMeter}</progress>
-                                </Accordion.Body>
+                                {/* </Accordion.Body> */}
                             </section>
-                            </Accordion.Item>
-                            </Accordion>
+                            // </Accordion.Item>
+                            // </Accordion>
                         ))}
                         {/* <button id="logoutBTN" onClick={() => Auth.logout()}>Logout</button> */}
                     </section>

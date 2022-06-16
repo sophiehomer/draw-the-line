@@ -22,7 +22,7 @@ font-size: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1.5px solid black;
+    border: 1.5px solid #111111;
     width: 300px;
     height: 350px;
     border-radius: 10px;
@@ -35,7 +35,7 @@ font-size: 1.5em;
   justify-content: center;
   margin-bottom: 5%;
   border: none;
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.5px solid #111111;
   background-color: transparent !important;
   font-size: 1em;
   }
@@ -48,7 +48,7 @@ font-size: 1.5em;
     width: 78%;
     margin-bottom: 15%;
     border: none;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.5px solid #111111;
     background-color: transparent !important;
   }
 
@@ -68,11 +68,11 @@ font-size: 1.5em;
     width: 50%;
     height: 35px;
     background: transparent;
-    border: 1.5px solid black;
+    border: 1.5px solid #111111;
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    color: black;
+    color: #111111;
   }
   
   .login-button:hover {
@@ -91,11 +91,11 @@ font-size: 1.5em;
 
   .link:hover {
     text-decoration: underline;
-    color: black;
+    color: #111111;
   } 
 
   .loginLinkText {
-    color: black;
+    color: #111111;
     text-align: center;
     font-size: 15px;
     font-weight: lighter;
