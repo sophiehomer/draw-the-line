@@ -67,18 +67,19 @@ font-size: 1.5em;
   .login-button {
     width: 50%;
     height: 35px;
+    color: #FFFEFC;
+    background-color: #111111;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login-button:hover {
     background: transparent;
     border: 1.5px solid #111111;
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    color: #111111;
-  }
-  
-  .login-button:hover {
-    background-color: white;
-    color: transparent;
-    color: #956FC7;
+    color: #111111; 
   }
   
   .signinText {
@@ -97,8 +98,7 @@ font-size: 1.5em;
   .loginLinkText {
     color: #111111;
     text-align: center;
-    font-size: 15px;
-    font-weight: lighter;
+    font-size: 1em;
     padding-top: 14%;
   }
   

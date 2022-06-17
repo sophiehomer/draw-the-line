@@ -21,17 +21,14 @@
     justify-content: center;
     padding: 20px;
     margin: 50px;
-    border: 1px solid white;
+    border: 1px solid #111111;
     border-radius: 10px;
     text-align: center;
 }
 
 .friendsText {
     font-size: 25px;
-    background: -webkit-linear-gradient(#b7a5f7, #714de6);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #111111;
 }
 
 .friendsSection {

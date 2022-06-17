@@ -6,7 +6,7 @@ import Nav from '../Nav/nav.js'
 const Header = () => {
   return (
     <header>
-        <h1 className="logoFont">Socrates</h1>
+        <h1 className="logoFont">soapbox</h1>
         <Nav/>
     </header>
   )

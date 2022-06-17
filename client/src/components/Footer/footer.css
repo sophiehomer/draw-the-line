@@ -12,11 +12,12 @@ footer {
 .twitterIcon,
 .emailIcon {
    margin-right: 2%;
+   transition: transform .2s;
 }
 
 .instagramIcon:hover,
 .twitterIcon:hover,
 .emailIcon:hover {
-  color: white;
+   color: rgb(167, 168, 169);
 }
   

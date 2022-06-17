@@ -11,9 +11,8 @@
 input.post-title {
     width: 40%;
     border: none;
-    border-bottom: 1px solid #111111;
+    border-bottom: 1.5px solid #111111;
     background-color: transparent;
-    font-weight: lighter;
     font-size: 18px;
     padding-left: 1%;
 }
@@ -36,12 +35,11 @@ input.post-title:focus {
 
 .writePost {
     background-color: transparent !important;
-    border-bottom: 1px solid #111111 !important;
+    border-bottom: 1.5px solid #111111 !important;
     width: 100%;
     border: none;
     margin-top: 5%;
     padding: 0;
-    font-weight: lighter;
     font-size: 18px;
     padding-left: 1%;
 }
@@ -69,7 +67,7 @@ input.post-title:focus {
 }
 
 .writePostSection {
-    border: 1px solid #111111;
+    border: 1.5px solid #111111;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
@@ -102,11 +100,6 @@ input.post-title:focus {
     font-weight: 600 !important;
 }
 
-.modal-header {
-    background-image: linear-gradient(to left, #67C7F6, #3B69DA) !important;
-    color: #111111 !important;
-}
-
 .modal-header .close {
     color: #111111 !important;
     opacity: 1 !important;
@@ -136,19 +129,16 @@ h3 {
 .postButton {
     width: 15%;
     height: 35px;
-    background: transparent;
-    border: 1px solid #111111;
+    background-color: #111111;
+    border: none;
     font-size: 15px;
     border-radius: 5px;
-    cursor: pointer;
-    color: #111111;
+    color: #FFFEFC;
     margin-top: 4%;
 }
 
-
 .postButton:hover {
-    background-color:#111111;
-    color: #805afd;
+    cursor: pointer;
 }
 
 

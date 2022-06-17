@@ -1,5 +1,5 @@
 import Auth from '../../utils/auth';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { DELETE_POST, } from '../../utils/mutations';
@@ -8,7 +8,7 @@ import { ADD_POST } from '../../utils/mutations';
 import Header from '../Header/header.js';
 
 // Style Import
-import Accordion from 'react-bootstrap/Accordion';
+// import Accordion from 'react-bootstrap/Accordion';
 import './createPost.css';
 
 // Sound Imports
@@ -19,9 +19,6 @@ import deleteSound from '../../assets/sounds/delete-sound.wav';
 var Filter = require('bad-words'),
     filter = new Filter();
     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
-
-
-
 
 function CreatePost() {
 
@@ -107,14 +104,14 @@ function CreatePost() {
         {loggedIn ?
             <>  
            <Header />
-           <h2 className='welcomeText'>Create a Post</h2>
+           <h1 className='welcomeText'>Share a post...</h1>
            <main className="createPostPage">
                 <form id='post-form' onSubmit={handleFormSubmit}>
                     <section className="writePostSection">
                         <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
 
                         <div className="writePostDiv">
-                        <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder='Share your thoughts...' />
+                        <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
                             <button className="postButton" id="post-btn">Post</button>
                         </div>
                         <div id="bad-words-warning"></div>
