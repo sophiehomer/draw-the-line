@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
-import { FaStackOverflow } from 'react-icons/fa';
+
 import { AiFillMail } from 'react-icons/ai';
 
 

@@ -7,6 +7,8 @@ import { ADD_COMMENT_LIKE, ADD_COMMENT_DISLIKE, DELETE_COMMENT } from '../../uti
 import likeSound from '../../assets/sounds/like-sound.wav';
 import dislikeSound from '../../assets/sounds/dislike-sound.wav';
 import Header from '../Header/header'
+import { AiOutlineLike } from 'react-icons/ai'
+import { AiOutlineDislike } from 'react-icons/ai'
 
 import './singlePost.css';
 
@@ -98,7 +100,6 @@ function SinglePost() {
     // Like click function
     function likeClick() {
         addLike({ variables: { postId: userPost._id } })
-        likeSoundNoise.play();
         if (userPost.banMeter >= 0.6) {
             deletePost({ variables: { postId: userPost._id } })
             const deletedPost = document.getElementById('single-post-page');
@@ -108,7 +109,6 @@ function SinglePost() {
     // Dislike  click function
     function dislikeClick() {
         addDislike({ variables: { postId: userPost._id } });
-        dislikeSoundNoise.play();
         if (userPost.banMeter >= 0.6) {
             deletePost({ variables: { postId: userPost._id } })
             const deletedPost = document.getElementById('single-post-page');
@@ -120,24 +120,29 @@ function SinglePost() {
         <>
             <Header />
             <section>
-            <h2 className='welcomeText'>Single Post</h2>
+           
                 <div id="single-post-page">
-                    <div className='single-page-discussion-post'>
+                    <div className="nameDateDiv">
                         <p id="username-post">{userPost.username}</p>
+                        <p id="single-post-date">{userPost.createdAt}</p>
+                    </div>
+                    <div className='single-page-discussion-post'>
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
-                        <p id="single-post-date">{userPost.createdAt}</p>
-                        {/* </div> */}
+                      
 
                         <div id="single-page-likes-dislikes">
-                            {userPost.likesLength}<a className='voteBtnClickable' onClick={likeClick}>    👍</a>
-                            {userPost.dislikesLength}<a className='voteBtnClickable' onClick={dislikeClick}>      👎</a>
+                            {userPost.likesLength}<p className='voteBtnClickable' onClick={likeClick}><AiOutlineLike /></p>
+                            {userPost.dislikesLength}<p className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></p>
 
                         </div>
                         {userPost.banMeter !== 0 &&
                             <>
-                                <p>Ban Meter <a></a></p>
-                                <progress id="banMeter" value={userPost.banMeter} max="0.6">{userPost.banMeter}</progress>
+                                    {/* <p id="ban-meter-p">Ban Meter
+                                    <progress id="banMeter" value={userPost.banMeter} max="0.6">{userPost.banMeter}</progress>
+                                </p> */}
+                                {/* <p>Ban Meter <a></a></p>
+                                <progress id="banMeter" value={userPost.banMeter} max="0.6">{userPost.banMeter}</progress> */}
                             </>
                         }
 
@@ -149,16 +154,15 @@ function SinglePost() {
                             </div>
                         </form>
 
-                        <div className='comments-container'>
-                            {userComments.map((comment, index) => (
+                        <div>
+                            {userComments && userComments.map((comment, index) => (
 
-                                <section key={index} id={index}>
+                                <section className='comments-container' key={index} id={index}>
                                     <p>{comment.username}</p>
                                     <p>{comment.commentBody}</p>
                                     <p>{comment.createdAt}</p>
                                     {comment.likesLength}<a  className='voteBtnClickable' onClick={() => {
                                         addCommentLike({ variables: { commentId: comment._id } })
-                                        likeSoundNoise.play();
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
@@ -167,7 +171,6 @@ function SinglePost() {
                                     }}>    👍</a>
                                     {comment.dislikesLength}<a className='voteBtnClickable' onClick={() => {
                                         addCommentDislike({ variables: { commentId: comment._id } });
-                                        dislikeSoundNoise.play();
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
@@ -175,11 +178,7 @@ function SinglePost() {
                                         }
                                     }
                                     }>      👎</a><br></br>
-                                    {comment.banMeter !== 0 &&
-                                        <>
-                                            <progress id="banMeter" value={comment.banMeter} max="0.6">{comment.banMeter} </progress>
-                                        </>
-                                    }
+        
                                 </section>
 
                             ))}

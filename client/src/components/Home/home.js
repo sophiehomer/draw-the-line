@@ -5,6 +5,9 @@ import { QUERY_ME_BASIC, GET_USER_POSTS } from '../../utils/queries';
 import { Link } from 'react-router-dom';
 import Login from '../Login/login';
 import Header from '../Header/header.js';
+import { AiOutlineLike } from 'react-icons/ai'
+import { AiOutlineDislike } from 'react-icons/ai'
+
 
 // import { AiOutlineDown } from 'react-icons/ai';
 import Accordion from 'react-bootstrap/Accordion';
@@ -28,33 +31,27 @@ function Home() {
                     <h2 className="welcomeText">Welcome, {username}!</h2>                        
                         {postData.map((post, index) =>
                         (  
-                            //  <Accordion key={index}>
-                            // <Accordion.Item eventKey="0">
                             <section className="discussion-post" key={index}>
-                            {/* <Accordion.Header> */}
+
                             <div className="accordionHeaderDiv"> 
-                            <h4 id="userTitle-post"><Link to={`/Single-post/${post._id}`}>{post.postTitle}</Link></h4>
-                            <h3 id="username-post">{post.username}</h3>
-                            <p>{post.createdAt}</p>
-                            </div>    
-                                {/* </Accordion.Header>
-                                <Accordion.Body> */}
+                                <h3 id="username-post">{post.username}</h3>
+                                <p className="postDateCreated">{post.createdAt}</p>
+                            </div>  
+                            <div>
+                                <h4 id="userTitle-post"><Link to={`/Single-post/${post._id}`}>{post.postTitle}</Link></h4>
+                            </div> 
                                 <p id="postText">{post.postText}</p>
                                 <div className="likesBanMeterDiv">
                                 <div id="likes-dislikes">
-                                    {post.likesLength}<a className='voteBtn'>  👍</a>
-                                    {post.dislikesLength}<a className='voteBtn'>  👎</a>
+                                    {post.likesLength}<a className='voteBtn'><AiOutlineLike /></a>
+                                    {post.dislikesLength}<a className='voteBtn'><AiOutlineDislike /></a>
                                 </div>
-                                <p id="ban-meter-p">Ban Meter
+                                {/* <p id="ban-meter-p">Ban Meter
                                     <progress id="banMeter" value={post.banMeter} max="0.6">{post.banMeter}</progress>
-                                </p>
+                                </p> */}
                                 </div>
-                                {/* </Accordion.Body> */}
                             </section>
-                            // </Accordion.Item>
-                            // </Accordion>
                         ))}
-                        {/* <button id="logoutBTN" onClick={() => Auth.logout()}>Logout</button> */}
                     </section>
                 </>
                 :

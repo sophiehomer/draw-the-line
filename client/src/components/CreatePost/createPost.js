@@ -92,12 +92,13 @@ function CreatePost() {
     };
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-        postSoundNoise.play();
         await addPost({
             variables: { ...formState },
         });
         // setUsersPosts(userPosts)
-        window.location.reload(false);
+        // window.location.reload(false);
+        window.location.replace("http://localhost:3000/");
+
     };
     const loggedIn = Auth.loggedIn();
 
@@ -119,52 +120,6 @@ function CreatePost() {
                         <div id="bad-words-warning"></div>
                     </section>
                 </form>
-                
-                <section className="postsSection">
-                     {userPosts.map((post, index) =>
-                        (   <Accordion key={index}>
-                            <Accordion.Item eventKey="0">
-                            <section className="discussion-post" key={index}>
-                            <Accordion.Header>
-                            <div className="accordionHeaderDiv"> 
-                                <h3 id="userTitle-post"><Link to={`/Single-post/${post._id}`}>{post.postTitle}</Link></h3>
-                                <h3 id="username-post">{username}</h3>
-                                <p>{post.createdAt}</p>
-                            </div>    
-                                </Accordion.Header>
-                                <Accordion.Body>
-                                <p id="postText">{post.postText}</p>
-                                <div id="likes-dislikes">
-                                    <p>{post.likesLength}<a>  👍</a></p>
-                                    <p>{post.dislikesLength}<a>  👎</a></p>
-                                </div>
-                                <p id="ban-meter-p">Ban Meter: </p>
-                                <progress id="banMeter" value={post.banMeter} max="0.6">{post.banMeter}</progress>
-                                </Accordion.Body>
-                            </section>
-                            </Accordion.Item>
-                            </Accordion>
-                        ))}
-                </section>
-
-                {/* <section>
-                    <h1>Posts</h1>
-                    {userPosts.map((post, index) => (
-                        <section className='postContainer' key={index} id={index}>
-                            <h2>Title:</h2> <Link to={`/Single-post/${post._id}`}>{post.postTitle}</Link>
-                            <h3>Post: {post.postText}</h3>
-                            <button id='delete-post-btn'
-                            onClick={() => {
-                                deletePost({variables: {postId: post._id}})
-                                const deletedPost = document.getElementById(index);
-                                deletedPost.remove();
-                                deleteSoundNoise.play();
-                                }
-                            }
-                            >Delete</button>
-                        </section>
-                    ))}
-                </section> */}
                 </main>
                 </> 
                 :

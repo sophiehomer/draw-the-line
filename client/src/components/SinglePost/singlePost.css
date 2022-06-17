@@ -9,23 +9,35 @@
     animation-delay: .2s;
 }
 
-#single-post-date {
-    margin-top: 2%;
+.nameDateDiv {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-items: space-between;
+    justify-content:space-between;
+    width: 50%;
+    color: gray !important;
+
 }
+
+/* #single-post-date {
+    margin-top: 2%;
+} */
 
 #single-post-userTitle-post {
     padding: 4%;
     margin: 0;
-    font-weight: lighter !important;
-    font-size: 18px;
+    font-size: 2em;
 }
 
 .comments-container {
-    border: 1px solid white;
+    border: 1.5px solid pink;
     border-radius: 25px;
     padding: 4%;
     margin-bottom: 10%;
+    width: 100%;
 }
+
 
 #comment-form {
     display: flex;
@@ -36,10 +48,10 @@
 
 #commentBody {
     width: 250%;
-    font-weight: lighter;
+    /* font-weight: lighter; */
     background-color: transparent !important;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1.5px solid #111111;
     padding-left: 1%;
     margin-top: 20%;
     margin-bottom: 4%;
@@ -51,7 +63,7 @@
 }
 
 .single-page-discussion-post {
-    color: white;
+    color: #111111;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -64,12 +76,12 @@
 
 .post-button {
     width: 100%;
-    background: transparent;
-    border: 1px solid white;
+    background-color: #FFFEFC;
+    color: #111111;
+    border: 1.5px solid #111111;
     font-size: 15px;
     border-radius: 5px;
     cursor: pointer;
-    color: white;
     margin-top: 20%;
     margin-left: 4%;
     margin-bottom: 50%;
@@ -77,13 +89,13 @@
 }
 
 .post-button:hover {
-    background-color:white;
-    color: #805afd;
+    background-color: #111111;
+    color: white;
 }
 
 #single-page-likes-dislikes {
     display: flex;
-    color: white;
+    color: #111111;
     font-size: 18px;
     margin-bottom: 2%;
 }
