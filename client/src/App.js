@@ -26,7 +26,7 @@ import CreatePost from "./components/CreatePost/createPost";
 import SinglePost from "./components/SinglePost/SinglePost";
 import SearchPeople from "./components/SearchPeople/searchPeople";
 import Footer from "./components/Footer/footer"
-import About from "./components/About/about"
+// import About from "./components/About/about"
 
 // Set up Apollo link 
 const httpLink = createHttpLink({
@@ -61,8 +61,6 @@ function App() {
           <Route path="/Create-post" element={<CreatePost />} />
           <Route path="/Single-post/:id" element={<SinglePost />} />
           <Route path="/search-people" element={<SearchPeople />} />
-          <Route path="/about" element={<About />} />
-          {/* <Route path="/Contact" element={<Contact />} /> */}
         </Routes>
       </Router>
       <Footer></Footer>

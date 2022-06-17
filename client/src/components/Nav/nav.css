@@ -3,14 +3,15 @@
 }
 
 .offcanvas {
-  border-radius: 7%;
+  border-radius: 5%;
+  border: none;
 }
 
 .offcanvas-header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding: 3%;
+  padding: 0%;
 }
 
 .offcanvas {
@@ -24,23 +25,28 @@
 }
 
 .tabpanel {
-  padding-left: 5%;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
   transition: 0.5s;
 }
 
 .tabpanel a {
-  padding: 10px;
+  /* padding: 10px; */
   text-decoration: none;
   font-size: 16px;
   color:  #111111;
   display: block;
   transition: 0.3s;
   text-align: left;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  font-weight: bold;
 }
 
 .tabpanel a:hover {
-  color: rgb(167, 168, 169);;
-  background-color: rgb(251, 250, 252);
+  color: #0B58CA;
+  background-color: #f2efed;
   cursor: pointer;
 }
 
@@ -54,13 +60,13 @@
 }
 
 .openbtn:hover {
-  color: rgb(167, 168, 169) !important;
+  cursor: pointer;
 }
 
 .btn-close {
   font-size: .8em;
-  padding-top: 10% !important;
-  padding-right: 10% !important;
+  padding-top: 15% !important;
+  padding-right: 15% !important;
 }
 
 .btn-primary:hover {

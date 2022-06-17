@@ -46,9 +46,8 @@ function Nav() {
                             {/* <a  className="closebtn" onClick={openNav()}>×</a> */}
                             <Link to="/" className="tab">Home</Link>
                             <Link to={`/profile/${userId}`}>View my profile</Link>
-                            <Link to="/Create-post" className="tab">Create Post</Link>
-                            <Link to="/search-people" className="tab">Search People</Link>
-                            <Link to="/about" className="tab">About</Link>
+                            <Link to="/Create-post" className="tab">Write Post</Link>
+                            <Link to="/search-people" className="tab">Search Friends</Link>
                             <a onClick={() => Auth.logout()} className="tab">Logout</a>
                         </ul>
                         {/* <button className="openbtn" onClick={onClick}>☰</button> */}
