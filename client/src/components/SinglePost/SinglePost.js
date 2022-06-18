@@ -120,43 +120,40 @@ function SinglePost() {
         <>
             <Header />
             <main id="single-post-page">
-                {/* <div className="singlePagePost"> */}
-                <div className='single-page-discussion-post'>
+                <section className='single-page-discussion-post'>
                     <div className="nameDateDiv">
                         <p id="username-post">{userPost.username}</p>
                         <p id="single-post-date">{userPost.createdAt}</p>
                     </div>
-                   
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
-                      
                         <div id="single-page-likes-dislikes">
-                            {userPost.likesLength}<p className='voteBtnClickable' onClick={likeClick}><AiOutlineLike /></p>
-                            {userPost.dislikesLength}<p className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></p>
+                            {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><AiOutlineLike /></button>
+                            {userPost.dislikesLength}<button className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></button>
                         </div>
-                        
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Comment' />
-                            {/* <div> */}
                                 <button className='post-button' id='postBtnComment'>Post</button>
                                 <div id='waringDivComment'></div>
-                            {/* </div> */}
                         </form>
-                        <div>
-                            {userComments && userComments.map((comment, index) => (
+                    </section>
+                    <section className='commentSection'>
+                        {userComments && userComments.map((comment, index) => (
                                 <section className='comments-container' key={index} id={index}>
-                                    <p>{comment.username}</p>
-                                    <p>{comment.commentBody}</p>
-                                    <p>{comment.createdAt}</p>
-                                    {comment.likesLength}<a  className='voteBtnClickable' onClick={() => {
+                                    <p className='commentUsername'>{comment.username}</p>
+                                    <p className='commentDate'>{comment.createdAt}</p>
+                                    <p className='commentBody'>{comment.commentBody}</p>
+
+                                  <div className="commentLikesContainer">
+                                    {comment.likesLength}<button  className='voteBtnClickable' onClick={() => {
                                         addCommentLike({ variables: { commentId: comment._id } })
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
                                         }
-                                    }}>    👍</a>
-                                    {comment.dislikesLength}<a className='voteBtnClickable' onClick={() => {
+                                    }}><AiOutlineLike /></button>
+                                    {comment.dislikesLength}<button className='voteBtnClickable' onClick={() => {
                                         addCommentDislike({ variables: { commentId: comment._id } });
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
@@ -164,12 +161,12 @@ function SinglePost() {
                                             deletedPost.remove();
                                         }
                                     }
-                                    }>      👎</a><br></br>
+                                    }><AiOutlineDislike /></button><br></br>
+                                    </div>
                                 </section>
                             ))}
-                        </div>
-                    </div>
-                {/* </div> */}
+                    </section>
+                            
             </main>
         </>
     )

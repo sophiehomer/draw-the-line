@@ -31,25 +31,29 @@ function Nav() {
 
  return (
   <>
-   <div id="nav-container">
-    <section id="nav-tabs">
-     <ul className="tabpanel">
-      <Link to="/" className="tab">
-       Home
-      </Link>
-      <Link to={`/profile/${userId}`}>View my profile</Link>
-      <Link to="/Create-post" className="tab">
-       Write Post
-      </Link>
-      <Link to="/search-people" className="tab">
-       Search Friends
-      </Link>
-      <a onClick={() => Auth.logout()} className="tab">
-       Logout
-      </a>
-     </ul>
-    </section>
-   </div>
+    <nav>
+        {/* <div id="nav-container"> */}
+            {/* <section id="nav-tabs"> */}
+                {/* <ul className="tabpanel"> */}
+                    <Link to="/" className="tab">
+                        Home
+                    </Link>
+                    <Link to={`/profile/${userId}`}>
+                        View my profile
+                    </Link>
+                    <Link to="/Create-post" className="tab">
+                        Write Post
+                    </Link>
+                    <Link to="/search-people" className="tab">
+                        Search Friends
+                    </Link>
+                    <a onClick={() => Auth.logout()} className="tab">
+                        Logout
+                    </a>
+                {/* </ul> */}
+            {/* </section> */}
+        {/* </div> */}
+    </nav>
   </>
  )
 }
