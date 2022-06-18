@@ -211,10 +211,6 @@ button:focus {
     font-size: 1em;
     border: none;
     margin-right: 4%;
-    /* padding: 1%; */
-    /* margin-right: 10%; */
-    /* background-color: #FFFEFC; */
-    /* background-color: black; */
     background: transparent;
     color: #111111;
     display:flex;

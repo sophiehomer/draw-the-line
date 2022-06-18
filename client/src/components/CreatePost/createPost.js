@@ -8,7 +8,6 @@ import { ADD_POST } from '../../utils/mutations';
 import Header from '../Header/header.js';
 
 // Style Import
-// import Accordion from 'react-bootstrap/Accordion';
 import './createPost.css';
 
 // Bad word Filter
