@@ -119,44 +119,31 @@ function SinglePost() {
     return (
         <>
             <Header />
-            <section>
-           
-                <div id="single-post-page">
+            <main id="single-post-page">
+                {/* <div className="singlePagePost"> */}
+                <div className='single-page-discussion-post'>
                     <div className="nameDateDiv">
                         <p id="username-post">{userPost.username}</p>
                         <p id="single-post-date">{userPost.createdAt}</p>
                     </div>
-                    <div className='single-page-discussion-post'>
+                   
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
                       
-
                         <div id="single-page-likes-dislikes">
                             {userPost.likesLength}<p className='voteBtnClickable' onClick={likeClick}><AiOutlineLike /></p>
                             {userPost.dislikesLength}<p className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></p>
-
                         </div>
-                        {userPost.banMeter !== 0 &&
-                            <>
-                                    {/* <p id="ban-meter-p">Ban Meter
-                                    <progress id="banMeter" value={userPost.banMeter} max="0.6">{userPost.banMeter}</progress>
-                                </p> */}
-                                {/* <p>Ban Meter <a></a></p>
-                                <progress id="banMeter" value={userPost.banMeter} max="0.6">{userPost.banMeter}</progress> */}
-                            </>
-                        }
-
+                        
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Comment' />
-                            <div>
+                            {/* <div> */}
                                 <button className='post-button' id='postBtnComment'>Post</button>
                                 <div id='waringDivComment'></div>
-                            </div>
+                            {/* </div> */}
                         </form>
-
                         <div>
                             {userComments && userComments.map((comment, index) => (
-
                                 <section className='comments-container' key={index} id={index}>
                                     <p>{comment.username}</p>
                                     <p>{comment.commentBody}</p>
@@ -178,14 +165,12 @@ function SinglePost() {
                                         }
                                     }
                                     }>      👎</a><br></br>
-        
                                 </section>
-
                             ))}
                         </div>
                     </div>
-                </div>
-            </section>
+                {/* </div> */}
+            </main>
         </>
     )
 }

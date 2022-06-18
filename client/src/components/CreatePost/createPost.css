@@ -1,5 +1,5 @@
 #post-form {
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -8,13 +8,18 @@
     animation-delay: .2s;
 }
 
+.sharePostTitle {
+    padding-bottom: 10%;
+    font-size: 2em;
+}
+
 input.post-title {
     width: 40%;
     border: none;
     border-bottom: 1.5px solid #111111;
     background-color: transparent;
-    font-size: 18px;
-    padding-left: 1%;
+    font-size: 1em;
+    /* padding-left: 1%; */
 }
 
 input.post-title:focus {
@@ -23,7 +28,7 @@ input.post-title:focus {
 
 .writePostDiv {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 0;
     margin: 0;
@@ -40,8 +45,8 @@ input.post-title:focus {
     border: none;
     margin-top: 5%;
     padding: 0;
-    font-size: 18px;
-    padding-left: 1%;
+    font-size: 1em;
+    /* padding-left: 1%; */
 }
 
 .writePost:focus {
@@ -67,12 +72,13 @@ input.post-title:focus {
 }
 
 .writePostSection {
-    border: 1.5px solid #111111;
+    border: none;
+    background-color: #F6F9FC;;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    padding:4%;
-    Width: 60%;
+    padding: 10%;
+    Width: 80%;
 } 
 
 .createPostBar {
@@ -127,14 +133,14 @@ h3 {
 }
 
 .postButton {
-    width: 15%;
-    height: 35px;
+    padding: 0.4em 3.6em;
     background-color: #111111;
     border: none;
     font-size: 15px;
     border-radius: 5px;
     color: #FFFEFC;
     margin-top: 4%;
+    margin-left: 4%;
 }
 
 .postButton:hover {

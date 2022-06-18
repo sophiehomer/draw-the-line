@@ -35,7 +35,7 @@ function Profile() {
           <main className="profilePage">
             <section className="postsSection">
               {userPosts.map((post, index) => (
-                <section className="discussion-post" key={index}>
+                <section className="profile-discussion-post" key={index}>
                   <div className="accordionHeaderDiv">
                     <h2 id="username-post">{userInfo.username}</h2>
                     <p className="postDateCreated">{post.createdAt}</p>
@@ -50,13 +50,13 @@ function Profile() {
                   <p id="postText">{post.postText}</p>
                   <div id="likes-dislikes">
                     {post.likesLength}
-                    <a className="voteBtn">
+                    <p className="voteBtn">
                       <AiOutlineLike />
-                    </a>
+                    </p>
                     {post.dislikesLength}
-                    <a className="voteBtn">
+                    <p className="voteBtn">
                       <AiOutlineDislike />
-                    </a>
+                    </p>
                   </div>
                 </section>
               ))}

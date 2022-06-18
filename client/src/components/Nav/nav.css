@@ -15,8 +15,8 @@
 }
 
 .offcanvas {
-  height: 42%;
-  width: 20%;
+  height: 45%;
+  width: 30%;
 }
 
 .offcanvas-body {
@@ -46,7 +46,8 @@
 
 .tabpanel a:hover {
   color: #0B58CA;
-  background-color: #f2efed;
+  background-color: #F6F9FC;
+  border-radius: 25px;
   cursor: pointer;
 }
 

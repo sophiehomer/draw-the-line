@@ -45,17 +45,14 @@ function Home() {
                 <div className="likesBanMeterDiv">
                   <div id="likes-dislikes">
                     {post.likesLength}
-                    <a className="voteBtn">
+                    <p className="voteBtn">
                       <AiOutlineLike />
-                    </a>
+                    </p>
                     {post.dislikesLength}
-                    <a className="voteBtn">
+                    <p className="voteBtn">
                       <AiOutlineDislike />
-                    </a>
+                    </p>
                   </div>
-                  {/* <p id="ban-meter-p">Ban Meter
-                                    <progress id="banMeter" value={post.banMeter} max="0.6">{post.banMeter}</progress>
-                                </p> */}
                 </div>
               </section>
             ))}

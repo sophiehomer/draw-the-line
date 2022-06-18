@@ -131,6 +131,7 @@ a {
 .welcomeText {
     /* margin-top: 4%;
     padding-bottom: 4%; */
+    padding-bottom: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     color: #111111;
@@ -143,24 +144,28 @@ a {
 }
 
 .discussion-post{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: flex-start;
-border: 1.5px solid #111111;
-border-radius: 25px;
-width: 50%;
-text-align: center;
-margin-bottom: 5%;
-/* margin-top: 2%; */
-padding: 2%;
-animation: fadeinup ease 0.4s forwards;  
-animation-delay: .2s;
-opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    border: none;
+    border-radius: 25px;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: .5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    animation: fadeinup ease 0.4s forwards;  
+    animation-delay: .2s;
+    background-color: #F6F9FC;
+    opacity:0;
 }
 
 .postDateCreated {
     color: gray !important;
+    font-size: 1em !important;
 }
 
 .discussion-post h3{
@@ -180,13 +185,11 @@ button:focus {
 }
 
 .likesBanMeterDiv {
-    display:  flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 5%;
+    display: flex;
+    margin-top: 2%;
 }
 
-#ban-meter-p {
+/* #ban-meter-p {
     font-size: 18px;
     margin-bottom: 0;
     display: flex;
@@ -196,16 +199,18 @@ button:focus {
 
 #banMeter {
     margin-bottom: 2%;
-}
+} */
 
 #username-post {
+    color: gray;
     font-weight: normal !important;
-    font-size: 1.2em;
+    font-size: 1em;
     margin:0;
     padding: 0;
 }
 
 #userTitle-post {
+    display: flex;
     padding-bottom: 10%;
     margin: 0;
     font-size: 1.5em;
@@ -213,24 +218,30 @@ button:focus {
 
 #likes-dislikes {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     color: #111111;
-    font-size: 18px;
+    font-size: 22px !important;
 }
 
-#likes-dislikes a {
-    margin-right: 2%;
+/* #likes-dislikes a {
+    margin-right: 4% !important;
+} */
+
+.voteBtn {
+   /* margin-top: -3%; */
+   padding-right: 1em;
+   padding-left: 5px;
 }
 
-.according {
+/* .according {
     width: 100%;
-}
+} */
 
 .accordionHeaderDiv { 
 display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+flex-direction: column;
+/* justify-content: space-between; */
+/* align-items: center; */
 align-items: flex-start;
 }
 
