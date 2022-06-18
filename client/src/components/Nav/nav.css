@@ -33,7 +33,7 @@
 .tabpanel a {
   /* padding: 10px; */
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1em;
   color:  #111111;
   display: block;
   transition: 0.3s;
@@ -41,13 +41,12 @@
   padding-left: 10%;
   padding-bottom: 5%;
   padding-top: 5%;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .tabpanel a:hover {
   color: #0B58CA;
   background-color: #F6F9FC;
-  border-radius: 25px;
   cursor: pointer;
 }
 

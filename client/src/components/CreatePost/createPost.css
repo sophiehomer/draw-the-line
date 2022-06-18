@@ -73,7 +73,7 @@ input.post-title:focus {
 
 .writePostSection {
     border: none;
-    background-color: #F6F9FC;;
+    background-color: #F6F9FC;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
