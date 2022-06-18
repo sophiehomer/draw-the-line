@@ -15,16 +15,14 @@ import { setContext } from '@apollo/client/link/context';
 
 // components 
 import Home from "./components/Home/home";
-import Nav from "./components/Nav/nav";
+// import Nav from "./components/Nav/nav";
 import Signup from "./components/Signup/signup";
 import Profile from "./components/Profile/profile";
-import Contact from "./components/Contact/contact";
 import Login from "./components/Login/login";
 import CreatePost from "./components/CreatePost/createPost";
 import SinglePost from "./components/SinglePost/SinglePost";
 import SearchPeople from "./components/SearchPeople/searchPeople";
 import Footer from "./components/Footer/footer"
-// import About from "./components/About/about"
 
 // Set up Apollo link 
 const httpLink = createHttpLink({
