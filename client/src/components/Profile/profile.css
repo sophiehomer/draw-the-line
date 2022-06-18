@@ -1,8 +1,7 @@
-.profilePage, .friendProfile {
+.profilePage {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-right: 4%;
 }
 
 .profileName {
@@ -43,8 +42,8 @@
     flex-direction: column;
     justify-content: center;
     border:none;
-    /* background-color: #F6F9FC; */
-    background-color: orange;
+    background-color: #F6F9FC;
+    /* background-color: orange; */
     opacity:0;
     border-radius: 25px;
     text-align: center;

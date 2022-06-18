@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 // importing components from react-router-dom package
 import {
   BrowserRouter as Router,
