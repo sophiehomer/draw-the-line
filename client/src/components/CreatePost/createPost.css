@@ -23,7 +23,7 @@
     flex-direction: column;
     border-radius: 25px;
     padding: 10%;
-    Width: 80%;
+    width: 60%;
 }
 /* ------------------------------- post title ------------------------------- */
 .sharePostTitle {
@@ -85,6 +85,13 @@ input.post-title:focus {
     cursor: pointer;
 }
 
+#cardplacement {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+
+}
 /* ------------------------------ media queries ----------------------------- */
 @media only screen and (min-width: 768px) {
 

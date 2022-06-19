@@ -91,7 +91,7 @@ function CreatePost() {
                 <main className="createPostPage">
                     <form id='post-form' onSubmit={handleFormSubmit}>
                         <section className="writePostSection">
-                            <h1 className="sharePostTitle">Share a post...</h1>
+                            {/* <h1 className="sharePostTitle">Share a post...</h1> */}
                             <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
                                 <div className="writePostDiv">
                                     <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
