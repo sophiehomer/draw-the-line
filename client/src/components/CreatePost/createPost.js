@@ -63,7 +63,7 @@ function CreatePost() {
             warningDiv.innerHTML = '';
              postBtn.disabled = false;
         } else {
-            warningDiv.innerHTML = 'Keep it friendly';
+            warningDiv.innerHTML = 'No bad language. Please respect our community guidelines.';
             postBtn.disabled = true;
         }
         setFormState({
