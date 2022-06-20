@@ -150,7 +150,10 @@ a {
     width: 60%;
     text-align: center;
     margin-bottom: 5%;
-    padding: 2%;
+    padding-top: 2%;
+    padding-bottom: .5%;
+    padding-left: 2%;
+    padding-right: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     background-color: #F6F9FC;
@@ -200,20 +203,15 @@ button:focus {
 
 #likes-dislikes {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+
     color: #111111;
-    font-size: 1.5em;
+    font-size: 22px !important;
 }
 
 
 .voteBtn {
-    font-size: 1em;
-    border: none;
-    margin-right: 4%;
-    background: transparent;
-    color: #111111;
-    display:flex;
+   padding-right: 1em;
+   padding-left: 5px;
 }
 
 .accordionHeaderDiv { 

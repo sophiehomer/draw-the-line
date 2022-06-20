@@ -10,12 +10,27 @@ import Header from '../Header/header.js';
 // Style Import
 import './createPost.css';
 
+// Sound Imports
+import postSound from '../../assets/sounds/postSound.wav';
+import deleteSound from '../../assets/sounds/delete-sound.wav';
+
 // Bad word Filter
 var Filter = require('bad-words'),
     filter = new Filter();
     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
 
 function CreatePost() {
+
+    // Sound function for post
+    const postSoundNoise = new Audio(postSound);
+    postSoundNoise.loop = false;
+    postSoundNoise.volume = 0.5;
+
+    // Sound function for Delete
+    const deleteSoundNoise = new Audio(deleteSound);
+    deleteSoundNoise.loop = false;
+    deleteSoundNoise.volume = 0.5;
+
     // Get basic info
     const { data: basic } = useQuery(QUERY_ME_BASIC);
     const username = basic?.me.username || '';
@@ -88,20 +103,19 @@ function CreatePost() {
         {loggedIn ?
             <>  
            <Header />
-                <main className="createPostPage">
-                    <form id='post-form' onSubmit={handleFormSubmit}>
-                        <section className="writePostSection">
-                            {/* <h1 className="sharePostTitle">Share a post...</h1> */}
-                            <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
-                                <div className="writePostDiv">
-                                    <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
-                                    <button className="postButton" id="post-btn">
-                                        Post
-                                    </button>
-                                </div>
-                            <div id="bad-words-warning"></div>
-                        </section>
-                    </form>
+           <main className="createPostPage">
+                <form id='post-form' onSubmit={handleFormSubmit}>
+                    <section className="writePostSection">
+                        <h1 className="sharePostTitle">Share a post...</h1>
+                        <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
+
+                        <div className="writePostDiv">
+                        <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
+                            <button className="postButton" id="post-btn">Post</button>
+                        </div>
+                        <div id="bad-words-warning"></div>
+                    </section>
+                </form>
                 </main>
                 </> 
                 :

@@ -1,5 +1,4 @@
 #single-post-page{
-    
     /* width: 100%; */
     display: flex;
     flex-wrap: wrap;
@@ -38,7 +37,6 @@
     color: #111111;
     border-radius: 25px;
     /* margin-top: 5%; */
-    margin-bottom: 5%;
     padding:2%;
     width: 50%;
 }
@@ -71,7 +69,6 @@
     background-color: transparent !important;
     border: none;
     border-bottom: 1.5px solid #111111;
-    font-size: 1em;
 }
 
 #commentBody:focus {
@@ -120,7 +117,7 @@
 } */
 
 .voteBtnClickable {
-  font-size: 2em;
+  font-size: 1.5em;
   border: none;
   border-radius: 12px;
   padding: 1%;

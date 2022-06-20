@@ -4,6 +4,8 @@ import { QUERY_SINGLE_POST } from '../../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { DISLIKE_POST, LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
 import { ADD_COMMENT_LIKE, ADD_COMMENT_DISLIKE, DELETE_COMMENT } from '../../utils/mutations'
+import likeSound from '../../assets/sounds/like-sound.wav';
+import dislikeSound from '../../assets/sounds/dislike-sound.wav';
 import Header from '../Header/header'
 import { AiOutlineLike } from 'react-icons/ai'
 import { AiOutlineDislike } from 'react-icons/ai'
@@ -16,6 +18,14 @@ function SinglePost() {
     var Filter = require('bad-words'),
         filter = new Filter();
     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
+    // sound functions
+    const likeSoundNoise = new Audio(likeSound);
+    likeSoundNoise.loop = false;
+    likeSoundNoise.volume = 0.3;
+    const dislikeSoundNoise = new Audio(dislikeSound);
+    dislikeSoundNoise.loop = false;
+    dislikeSoundNoise.volume = 0.3;
+
 
     const { id: postId } = useParams()
     const { data } = useQuery(QUERY_SINGLE_POST, {
@@ -126,38 +136,37 @@ function SinglePost() {
                                 <button className='post-button' id='postBtnComment'>Post</button>
                                 <div id='waringDivComment'></div>
                         </form>
-                </section>
-                <section className='commentSection'>
-                    {userComments && userComments.map((comment, index) => (
-                        <section className='comments-container' key={index} id={index}>
-                            <p className='commentUsername'>{comment.username}</p>
-                            <p className='commentDate'>{comment.createdAt}</p>
-                            <p className='commentBody'>{comment.commentBody}</p>
-                            <div className="commentLikesContainer">
-                                {comment.likesLength}
-                                <button  className='voteBtnClickable' onClick={() => {
-                                    addCommentLike({ variables: { commentId: comment._id } })
+                    </section>
+                    <section className='commentSection'>
+                        {userComments && userComments.map((comment, index) => (
+                                <section className='comments-container' key={index} id={index}>
+                                    <p className='commentUsername'>{comment.username}</p>
+                                    <p className='commentDate'>{comment.createdAt}</p>
+                                    <p className='commentBody'>{comment.commentBody}</p>
+
+                                  <div className="commentLikesContainer">
+                                    {comment.likesLength}<button  className='voteBtnClickable' onClick={() => {
+                                        addCommentLike({ variables: { commentId: comment._id } })
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
-                                        }}}>
-                                        <AiOutlineLike />
-                                </button>
-                                {comment.dislikesLength}
-                                <button className='voteBtnClickable' onClick={() => {
-                                    addCommentDislike({ variables: { commentId: comment._id } });
+                                        }
+                                    }}><AiOutlineLike /></button>
+                                    {comment.dislikesLength}<button className='voteBtnClickable' onClick={() => {
+                                        addCommentDislike({ variables: { commentId: comment._id } });
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
-                                        }}}>
-                                        <AiOutlineDislike />
-                                </button>
-                            </div>
-                        </section>
+                                        }
+                                    }
+                                    }><AiOutlineDislike /></button><br></br>
+                                    </div>
+                                </section>
                             ))}
-                </section>         
+                    </section>
+                            
             </main>
         </>
     )
