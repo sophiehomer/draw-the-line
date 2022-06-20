@@ -76,6 +76,7 @@
     background-color: #F6F9FC;
    animation: fadeinup ease 0.4s forwards;  
    animation-delay: .2s;
+   line-height: 2.5em;
 }
 
 /* ----------- MEDIA QUERIES --------- */
