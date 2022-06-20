@@ -5,7 +5,7 @@ import './nav.css'
 // import { Button, Offcanvas } from 'react-bootstrap'
 import { QUERY_ME_BASIC } from '../../utils/queries'
 import { useQuery } from '@apollo/client'
-import Auth from '../../utils/auth'
+// import Auth from '../../utils/auth'
 
 function Nav() {
 //  const location = useLocation()
@@ -25,22 +25,15 @@ function Nav() {
  return (
   <>
     <nav>
-
-                    <Link to="/" className="tab">
-                        Home
-                    </Link>
-                    <Link to={`/profile/${userId}`}>
-                        View my profile
-                    </Link>
-                    <Link to="/Create-post" className="tab">
-                        Write Post
-                    </Link>
-                    <Link to="/search-people" className="tab">
-                        Search Friends
-                    </Link>
-                    <button onClick={() => Auth.logout()} className="tab">
-                        Logout
-                    </button>
+        <Link to={`/profile/${userId}`} className="navLink">
+            My profile
+        </Link>
+        <Link to="/Create-post" className="navLink">
+           Post
+        </Link>
+        <Link to="/search-people" className="navLink">
+            Search
+        </Link>
     </nav>
   </>
  )

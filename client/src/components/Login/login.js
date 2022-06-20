@@ -41,8 +41,8 @@ const Login = () => {
   };
   return (
     <>
-    <h1 className="landingPageLogo">
-    <svg width="154" height="58" viewBox="0 0 154 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <h1 className="landingPageLogo"> soapbox
+    {/* <svg width="154" height="58" viewBox="0 0 154 58" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M151.464 52.9493C150.629 55.1726 148.15 56.2985 145.927 55.4639C143.704 54.6294 142.578 52.1504 143.412 49.9271C144.247 47.7037 146.726 46.5779 148.949 47.4124C151.173 48.247 152.298 50.7259 151.464 52.9493Z" stroke="black" stroke-width="1.4"/>
         <path d="M147.024 12.0469C145.704 15.5629 141.784 17.3433 138.268 16.0236C134.752 14.7038 132.971 10.7836 134.291 7.26763C135.611 3.75163 139.531 1.97122 143.047 3.29098C146.563 4.61075 148.343 8.53091 147.024 12.0469Z" stroke="black" stroke-width="1.4"/>
         <path d="M127.3 19.5C127.3 21.0464 126.046 22.3 124.5 22.3C122.954 22.3 121.7 21.0464 121.7 19.5C121.7 17.9536 122.954 16.7 124.5 16.7C126.046 16.7 127.3 17.9536 127.3 19.5Z" stroke="black" stroke-width="1.4"/>
@@ -52,7 +52,7 @@ const Login = () => {
         <path d="M123.334 19.8441C123.231 18.5812 124.179 18.1858 124.666 18.1459" stroke="black" stroke-width="0.3"/>
         <path d="M137.034 11.0159C135.948 7.83575 138.349 6.12884 139.685 5.6729" stroke="black" stroke-width="0.5"/>
         <path d="M145 52C144.854 49.7467 146.589 49.0688 147.475 49.0116" stroke="black" stroke-width="0.3"/>
-        </svg>
+        </svg> */}
     </h1>
     <main className="aboutLoginMain">
     <section className="aboutSection">
