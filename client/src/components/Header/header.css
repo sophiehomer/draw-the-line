@@ -15,10 +15,10 @@ header {
 }
 
 .logoutButton {
-    padding: .5em 1.5em;
+    padding: .7em 1.5em;
     border: none;
     border-radius: 24px;
-    background-color: black;
+    background-color: #111111;;
     color: #FFFEFC;
     font-size: 1em;
     cursor: pointer;

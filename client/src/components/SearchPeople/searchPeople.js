@@ -10,13 +10,11 @@ function SearchPeople() {
     const [findUser, { data }] = useLazyQuery(QUERY_USER_BY_NAME);
 
     // Add friend Query
-    const [addFriend, { data: newFriend }] = useMutation(ADD_FRIEND);
+    const [addFriend] = useMutation(ADD_FRIEND);
     return (
         <>
-            <div id="hamburger">
                 <Header />
-            </div>
-            <section className="search-friend-section">
+            <main className="search-friend-section">
             <form id="search-friend-form" onSubmit={async (e) => {
                 e.preventDefault();
                 console.log("hello world")
@@ -27,7 +25,7 @@ function SearchPeople() {
             }
             }>
                 
-                <label id="sfp-label" className='welcomeText'>Search Friends</label>
+                <label id="sfp-label" className='searchFriendText'>Search Friends</label>
                 <input id='search-bar' type='text' name='search-bar' placeholder='Search' />
                 <button id="search-friend-btn" type='submit'>Search</button>
                 { data && data.userByName === null && <p>User does not exist</p>}
@@ -49,7 +47,7 @@ function SearchPeople() {
                
                 }
             </form>
-            </section>
+            </main>
             <div>
 
             </div>

@@ -14,7 +14,7 @@ input.post-title {
     padding: 1.2%;
     border: 1.5px solid gray;
     border-radius: 24px;
-    background-color: #FFFEFC;
+    /* background-color: #FFFEFC; */
     font-size: 1em;
 }
 
@@ -31,7 +31,7 @@ input.post-title {
     padding: 1.2%;
     border: 1.5px solid gray;
     border-radius: 24px;
-    background-color: #FFFEFC;
+    /* background-color: #FFFEFC; */
     font-size: 1em;
     margin-top:4%;
 }

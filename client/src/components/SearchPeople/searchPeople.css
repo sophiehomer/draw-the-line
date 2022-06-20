@@ -1,5 +1,5 @@
 #search-friend-form {
-  margin-top: 4%;
+  /* margin-top: 5%; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -7,12 +7,15 @@
   align-items: center;
   width: 50%;
   border-radius: 25px;
+  margin-bottom: 5%;
+  background-image: linear-gradient(rgb(91, 200, 246), rgb(169, 62, 218));
+  padding: 10%;
 }
 
 #sfp-label {
   color: #111111;
   font-size: 30px;
-  padding-bottom: 4%;
+  padding-bottom: 8%;
 }
 
 .search-friend-section {
@@ -20,75 +23,65 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  opacity: 0;
   animation: fadeinup ease 0.4s forwards;  
   animation-delay: .2s;
+  /* background-color: red; */
 }
 
 #search-bar {
-  background-color: transparent !important;
-  width: 300px;
-  height: 30px;
-  border: 1.5px solid #111111;
-  border-radius: 5px;
-  margin: 25px;
-  padding-left: 1%;
-  font-weight: lighter;
-}
-
-#search-bar:focus {
-  outline: none;
+  padding: 1.2%;
+  width: 50%;
+  font-size: 1em;
+  border: none;
+  /* border: 1.5px solid gray; */
+  border-radius: 24px;
 }
 
 #search-friend-btn {
-  padding: .4em 1.6em;
-  background-color: #111111;
-  color: transparent;
-  color: #FFFEFC;
-  font-size: 15px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin-top: 2%;
+    background-color: #111111;
+    border: none;
+    color: #FFFEFC;
+    margin-top: 4%;
+    padding: .7em 1.8em;
+    border-radius: 24px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-#search-friend-btn:hover {
-  background-color: #111111;
-  color: transparent;
-  color: #FFFEFC;
-  transition: 0.2 ease;
-}
 
 #foundFriendDiv {
+  /* background-color: #FFFEFC; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #F6F9FC;
   display: flex; 
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  border: 1.5px solid #111111;
+  border: none;
   border-radius: 10px;
-  margin: 30px;
-  width: 300px;
+  margin-top: 4%;
+  padding: 2%;
+  width: 60%;
 }
 
 #foundFriend {
-  margin: 30px;
+  /* margin-top: 4%; */
+
   color: #111111;
-  font-size: 25px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 #addFriendBTN {
-  margin: 20px;
-  padding: .4em 1.6em;
-  background-color: #111111;
+  /* margin: 20px; */
+  padding: .7em 1.8em;
   border: none;
-  font-size: 15px;
-  border-radius: 5px;
+  border-radius: 24px;
+  font-size: 1em;
+  background-color: #111111;
   cursor: pointer;
   color: #FFFEFC;
   transition: 0.2s ease-in;
-}
-
-#addFriendBTN:hover {
- cursor: pointer;
 }
