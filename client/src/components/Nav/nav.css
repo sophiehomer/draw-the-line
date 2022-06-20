@@ -11,3 +11,7 @@ nav {
   font-size: 1em;
   font-weight: bold;
 }
+
+.navLink:hover {
+  text-decoration: underline;
+}

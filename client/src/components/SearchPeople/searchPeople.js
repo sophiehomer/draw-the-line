@@ -1,6 +1,5 @@
 import './searchPeople.css';
 import Header from '../Header/header.js';
-
 import { QUERY_USER_BY_NAME } from '../../utils/queries';
 import { useLazyQuery, useMutation } from '@apollo/client';
 import { ADD_FRIEND } from '../../utils/mutations';
@@ -25,11 +24,14 @@ function SearchPeople() {
             }
             }>
                 
-                <label id="sfp-label" className='searchFriendText'>Search Friends</label>
-                <input id='search-bar' type='text' name='search-bar' placeholder='Search' />
-                <button id="search-friend-btn" type='submit'>Search</button>
+                {/* <label id="sfp-label" className='searchFriendText'>Search Friends</label> */}
+                <div className="searchSection">
+                    <input id='search-bar' type='text' name='search-bar' placeholder='Search friends' />
+                    <button id="search-friend-btn" type='submit'>Search</button>
+                </div>
                 { data && data.userByName === null && <p>User does not exist</p>}
                 { data && data.userByName !== null && 
+        
                 <>
                     <div id="foundFriendDiv">
                     <p id="foundFriend">{data.userByName.username}</p>

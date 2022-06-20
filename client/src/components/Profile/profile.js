@@ -1,9 +1,7 @@
 import Auth from "../../utils/auth";
-import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { QUERY_USER } from "../../utils/queries";
-import { useQuery, useMutation } from "@apollo/client";
-import { ADD_POST, DELETE_POST } from "../../utils/mutations";
+import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
 import { AiOutlineLike } from "react-icons/ai";
@@ -21,9 +19,6 @@ function Profile() {
   const userInfo = data?.user || [];
   const userPosts = data?.user.posts || [];
   const userFriends = data?.user.friends || [];
-
-  const [addPost, { error }] = useMutation(ADD_POST);
-  const [deletePost] = useMutation(DELETE_POST);
 
   const loggedIn = Auth.loggedIn();
   return (
@@ -63,7 +58,10 @@ function Profile() {
             </section>
             <section className="friendsSection">
               <section id="friendsSectionBorder">
-                <h4 className="friendsText">Friends<FaUserFriends/></h4>
+                <div className="friendIcon" >
+                  <h4 className="friendsText">Friends</h4><FaUserFriends/>
+                </div>
+  
                 {userFriends.map((friend, index) => (
                   <div key={index}>
                     <Link to={`/profile/${friend._id}`}>{friend.username}</Link>
