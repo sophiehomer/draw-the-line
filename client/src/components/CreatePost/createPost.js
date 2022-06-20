@@ -2,18 +2,13 @@ import Auth from '../../utils/auth';
 // import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { DELETE_POST, } from '../../utils/mutations';
-import { QUERY_ME, QUERY_ME_BASIC } from '../../utils/queries';
+// import { DELETE_POST, } from '../../utils/mutations';
+import { QUERY_ME_BASIC } from '../../utils/queries';
 import { ADD_POST } from '../../utils/mutations';
 import Header from '../Header/header.js';
 
 // Style Import
-// import Accordion from 'react-bootstrap/Accordion';
 import './createPost.css';
-
-// Sound Imports
-import postSound from '../../assets/sounds/postSound.wav';
-import deleteSound from '../../assets/sounds/delete-sound.wav';
 
 // Bad word Filter
 var Filter = require('bad-words'),
@@ -21,25 +16,14 @@ var Filter = require('bad-words'),
     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
 
 function CreatePost() {
-
-    // Sound function for post
-    const postSoundNoise = new Audio(postSound);
-    postSoundNoise.loop = false;
-    postSoundNoise.volume = 0.5;
-
-    // Sound function for Delete
-    const deleteSoundNoise = new Audio(deleteSound);
-    deleteSoundNoise.loop = false;
-    deleteSoundNoise.volume = 0.5;
-
     // Get basic info
     const { data: basic } = useQuery(QUERY_ME_BASIC);
     const username = basic?.me.username || '';
     // Get user's information
-    const { data } = useQuery(QUERY_ME);
-    const userPosts = data?.me.posts || [];
+    // const { data } = useQuery(QUERY_ME);
+    // const userPosts = data?.me.posts || [];
 
-    const [deletePost] = useMutation(DELETE_POST)
+    // const [deletePost] = useMutation(DELETE_POST)
     // set up state variables for comment section
     const [formState, setFormState] = useState({
         postTitle: '',
@@ -107,7 +91,6 @@ function CreatePost() {
            <main className="createPostPage">
                 <form id='post-form' onSubmit={handleFormSubmit}>
                     <section className="writePostSection">
-                        <h1 className="sharePostTitle">Share a post...</h1>
                         <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
 
                         <div className="writePostDiv">
