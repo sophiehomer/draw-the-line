@@ -77,8 +77,8 @@ function Signup() {
                         value={formState.password}
                         onChange={handleChange}
                     />
+                     {error && <div className="error">Sign up failed</div>}
                     <button id="signup-button" type="submit" value="signup">Sign up</button>
-                    {error && <div className="error">Signup failed</div>}
                     <p className="loginLinkText">Have an account? <br></br><Link to="/" className="link">Login here.</Link></p>
                 </div>
             </form>

@@ -26,36 +26,32 @@ font-family: raleway, sans-serif;
     width: 300px;
     height: 350px;
     border-radius: 10px;
-    /* margin-top: 100%; */
-    /* margin-bottom: 60%; */
   }
 
   input#email {
-  width: 78%;
-  justify-content: center;
-  margin-bottom: 5%;
-  border: none;
-  border-bottom: 1.5px solid #111111;
-  background-color: transparent !important;
-  font-size: 1em;
-  }
-
-  input#email:focus {
-    outline:none;
+    padding: 2%;
+    padding-left: 4%;
+    width: 78%;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-size: 1em;
+    border: 1.5px solid lightgray;
+    border-radius: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
   input#password {
+    padding: 2%;
+    padding-left: 4%;
     width: 78%;
-    margin-bottom: 15%;
-    border: none;
-    border-bottom: 1.5px solid #111111;
-    background-color: transparent !important;
+    justify-content: center;
+    margin-bottom: 5%;
+    font-size: 1em;
+    border: 1.5px solid lightgray;
+    border-radius: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
   }
-
-  input#password:focus {
-    outline: none;
-  }
-
   .login {
     display: flex;
     flex-wrap: wrap;
@@ -65,21 +61,15 @@ font-family: raleway, sans-serif;
   }
  
   .login-button {
-    width: 50%;
-    height: 35px;
+    margin-top: 5%;
+    padding: .5em 1.5em;
     color: #FFFEFC;
     background-color: #111111;
     border: none;
-    border-radius: 5px;
-  }
-  
-  .login-button:hover {
-    background: transparent;
-    border: 1.5px solid #111111;
+    border-radius: 24px;
     font-size: 1em;
-    border-radius: 5px;
     cursor: pointer;
-    color: #111111; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   .signinText {
@@ -103,10 +93,8 @@ font-family: raleway, sans-serif;
   }
   
 .error {
-  margin-top: -8%;
-  padding-bottom: 5%;
-  font-size: 16px;
-  color: rgb(0, 0, 0);
+  font-size: 1em;
+  color: #111111;
 }
 
 
