@@ -197,12 +197,6 @@ button:focus {
     cursor: pointer;
 }
 
-/* .voteBtn:hover{
-    background: transparent;
-    color: rgb(146, 192, 248);
-    border: 1px solid rgb(146, 192, 248);
-} */
-
 .accordionHeaderDiv { 
 display: flex;
 flex-direction: column;

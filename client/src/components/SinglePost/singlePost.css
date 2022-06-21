@@ -85,7 +85,7 @@
 
 .post-button {
     margin-left: 4%;
-    background-color: #111111;
+    background-color: #B48FFF;
     border: none;
     color: #FFFEFC;
     padding: .5em 1.6em;
@@ -96,8 +96,9 @@
 }
 
 .post-button:hover {
-    background-color: #111111;
-    color: white;
+    border: 1.5px solid #B48FFF;
+    background-color: white;
+    color: #B48FFF;
 }
 
 #single-page-likes-dislikes {
@@ -129,7 +130,7 @@
 
 .voteBtnClickable:hover {
     background: white;
-    color: #5290fb;
+    color: #B48FFF;
   
 }
 
