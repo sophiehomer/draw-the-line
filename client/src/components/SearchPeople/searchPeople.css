@@ -1,5 +1,5 @@
 #search-friend-form {
-  /* margin-top: 5%; */
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -52,7 +52,7 @@
 
 #search-friend-btn {
     margin-left: 4%;
-    background-color: #111111;
+    background-image: linear-gradient(rgb(146, 192, 248), rgb(181, 141, 255));
     border: none;
     color: #FFFEFC;
     padding: .5em 1.6em;

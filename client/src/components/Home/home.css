@@ -55,10 +55,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 55%;
+    max-width: 50%;
 }
 
-.debateText {
+/* .debateText {
     text-align: center;
     color: #111111;
     opacity: 0;
@@ -67,7 +67,7 @@ a {
     font-size: 22px;
     line-height: 2.7;
     padding-top: 5%;
-}
+} */
 
 .about {
     text-align: center;
@@ -77,7 +77,7 @@ a {
     animation-delay: 1.5s;
     font-size: 18px;
     line-height: 1.7;
-    width: 60%;
+    width: 100%;
 }
         
 /* LOGGED IN VIEW */
@@ -117,7 +117,6 @@ a {
     flex-direction: column;
     justify-content: center;
     background-color: #F6F9FC;
-    /* background-image: linear-gradient(rgb(172, 226, 250), rgb(97, 155, 237)); */
     opacity:0;
     border-radius: 25px;
     text-align: center;
@@ -126,24 +125,6 @@ a {
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     width: 50%;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    border: none;
-    border-radius: 25px;
-    width: 60%;
-    text-align: center;
-    margin-bottom: 5%;
-    padding-top: 2%;
-    padding-bottom: .5%;
-    padding-left: 2%;
-    padding-right: 2%;
-    animation: fadeinup ease 0.4s forwards;  
-    animation-delay: .2s;
-    background-color: #F6F9FC;
-    opacity:0; */
 }
 
 .postDateCreated {
@@ -210,16 +191,17 @@ button:focus {
     margin-left: 1%;
     margin-right: 2%;
     padding: 1%;
-    background-color: white;
-    color: #5290fb;
+    background-image: linear-gradient(rgb(146, 192, 248), rgb(181, 141, 255));
+    color: white;
     display:flex;
     cursor: pointer;
 }
 
-.voteBtn:hover{
-    background: #5290fb;
-    color: white;
-}
+/* .voteBtn:hover{
+    background: transparent;
+    color: rgb(146, 192, 248);
+    border: 1px solid rgb(146, 192, 248);
+} */
 
 .accordionHeaderDiv { 
 display: flex;

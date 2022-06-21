@@ -1,16 +1,19 @@
 .landingPageLogo {
-position: absolute;
-left: 4%;
-top: 4%;
-font-size: 1.5em;
-font-family: raleway, sans-serif;
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  font-size: 1.5em;
+  font-family: raleway, sans-serif;
 }
 
 .aboutLoginMain {
   display: flex;
-  justify-content:center;
-  align-items:center;
-  padding:15%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12%;
+  padding-bottom: 12%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 #login-section {
@@ -25,7 +28,7 @@ font-family: raleway, sans-serif;
     justify-content: center;
     border: none;
     width: 350px;
-    height: 400px;
+    height: 410px;
     border-radius: 10px;
   }
 

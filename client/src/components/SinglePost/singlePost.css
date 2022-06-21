@@ -121,16 +121,15 @@
   margin-left: 1%;
   margin-right: 2%;
   display:flex;
-  background-color: white;
-  color: #5290fb;
+  background-image: linear-gradient(rgb(146, 192, 248), rgb(181, 141, 255));
+  color: white;
   border-radius: 50px;
   cursor: pointer;
 }
 
 .voteBtnClickable:hover {
-   
-    background: #5290fb;
-    color: white;
+    background: white;
+    color: #5290fb;
   
 }
 

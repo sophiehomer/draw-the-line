@@ -54,11 +54,11 @@ input.post-title {
     flex-direction: column;
     border-radius: 25px;
     padding: 10%;
-    Width: 50%;
+    width: 50%;
 } 
 
 .postButton {
-    background-color: #111111;
+    background-image: linear-gradient(rgb(146, 192, 248), rgb(181, 141, 255));
     border: none;
     color: #FFFEFC;
     margin-top: 4%;

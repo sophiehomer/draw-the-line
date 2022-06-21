@@ -14,7 +14,8 @@ header {
 }
 
 .logoutButton {
-    background-color: transparent;
+    background-color: #F6F9FC;
+    color:#111111;
     border: none;
     border-radius: 24px;
     font-size: 1em;
@@ -22,10 +23,5 @@ header {
     cursor: pointer;
     font-weight: bold;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.logoutButton:hover {
-    background-color: lightgray;
-    
 }
 
