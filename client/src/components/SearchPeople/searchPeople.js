@@ -26,7 +26,7 @@ function SearchPeople() {
                 
                 {/* <label id="sfp-label" className='searchFriendText'>Search Friends</label> */}
                 <div className="searchSection">
-                    <input id='search-bar' type='text' name='search-bar' placeholder='Search friends' />
+                    <input id='search-bar' type='text' name='search-bar' placeholder="Search friends" />
                     <button id="search-friend-btn" type='submit'>Search</button>
                 </div>
                 { data && data.userByName === null && <p>User does not exist</p>}

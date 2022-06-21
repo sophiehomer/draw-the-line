@@ -4,13 +4,6 @@
     box-shadow: border-box;
 }
 
-/* .logoDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .loginContainer {
     display: flex;
     flex-direction: column;
@@ -119,6 +112,21 @@ a {
 
 .discussion-post{
     display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F6F9FC;
+    opacity:0;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 5%;
+    padding: 2%;
+    animation: fadeinup ease 0.4s forwards;  
+    animation-delay: .2s;
+    width: 50%;
+
+    /* display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
@@ -134,12 +142,13 @@ a {
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     background-color: #F6F9FC;
-    opacity:0;
+    opacity:0; */
 }
 
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
+    margin-bottom: 4%;
 }
 
 .discussion-post h3{
@@ -173,23 +182,27 @@ button:focus {
 
 #userTitle-post {
     display: flex;
-    padding-bottom: 10%;
+    flex-direction:row;
+    justify-content: flex-start;
+    padding-bottom: 1%;
     margin: 0;
     font-size: 1.5em;
 }
 
 #likes-dislikes {
+    margin-top: 4%;
     display: flex;
-
+    flex-direction: row;
+    align-items:center;
     color: #111111;
-    font-size: 22px !important;
 }
 
 
 .voteBtn {
-    font-size: 1em;
+    font-size: 1.5em;
     border: none;
-    margin-right: 4%;
+    margin-right: 2%;
+    padding: 1%;
     background: transparent;
     color: #111111;
     display:flex;

@@ -35,8 +35,9 @@
     background-color:#F6F9FC;
     color: #111111;
     border-radius: 25px;
-    padding:2%;
-    width: 50%;
+    padding:4%;
+    margin-bottom: 2%;
+    /* width: 50%; */
 }
 
 #comment-form {
@@ -46,7 +47,7 @@
 }
 
 .commentSection {
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .commentUsername {
@@ -63,10 +64,13 @@
 }
 
 #commentBody {
-    width: 67%;
-    background-color: transparent !important;
-    border: none;
-    border-bottom: 1.5px solid #111111;
+    width: 70%;
+    padding: 1.2%;
+    font-size: 1em;
+    border: 1.5px solid lightgray;
+    border-radius: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
 }
 
 #commentBody:focus {
@@ -86,14 +90,15 @@
 }
 
 .post-button {
-    margin-left: 5%;
+    margin-left: 4%;
     background-color: #111111;
-    color: #FFFEFC;
     border: none;
+    color: #FFFEFC;
+    padding: .7em 1.8em;
+    border-radius: 24px;
     font-size: 1em;
-    border-radius: 5px;
     cursor: pointer;
-    padding: .4em 3.6em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .post-button:hover {

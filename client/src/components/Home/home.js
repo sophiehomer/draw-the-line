@@ -42,18 +42,18 @@ function Home() {
                   </h3>
                 </div>
                 <p id="postText">{post.postText}</p>
-                <div className="likesBanMeterDiv">
+                {/* <div className="likesBanMeterDiv"> */}
                   <div id="likes-dislikes">
                     {post.likesLength}
-                    <p className="voteBtn">
+                    <button className="voteBtn">
                       <AiOutlineLike />
-                    </p>
+                    </button>
                     {post.dislikesLength}
-                    <p className="voteBtn">
+                    <button className="voteBtn">
                       <AiOutlineDislike />
-                    </p>
+                    </button>
                   </div>
-                </div>
+                {/* </div> */}
               </section>
             ))}
           </section>

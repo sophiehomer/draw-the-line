@@ -37,6 +37,7 @@
   animation-delay: .2s;
 }
 
+
 #search-bar {
   padding-left: 1.2%;
   width: 50%;
@@ -63,7 +64,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-image: linear-gradient(to right, rgb(171, 215, 252), rgb(216, 178, 254));
+  background-image: linear-gradient(to right, rgb(171, 215, 252), rgb(228, 201, 255));
   display: flex; 
   flex-direction: row;
   align-items: center;

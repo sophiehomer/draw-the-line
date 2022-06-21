@@ -132,7 +132,7 @@ function SinglePost() {
                             {userPost.dislikesLength}<button className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></button>
                         </div>
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
-                            <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Comment' />
+                            <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment...' />
                                 <button className='post-button' id='postBtnComment'>Post</button>
                                 <div id='waringDivComment'></div>
                         </form>
@@ -140,28 +140,31 @@ function SinglePost() {
                     <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
                                 <section className='comments-container' key={index} id={index}>
-                                    <p className='commentUsername'>{comment.username}</p>
-                                    <p className='commentDate'>{comment.createdAt}</p>
+                                    <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
+                                    <p className='commentDate'></p>
                                     <p className='commentBody'>{comment.commentBody}</p>
 
                                   <div className="commentLikesContainer">
-                                    {comment.likesLength}<button  className='voteBtnClickable' onClick={() => {
+                                    {comment.likesLength
+                                    }<button  className='voteBtn' onClick={() => {
                                         addCommentLike({ variables: { commentId: comment._id } })
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
-                                        }
-                                    }}><AiOutlineLike /></button>
-                                    {comment.dislikesLength}<button className='voteBtnClickable' onClick={() => {
+                                        }}}>
+                                        <AiOutlineLike />
+                                    </button>
+                                    {comment.dislikesLength}
+                                    <button className='voteBtn' onClick={() => {
                                         addCommentDislike({ variables: { commentId: comment._id } });
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
-                                        }
-                                    }
-                                    }><AiOutlineDislike /></button><br></br>
+                                        }}}>
+                                        <AiOutlineDislike />
+                                    </button>
                                     </div>
                                 </section>
                             ))}

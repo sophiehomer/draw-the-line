@@ -6,7 +6,7 @@
 
 .profileName {
     margin-top: 4%;
-    margin-left:4%;
+    margin-left: 5%;
     padding-bottom: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
@@ -49,7 +49,7 @@
     padding: 4%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    /* width: 90%; */
+    width: 100%;
 }
 
 .friendIcon {
@@ -66,7 +66,7 @@
 
 
 .friendsSection {
-    flex-basis:30%;
+    flex-basis:20%;
     height: 50%;
     border-radius: 12px;
     padding-top: 2%;
@@ -74,9 +74,9 @@
     padding-right: 2%;
     padding-bottom:2%;
     background-color: #F6F9FC;
-   animation: fadeinup ease 0.4s forwards;  
-   animation-delay: .2s;
-   line-height: 2.5em;
+    animation: fadeinup ease 0.4s forwards;  
+    animation-delay: .2s;
+    line-height: 2em;
 }
 
 /* ----------- MEDIA QUERIES --------- */
