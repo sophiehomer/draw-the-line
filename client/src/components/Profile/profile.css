@@ -58,12 +58,20 @@
     align-items: center;
     color: gray;
 }
+
 .friendsText {
     font-size: 1.5em;
     color: gray;
     padding-right: 2%;
 }
 
+.friendsSection a {
+    color: #111111;
+}
+
+.friendsSection a:hover{
+    color: #635BFF;
+}
 
 .friendsSection {
     flex-basis:20%;

@@ -189,23 +189,36 @@ button:focus {
     font-size: 1.5em;
 }
 
+#userTitle-post:hover {
+    text-decoration: underline;
+}
+
 #likes-dislikes {
     margin-top: 4%;
     display: flex;
     flex-direction: row;
     align-items:center;
-    color: #111111;
+    /* color: #5290fb; */
 }
 
 
 .voteBtn {
     font-size: 1.5em;
-    border: none;
+    /* border: none; */
+    border-radius: 50px;
+    margin-left: 1%;
     margin-right: 2%;
     padding: 1%;
-    background: transparent;
-    color: #111111;
+    background-color: transparent;
+    border:1px solid #5290fb;
+    color: #5290fb;
     display:flex;
+    cursor: pointer;
+}
+
+.voteBtn:hover{
+    border:1px solid #111111;
+    color: #111111; 
 }
 
 .accordionHeaderDiv { 

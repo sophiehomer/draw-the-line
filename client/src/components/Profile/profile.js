@@ -45,13 +45,13 @@ function Profile() {
                   </div>
                   <div id="likes-dislikes">
                     {post.likesLength}
-                    <p className="voteBtn">
+                    <button className="voteBtn">
                       <AiOutlineLike />
-                    </p>
+                    </button>
                     {post.dislikesLength}
-                    <p className="voteBtn">
+                    <button className="voteBtn">
                       <AiOutlineDislike />
-                    </p>
+                    </button>
                   </div>
                 </section>
               ))}

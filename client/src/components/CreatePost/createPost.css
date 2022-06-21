@@ -11,7 +11,8 @@
 
 input.post-title {
     width: 30%;
-    padding: 1.2%;
+    padding: 1%;
+    padding-left: 2%;
     border: 1.5px solid lightgray;
     border-radius: 24px;
     font-size: 1em;
@@ -29,7 +30,8 @@ input.post-title {
 
 .writePost {
     width: 80%;
-    padding: 1.2%;
+    padding: 1%;
+    padding-left: 2%;
     border: 1.5px solid lightgray;
     border-radius: 24px;
     font-size: 1em;
@@ -50,7 +52,7 @@ input.post-title {
     flex-direction: column;
     border-radius: 25px;
     padding: 10%;
-    Width: 60%;
+    Width: 50%;
 } 
 
 .postButton {
