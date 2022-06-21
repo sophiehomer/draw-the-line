@@ -45,9 +45,9 @@ const Login = () => {
     <main className="aboutLoginMain">
     <section className="aboutSection">
     {/* <h1 className="debateText">Let's debate</h1> */}
-    <p className="about">soapbox is a debate platform monitored and regulated by our community.
-        We strive to bring forth a safe space for our community members to engage in thought provoking debates with one another.
-    </p>
+    {/* <p className="about">soapbox is a social community platform. with a zero tolerance for bullying or cursing! 
+        to engage in thought provoking debates with one another.
+    </p> */}
     {/* <AiOutlineDown className="downArrow" size={25} /> */}
 </section>
 

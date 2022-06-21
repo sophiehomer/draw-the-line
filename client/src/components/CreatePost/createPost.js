@@ -78,8 +78,17 @@ function CreatePost() {
         });
         // setUsersPosts(userPosts)
         // window.location.reload(false);
-        window.location.replace("http://localhost:3000/");
 
+        if( window.location.toString().includes("heroku")) {
+            console.log("hello")
+            window.location.replace("https://drawtheline2022.herokuapp.com/");
+           
+        }   else {
+            console.log("world")
+            window.location.replace("http://localhost:3000/");
+
+        }
+     
     };
     const loggedIn = Auth.loggedIn();
 
