@@ -117,6 +117,7 @@ a {
     flex-direction: column;
     justify-content: center;
     background-color: #F6F9FC;
+    /* background-image: linear-gradient(rgb(172, 226, 250), rgb(97, 155, 237)); */
     opacity:0;
     border-radius: 25px;
     text-align: center;
@@ -204,21 +205,20 @@ button:focus {
 
 .voteBtn {
     font-size: 1.5em;
-    /* border: none; */
+    border: none;
     border-radius: 50px;
     margin-left: 1%;
     margin-right: 2%;
     padding: 1%;
-    background-color: transparent;
-    border:1px solid #5290fb;
+    background-color: white;
     color: #5290fb;
     display:flex;
     cursor: pointer;
 }
 
 .voteBtn:hover{
-    border:1px solid #111111;
-    color: #111111; 
+    background: #5290fb;
+    color: white;
 }
 
 .accordionHeaderDiv { 

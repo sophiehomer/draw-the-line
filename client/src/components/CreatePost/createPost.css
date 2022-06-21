@@ -13,7 +13,8 @@ input.post-title {
     width: 30%;
     padding: 1%;
     padding-left: 2%;
-    border: 1.5px solid lightgray;
+    border: 1.5px solid #111111;
+    opacity: 0.5;
     border-radius: 24px;
     font-size: 1em;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -32,7 +33,8 @@ input.post-title {
     width: 80%;
     padding: 1%;
     padding-left: 2%;
-    border: 1.5px solid lightgray;
+    border: 1.5px solid #111111;
+    opacity: 0.5;
     border-radius: 24px;
     font-size: 1em;
     margin-top:4%;
@@ -61,7 +63,7 @@ input.post-title {
     color: #FFFEFC;
     margin-top: 4%;
     margin-left: 4%;
-    padding: .7em 1.8em;
+    padding: .5em 1.6em;
     border-radius: 24px;
     font-size: 1em;
     cursor: pointer;

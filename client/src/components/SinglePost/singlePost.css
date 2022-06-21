@@ -65,7 +65,8 @@
 
 #commentBody {
     width: 70%;
-    padding: 1.2%;
+    padding: 1%;
+    padding-left: 2%;
     font-size: 1em;
     border: 1.5px solid lightgray;
     border-radius: 24px;
@@ -73,19 +74,12 @@
     font-size: 1em;
 }
 
-#commentBody:focus {
-    outline: none
-}
-
 .single-page-discussion-post {
     color: #111111;
     border-radius: 25px;
     background-color: #F6F9FC;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 5%;
     width: 70%;
 }
 
@@ -94,7 +88,7 @@
     background-color: #111111;
     border: none;
     color: #FFFEFC;
-    padding: .7em 1.8em;
+    padding: .5em 1.6em;
     border-radius: 24px;
     font-size: 1em;
     cursor: pointer;
@@ -124,18 +118,20 @@
   border: none;
   border-radius: 12px;
   padding: 1%;
+  margin-left: 1%;
   margin-right: 2%;
-  /* background-color: #FFFEFC; */
-  /* background-color: black; */
-  background: transparent;
-  color: #111111;
   display:flex;
+  background-color: white;
+  color: #5290fb;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .voteBtnClickable:hover {
-    cursor: pointer;
-    text-decoration: none;
-    color: #0B58CA;
+   
+    background: #5290fb;
+    color: white;
+  
 }
 
 .commentLikesContainer {
