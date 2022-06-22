@@ -13,23 +13,8 @@ header {
 .logo {
     font-size: 1.5em;
     font-family: 'Abril Fatface', sans-serif;
-    color: #F6F9FC;
+    color: #4A4A4A;
 
 }
 
-.logoutButton {
-    background-color: rgb(255, 255, 255, .3);
-    color:white;
-    border: none;
-    border-radius: 24px;
-    font-size: 1em;
-    padding: .7em 1.5em;
-    cursor: pointer;
-    font-family: raleway, sans-serif;
-}
-
-.logoutButton:hover {
-    background-color: #6d33e0;
-    color: #FFFEFC;
-}
 

@@ -102,7 +102,7 @@ a {
     padding-bottom: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    color: #8850f7;
+    color: white;
 	font-size: 2em;
 }
 
@@ -130,7 +130,7 @@ a {
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
-    margin-bottom: 4%;
+    margin-bottom: 10%;
 }
 
 .discussion-post h3{
@@ -185,12 +185,12 @@ button:focus {
 
 
 .voteBtn {
-    font-size: 1.5em;
+    font-size: 1em;
     border: none;
     border-radius: 50px;
     margin-left: 1%;
     margin-right: 2%;
-    padding: 1%;
+    padding: 1.2%;
     background: white;
     color: #8850f7;
     display:flex;

@@ -10,7 +10,7 @@
     padding-bottom: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    color: #4A4A4A;
+    color: white;
 	font-size: 2em;
 }
 
@@ -42,7 +42,6 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgb(255, 255, 255, .3);
-
     opacity:0;
     border-radius: 25px;
     text-align: center;

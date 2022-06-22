@@ -2,14 +2,11 @@ import Auth from "../../utils/auth";
 import "./home.css";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME_BASIC, GET_USER_POSTS } from "../../utils/queries";
-import { Link } from "react-router-dom";
 import Login from "../Login/login";
 import Header from "../Header/header.js";
-import { AiOutlineLike } from "react-icons/ai";
-import { AiOutlineDislike } from "react-icons/ai";
+import { Link } from 'react-router-dom'
+import { BsFillSuitHeartFill } from 'react-icons/bs'
 
-// import { AiOutlineDown } from 'react-icons/ai';
-// import Accordion from 'react-bootstrap/Accordion';
 
 function Home() {
   const { data } = useQuery(QUERY_ME_BASIC);
@@ -42,18 +39,15 @@ function Home() {
                   </h3>
                 </div>
                 <p id="postText">{post.postText}</p>
-                {/* <div className="likesBanMeterDiv"> */}
+               
                   <div id="likes-dislikes">
                     {post.likesLength}
                     <button className="voteBtn">
-                      <AiOutlineLike />
+                      <BsFillSuitHeartFill />
                     </button>
-                    {post.dislikesLength}
-                    <button className="voteBtn">
-                      <AiOutlineDislike />
-                    </button>
+                   
                   </div>
-                {/* </div> */}
+          
               </section>
             ))}
           </section>

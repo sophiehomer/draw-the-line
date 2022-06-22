@@ -3,10 +3,8 @@ import { useState } from 'react';
 import { QUERY_SINGLE_POST } from '../../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
-import { ADD_COMMENT_LIKE, ADD_COMMENT_DISLIKE, DELETE_COMMENT } from '../../utils/mutations'
+import { ADD_COMMENT_LIKE, DELETE_COMMENT } from '../../utils/mutations'
 import Header from '../Header/header'
-import { AiOutlineLike } from 'react-icons/ai'
-// import { AiOutlineDislike } from 'react-icons/ai'
 import { BsFillSuitHeartFill } from 'react-icons/bs'
 
 import './singlePost.css';
@@ -29,8 +27,6 @@ function SinglePost() {
 
     // Mutations
     const [addCommentLike] = useMutation(ADD_COMMENT_LIKE)
-    // const [addCommentDislike] = useMutation(ADD_COMMENT_DISLIKE)
-    // const [addDislike] = useMutation(DISLIKE_POST);
     const [addLike] = useMutation(LIKE_POST);
     const [addComment] = useMutation(ADD_COMMENT);
     const [deletePost] = useMutation(DELETE_POST)
