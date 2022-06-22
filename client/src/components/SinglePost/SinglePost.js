@@ -146,7 +146,7 @@ function SinglePost() {
 
                                   <div className="commentLikesContainer">
                                     {comment.likesLength
-                                    }<button  className='voteBtn' onClick={() => {
+                                    }<button  className='commentVoteBtn' onClick={() => {
                                         addCommentLike({ variables: { commentId: comment._id } })
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
@@ -156,7 +156,7 @@ function SinglePost() {
                                         <AiOutlineLike />
                                     </button>
                                     {comment.dislikesLength}
-                                    <button className='voteBtn' onClick={() => {
+                                    <button className='commentVoteBtn' onClick={() => {
                                         addCommentDislike({ variables: { commentId: comment._id } });
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })

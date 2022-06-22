@@ -114,6 +114,26 @@
     margin-right: 10%;
 } */
 
+.commentVoteBtn {
+    font-size: 1.5em;
+    border: none;
+    border-radius: 12px;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 2%;
+    display:flex;
+    background: white;
+    color: #B48FFF;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.commentVoteBtn:hover {
+    background-image: linear-gradient(rgb(128, 193, 246), #B48FFF);
+    color: white;
+    border: none;
+}
+
 .voteBtnClickable {
   font-size: 1.5em;
   border: none;
@@ -122,15 +142,16 @@
   margin-left: 1%;
   margin-right: 2%;
   display:flex;
-  background-image: linear-gradient(rgb(146, 192, 248), rgb(181, 141, 255));
-  color: white;
+  background: white;
+  color: #B48FFF;
   border-radius: 50px;
   cursor: pointer;
 }
 
 .voteBtnClickable:hover {
-    background: white;
-    color: #B48FFF;
+    background-image: linear-gradient(rgb(128, 193, 246), #B48FFF);
+    color: white;
+    border: none;
   
 }
 
