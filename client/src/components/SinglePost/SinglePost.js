@@ -94,16 +94,7 @@ function SinglePost() {
             deletedPost.remove();
         }
     }
-    // Dislike  click function
-    // function dislikeClick() {
-    //     addDislike({ variables: { postId: userPost._id } });
-    //     if (userPost.banMeter >= 0.6) {
-    //         deletePost({ variables: { postId: userPost._id } })
-    //         const deletedPost = document.getElementById('single-post-page');
-    //         deletedPost.remove();
-    //     }
 
-    // }
     return (
         <>
             <Header />
@@ -115,15 +106,16 @@ function SinglePost() {
                     </div>
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
-                        <div id="single-page-likes-dislikes">
-                            {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><BsFillSuitHeartFill /></button>
-                            {/* {userPost.dislikesLength}<button className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></button> */}
-                        </div>
-                        <form id='comment-form' onSubmit={handleFormSubmitComment}>
-                            <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment...' />
+                        <div id="likesAndCommments">
+                            <form id='comment-form' onSubmit={handleFormSubmitComment}>
+                                <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment...' />
                                 <button className='post-button' id='postBtnComment'>Post</button>
                                 <div id='waringDivComment'></div>
-                        </form>
+                                
+                                {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><BsFillSuitHeartFill /></button>
+                               
+                            </form>
+                        </div>
                     </section>
                     <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
@@ -143,16 +135,6 @@ function SinglePost() {
                                         }}}>
                                         <BsFillSuitHeartFill />
                                     </button>
-                                    {/* {comment.dislikesLength}
-                                    <button className='commentVoteBtn' onClick={() => {
-                                        addCommentDislike({ variables: { commentId: comment._id } });
-                                        if (comment.banMeter >= 0.6) {
-                                            deleteComment({ variables: { commentId: comment._id } })
-                                            const deletedPost = document.getElementById(index);
-                                            deletedPost.remove();
-                                        }}}>
-                                        <AiOutlineDislike />
-                                    </button> */}
                                     </div>
                                 </section>
                             ))}
