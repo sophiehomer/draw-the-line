@@ -19,7 +19,7 @@ import Home from "./components/Home/home";
 import Signup from "./components/Signup/signup";
 import Profile from "./components/Profile/profile";
 import Login from "./components/Login/login";
-import CreatePost from "./components/CreatePost/createPost";
+// import CreatePost from "./components/CreatePost/createPost";
 import SinglePost from "./components/SinglePost/SinglePost";
 import SearchPeople from "./components/SearchPeople/searchPeople";
 import Footer from "./components/Footer/footer"
@@ -54,7 +54,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/Profile/:id" element={<Profile />} />
-          <Route path="/Create-post" element={<CreatePost />} />
+          {/* <Route path="/Create-post" element={<CreatePost />} /> */}
           <Route path="/Single-post/:id" element={<SinglePost />} />
           <Route path="/search-people" element={<SearchPeople />} />
         </Routes>

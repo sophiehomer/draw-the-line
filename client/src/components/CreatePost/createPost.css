@@ -73,7 +73,7 @@ input.post-title {
 }
 
 .postButton:hover {
-    border: 1.5px solid #8850f7;
+    /* border: 1.5px solid #8850f7; */
     background-color: white;
     color: #8850f7;
 }

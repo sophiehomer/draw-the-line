@@ -14,11 +14,11 @@ function Nav() {
  return (
   <>
     <nav>
+        <Link to="/" className="navLink">
+            Home
+        </Link>
         <Link to={`/profile/${userId}`} className="navLink">
             My profile
-        </Link>
-        <Link to="/Create-post" className="navLink">
-           Post
         </Link>
         <Link to="/search-people" className="navLink">
             Search
