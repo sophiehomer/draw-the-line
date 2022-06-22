@@ -39,15 +39,12 @@ function Home() {
                   </h3>
                 </div>
                 <p id="postText">{post.postText}</p>
-               
                   <div id="likes-dislikes">
                     {post.likesLength}
                     <button className="voteBtn">
                       <BsFillSuitHeartFill />
                     </button>
-                   
                   </div>
-          
               </section>
             ))}
           </section>

@@ -4,9 +4,9 @@ import { QUERY_USER } from "../../utils/queries";
 import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
-import { AiOutlineLike } from "react-icons/ai";
-import { AiOutlineDislike } from "react-icons/ai";
 import { FaUserFriends } from "react-icons/fa";
+import { BsFillSuitHeartFill } from 'react-icons/bs'
+
 
 function Profile() {
   // get ID and query a user's info
@@ -46,11 +46,7 @@ function Profile() {
                   <div id="likes-dislikes">
                     {post.likesLength}
                     <button className="voteBtn">
-                      <AiOutlineLike />
-                    </button>
-                    {post.dislikesLength}
-                    <button className="voteBtn">
-                      <AiOutlineDislike />
+                      <BsFillSuitHeartFill />
                     </button>
                   </div>
                 </section>
