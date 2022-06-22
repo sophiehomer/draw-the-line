@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './nav.css'
 import { QUERY_ME_BASIC } from '../../utils/queries'
 import { useQuery } from '@apollo/client'
-import Auth from '../../utils/auth'
+// import Auth from '../../utils/auth'
 
 
 
@@ -23,9 +23,9 @@ function Nav() {
         <Link to="/search-people" className="navLink">
             Search
         </Link>
-        <button onClick={() => Auth.logout()} className="logoutButton">
+        {/* <button onClick={() => Auth.logout()} className="logoutButton">
             Logout
-          </button>
+          </button> */}
         
     </nav>
   </>
