@@ -2,13 +2,12 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { QUERY_SINGLE_POST } from '../../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
-import { DISLIKE_POST, LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
+import { LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
 import { ADD_COMMENT_LIKE, ADD_COMMENT_DISLIKE, DELETE_COMMENT } from '../../utils/mutations'
-import likeSound from '../../assets/sounds/like-sound.wav';
-import dislikeSound from '../../assets/sounds/dislike-sound.wav';
 import Header from '../Header/header'
 import { AiOutlineLike } from 'react-icons/ai'
-import { AiOutlineDislike } from 'react-icons/ai'
+// import { AiOutlineDislike } from 'react-icons/ai'
+import { BsFillSuitHeartFill } from 'react-icons/bs'
 
 import './singlePost.css';
 
@@ -18,13 +17,6 @@ function SinglePost() {
     var Filter = require('bad-words'),
         filter = new Filter();
     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
-    // sound functions
-    const likeSoundNoise = new Audio(likeSound);
-    likeSoundNoise.loop = false;
-    likeSoundNoise.volume = 0.3;
-    const dislikeSoundNoise = new Audio(dislikeSound);
-    dislikeSoundNoise.loop = false;
-    dislikeSoundNoise.volume = 0.3;
 
 
     const { id: postId } = useParams()
@@ -37,8 +29,8 @@ function SinglePost() {
 
     // Mutations
     const [addCommentLike] = useMutation(ADD_COMMENT_LIKE)
-    const [addCommentDislike] = useMutation(ADD_COMMENT_DISLIKE)
-    const [addDislike] = useMutation(DISLIKE_POST);
+    // const [addCommentDislike] = useMutation(ADD_COMMENT_DISLIKE)
+    // const [addDislike] = useMutation(DISLIKE_POST);
     const [addLike] = useMutation(LIKE_POST);
     const [addComment] = useMutation(ADD_COMMENT);
     const [deletePost] = useMutation(DELETE_POST)
@@ -107,15 +99,15 @@ function SinglePost() {
         }
     }
     // Dislike  click function
-    function dislikeClick() {
-        addDislike({ variables: { postId: userPost._id } });
-        if (userPost.banMeter >= 0.6) {
-            deletePost({ variables: { postId: userPost._id } })
-            const deletedPost = document.getElementById('single-post-page');
-            deletedPost.remove();
-        }
+    // function dislikeClick() {
+    //     addDislike({ variables: { postId: userPost._id } });
+    //     if (userPost.banMeter >= 0.6) {
+    //         deletePost({ variables: { postId: userPost._id } })
+    //         const deletedPost = document.getElementById('single-post-page');
+    //         deletedPost.remove();
+    //     }
 
-    }
+    // }
     return (
         <>
             <Header />
@@ -128,8 +120,8 @@ function SinglePost() {
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
                         <div id="single-page-likes-dislikes">
-                            {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><AiOutlineLike /></button>
-                            {userPost.dislikesLength}<button className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></button>
+                            {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><BsFillSuitHeartFill /></button>
+                            {/* {userPost.dislikesLength}<button className='voteBtnClickable' onClick={dislikeClick}><AiOutlineDislike /></button> */}
                         </div>
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment...' />
@@ -153,9 +145,9 @@ function SinglePost() {
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
                                         }}}>
-                                        <AiOutlineLike />
+                                        <BsFillSuitHeartFill />
                                     </button>
-                                    {comment.dislikesLength}
+                                    {/* {comment.dislikesLength}
                                     <button className='commentVoteBtn' onClick={() => {
                                         addCommentDislike({ variables: { commentId: comment._id } });
                                         if (comment.banMeter >= 0.6) {
@@ -164,7 +156,7 @@ function SinglePost() {
                                             deletedPost.remove();
                                         }}}>
                                         <AiOutlineDislike />
-                                    </button>
+                                    </button> */}
                                     </div>
                                 </section>
                             ))}

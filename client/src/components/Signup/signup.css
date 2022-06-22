@@ -41,7 +41,7 @@
   justify-content: center;
   margin-bottom: 5%;
   font-size: 1em;
-  border: 1.5px solid #111111;
+  border: 1.5px solid #4A4A4A;
   opacity: 0.5;
   border-radius: 24px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -64,7 +64,7 @@ input:-webkit-autofill:active  {
 }
 
 ::placeholder {
-  color: #111111
+  color: #4A4A4A;
 }
 
 .signupText {
@@ -91,16 +91,16 @@ input:-webkit-autofill:active  {
   border-radius: 24px;
   font-size: 1em;
   cursor: pointer;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: raleway, sans-serif;
 
 }
 
 #signup-button:hover {
   background-color: #FFFEFC;
-  border: 1.5px solid #111111;
+  border: 1.5px solid #4A4A4A;
   border-radius: 5px;
   color: transparent;
-  color: #111111;
+  color: #4A4A4A;
 }
 
 .signinText {
@@ -108,7 +108,7 @@ input:-webkit-autofill:active  {
 }
 
 .signupLinkText {
-  color: #111111;
+  color: #4A4A4A;
   text-align: center;
   font-size: 15px;
   padding-top: 14%;

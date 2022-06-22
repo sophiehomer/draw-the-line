@@ -10,7 +10,7 @@
     padding-bottom: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    color: #111111;
+    color: #4A4A4A;
 	font-size: 2em;
 }
 
@@ -30,7 +30,7 @@
     justify-content: center;
     padding: 20px;
     margin: 50px;
-    border: 1px solid #111111;
+    border: 1px solid #4A4A4A;
     border-radius: 10px;
     text-align: center;
 }
@@ -41,7 +41,8 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    background-color: #F6F9FC;
+    background-color: rgb(255, 255, 255, .3);
+
     opacity:0;
     border-radius: 25px;
     text-align: center;
@@ -66,11 +67,11 @@
 }
 
 .friendsSection a {
-    color: #111111;
+    color: #4A4A4A;
 }
 
 .friendsSection a:hover{
-    color: #B48FFF;
+    color: #8850f7;
 }
 
 .friendsSection {
@@ -81,7 +82,7 @@
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom:2%;
-    background-color: #F6F9FC;
+    background-color: rgb(255, 255, 255, .3);
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     line-height: 2em;

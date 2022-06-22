@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header>
         <Link to="/" >
-          <h1 className="logo">soapbox</h1>
+          <h1 className="logo">kit</h1>
         </Link>
         <Nav/>
           <button onClick={() => Auth.logout()} className="logoutButton">
