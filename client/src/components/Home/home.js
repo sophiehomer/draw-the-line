@@ -24,38 +24,39 @@ function Home() {
       {loggedIn ? (
         <>
           <Header />
-          <section id="loggedInView">
-            <div>
+          <main id="loggedInView">
+            <section class="welcomeandPostSection">
               <h1 className="welcomeText">Welcome, {username}!</h1>
-              <div>
+              {/* <div> */}
                 <CreatePost />
-              </div>
-            </div>
+              {/* </div> */}
+            </section>
            
-          
-            {postData.map((post, index) => (
-              <section className="discussion-post" key={index}>
-                <div className="accordionHeaderDiv">
-                  <h2 id="username-post">{post.username}</h2>
-                  <p className="postDateCreated">{post.createdAt}</p>
-                </div>
-                <div>
-                  <h3 id="userTitle-post">
-                    <Link to={`/Single-post/${post._id}`}>
-                      {post.postTitle}
-                    </Link>
-                  </h3>
-                </div>
-                <p id="postText">{post.postText}</p>
+          <section class="postsSectionHome">
+              {postData.map((post, index) => (
+                <div className="discussion-post" key={index}>
+                  <div className="accordionHeaderDiv">
+                    <h2 id="username-post">{post.username}</h2>
+                    <p className="postDateCreated">{post.createdAt}</p>
+                  </div>
+                  <div>
+                    <h3 id="userTitle-post">
+                      <Link to={`/Single-post/${post._id}`}>
+                        {post.postTitle}
+                      </Link>
+                    </h3>
+                  </div>
+                  <p id="postText">{post.postText}</p>
                   <div id="likes-dislikes">
                     {post.likesLength}
                     <button className="voteBtn">
                       <BsFillSuitHeartFill />
                     </button>
                   </div>
-              </section>
+                </div>
             ))}
           </section>
+        </main>
         </>
       ) : (
         <>
