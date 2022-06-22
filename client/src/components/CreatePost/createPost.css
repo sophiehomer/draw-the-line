@@ -29,13 +29,12 @@ input.post-title {
 }
 
 .writePost {
-    width: 80%;
+    width: 75%;
     padding: 1%;
     padding-left: 2%;
     border: .5px solid lightgray;
     border-radius: 24px;
     font-size: 1em;
-    margin-top: 4%;
     font-family: raleway, sans-serif;
 }
 
@@ -51,8 +50,12 @@ input.post-title {
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    padding: 10%;
-    width: 50%;
+    padding-top: 4%;
+    padding-left: 4%;
+    padding-bottom: 2%;
+    width: 670px;
+    margin-bottom: 4%;
+    /* width: 100%; */
 } 
 
 .postButton {

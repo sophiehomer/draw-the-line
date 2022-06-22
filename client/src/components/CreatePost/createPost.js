@@ -5,7 +5,7 @@ import { useQuery, useMutation } from '@apollo/client';
 // import { DELETE_POST, } from '../../utils/mutations';
 import { QUERY_ME_BASIC } from '../../utils/queries';
 import { ADD_POST } from '../../utils/mutations';
-import Header from '../Header/header.js';
+// import Header from '../Header/header.js';
 
 // Style Import
 import './createPost.css';
@@ -96,8 +96,8 @@ function CreatePost() {
         <> 
         {loggedIn ?
             <>  
-           <Header />
-           <main className="createPostPage">
+           {/* <Header /> */}
+           {/* <main className="createPostPage"> */}
                 <form id='post-form' onSubmit={handleFormSubmit}>
                     <section className="writePostSection">
                         <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
@@ -109,7 +109,7 @@ function CreatePost() {
                         <div id="bad-words-warning"></div>
                     </section>
                 </form>
-                </main>
+                {/* </main> */}
                 </> 
                 :
                 <>

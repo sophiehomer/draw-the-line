@@ -6,6 +6,7 @@ import Login from "../Login/login";
 import Header from "../Header/header.js";
 import { Link } from 'react-router-dom'
 import { BsFillSuitHeartFill } from 'react-icons/bs'
+import CreatePost from '../CreatePost/createPost'
 
 
 function Home() {
@@ -24,7 +25,14 @@ function Home() {
         <>
           <Header />
           <section id="loggedInView">
-            <h1 className="welcomeText">Welcome, {username}!</h1>
+            <div>
+              <h1 className="welcomeText">Welcome, {username}!</h1>
+              <div>
+                <CreatePost />
+              </div>
+            </div>
+           
+          
             {postData.map((post, index) => (
               <section className="discussion-post" key={index}>
                 <div className="accordionHeaderDiv">
