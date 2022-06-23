@@ -86,6 +86,7 @@ a {
 #loggedInView {
     display: flex;
     flex-wrap: wrap;
+    padding: 4%
     /* flex-direction: column;
     align-items: center; */
 }
@@ -101,10 +102,11 @@ a {
 
 .welcomeText {
     padding-bottom: 4%;
+    margin-left: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    color: white;
-	font-size: 2em;
+    color: #4A4A4A;
+	font-size: 1.5em;
 }
 
 .homepagePostDiv {
@@ -132,13 +134,14 @@ a {
     padding: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    width: 45%;
+    width: 60%;
 }
 
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
     margin-bottom: 10%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .discussion-post h3{
@@ -168,6 +171,8 @@ button:focus {
     font-size: 1em;
     margin:0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 #userTitle-post {
@@ -176,7 +181,7 @@ button:focus {
     justify-content: flex-start;
     padding-bottom: 1%;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
 #userTitle-post:hover {

@@ -100,7 +100,7 @@ function CreatePost() {
            {/* <main className="createPostPage"> */}
                 <form id='post-form' onSubmit={handleFormSubmit}>
                     <section className="writePostSection">
-                        <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Title' />
+                        <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Subject' />
 
                         <div className="writePostDiv">
                         <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
