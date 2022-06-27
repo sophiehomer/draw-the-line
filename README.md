@@ -1,8 +1,7 @@
 
-  # draw-the-line [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+  # kit
   ## Description
-  ![markdown logo](./homepage-screenshot.png)
-Soapbox is a social media platform with zero tolerance for foul langauge. to This website uses the npm bad words package for censorship.
+  kit is a social application made for the students in my class to keep in touch with one another once our coding bootcamp had ended.
   ## Tables of Contents
   1. [Installation](#installation)
   2. [Usage](#usage)
@@ -16,16 +15,16 @@ Soapbox is a social media platform with zero tolerance for foul langauge. to Thi
   npm i
   ```
   ## Usage
-  NA [How To Video](NA)
+
   ## Contribution
   Just fork and make a pull request
   ## Tests
 
   ## License 
-  This applicaiton is licensed under the The Unlicense license.
+   None
   ## Questions
   If you have any questions:
 
-  [GitHub Acccount](https://github.com/abarragan89)
+  [GitHub Acccount](https://github.com/sophiehomer)
 
-  Email: anthony.bar.89@gmail.com
+  Email: sophiehomer94@gmail.com

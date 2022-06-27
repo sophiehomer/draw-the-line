@@ -85,8 +85,10 @@ a {
 
 #loggedInView {
     display: flex;
-    flex-wrap: wrap;
-    padding: 4%
+    flex-direction: column;
+    /* align-content:  center; */
+    /* flex-wrap: wrap; */
+    /* padding: 4% */
     /* flex-direction: column;
     align-items: center; */
 }
@@ -101,8 +103,8 @@ a {
 }
 
 .welcomeText {
-    padding-bottom: 4%;
-    margin-left: 2%;
+    margin-top: 4%;
+    margin-left: 12%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     color: #4A4A4A;
@@ -110,19 +112,20 @@ a {
     width: 100%;
 }
 
-.homepagePostDiv {
+/* .homepagePostDiv {
     display: flex;
-}
+} */
 
 /* ----------------------------------- !! ----------------------------------- */
 .postsSectionHome {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.createPostDiv {
-    width: 280%;
-}
+/* .createPostDiv {
+    width: 100%;
+} */
 
 /* ----------------------------------- !! ----------------------------------- */
 
@@ -140,7 +143,7 @@ a {
     padding: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    width: 60%;
+    width: 75%;
 }
 
 .postDateCreated {
@@ -211,10 +214,14 @@ button:focus {
     margin-right: 2%;
     padding: 1.2%;
     background: white;
-    color: #F0D3DF;
+    color: #fac2da;
     display:flex;
     cursor: pointer;
 }
+
+/* .voteBtn:hover {
+    color: rgb(244, 133, 198);
+} */
 
 .accordionHeaderDiv { 
 display: flex;
@@ -226,27 +233,27 @@ align-items: flex-start;
     border: none;
 }
 
-.accordion-body {
+/* .accordion-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: -5%;
-}
+} */
 
-.accordion-item {
+/* .accordion-item {
     background-color: transparent;
     border: none;
- }
+ } */
 
-.accordion-button {
+/* .accordion-button {
     background-color: transparent;
     border: none;
     width: 100%;
     color: #4A4A4A;
-}
+} */
 
-.accordion-button .collapsed {
+/* .accordion-button .collapsed {
     border: none;
     background-color: transparent;
     margin: 0;
@@ -258,7 +265,7 @@ align-items: flex-start;
     color: #4A4A4A !important;
     border: none;
     box-shadow: none;
-}
+} */
 
 
 /* ------------------------------ MEDIA QUERIES ----------------------------- */

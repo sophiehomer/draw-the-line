@@ -68,7 +68,8 @@
     margin-top: 5%;
     background-color: rgb(255, 255, 255, .3);
     border: 1.5px solid white;
-    border-radius: 24px;  padding: .5em 3.5em;
+    border-radius: 24px;  
+    padding: .5em 3.5em;
     font-size: 1em;
     cursor: pointer;
     font-family: raleway, sans-serif; 
