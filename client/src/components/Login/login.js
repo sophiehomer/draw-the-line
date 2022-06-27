@@ -4,6 +4,7 @@ import { LOGIN_USER } from '../../utils/mutations'
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth'
 import "./login.css"
+// import logoImage from '../../assets/images/logo.png'
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -41,7 +42,8 @@ const Login = () => {
   };
   return (
     <>
-    <h1 className="landingPageLogo">soapbox</h1>
+    <h1 className="landingPageLogo">kit</h1>
+    {/* <img src={ logoImage } className="logoImg" style={{ width: "10%" }} alt="logo" /> */}
     <main className="aboutLoginMain">
     <section className="aboutSection">
     {/* <h1 className="debateText">Let's debate</h1> */}

@@ -1,15 +1,17 @@
-html {
+/* html {
     background: url(../src/assets/images/clouds.jpeg) no-repeat center center fixed;
+    background-image: linear-gradient(#CBD4FE, #57418A);
+    background-image: linear-gradient(#F0D3DF, #CBE0F8);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+  } */
 
 
 body {
     min-height: 100vh;
-    /* background-color: #FFFEFC; */
+    background-image: linear-gradient(#F0D3DF, #CBE0F8);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-attachment: fixed;
