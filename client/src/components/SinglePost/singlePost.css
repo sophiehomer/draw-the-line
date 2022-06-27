@@ -7,6 +7,7 @@
     /* opacity: 0; */
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
+    margin-top: 4%;
     padding: 2%;
 }
 
@@ -107,10 +108,10 @@
     font-family: raleway, sans-serif;
 }
 
-/* .post-button:hover {
+.post-button:hover {
     background-color: white;
-    color: #8850f7;
-} */
+    color:#4A4A4A;
+}
 
 /* #single-page-likes {
     display: flex;
