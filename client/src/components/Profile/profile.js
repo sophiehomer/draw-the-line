@@ -18,7 +18,7 @@ function Profile() {
   // Get username and friends
   const userInfo = data?.user || [];
   const userPosts = data?.user.posts || [];
-  // const userFriends = data?.user.friends || [];
+  const userFriends = data?.user.friends || [];
 
   const loggedIn = Auth.loggedIn();
   return (
@@ -27,12 +27,13 @@ function Profile() {
         <>
           <Header />
           <h1 className="profileName">{userInfo.username}</h1>
+          <h2 className="profilePostTitle">Posts</h2>
           <main className="profilePage">
             <section className="postsSection">
               {userPosts.map((post, index) => (
                 <section className="profile-discussion-post" key={index}>
                   <div className="accordionHeaderDiv">
-                    <h2 id="username-post">{userInfo.username}</h2>
+                    <h3 id="username-post">{userInfo.username}</h3>
                     <p className="postDateCreated">{post.createdAt}</p>
                   </div>
                   <div>
@@ -52,20 +53,17 @@ function Profile() {
                 </section>
               ))}
             </section>
-            <Friends />
-            {/* <section className="friendsSection">
-              <section id="friendsSectionBorder">
+      
+            <section className="friendsSection">
                 <div className="friendIcon">
                   <h4 className="friendsText">Friends</h4><FaUserFriends/>
                 </div>
-  
                 {userFriends.map((friend, index) => (
                   <div key={index}>
                     <Link to={`/profile/${friend._id}`}>{friend.username}</Link>
                   </div>
                 ))}
-              </section>
-            </section> */}
+            </section>
           </main>
         </>
       ) : (
@@ -77,29 +75,4 @@ function Profile() {
   );
 }
 
-function Friends() {
-   // get ID and query a user's info
-   const { id: userId } = useParams();
-   const { data } = useQuery(QUERY_USER, {
-     variables: { id: userId },
-   });
- 
-   // Get friends
-   const userFriends = data?.user.friends || [];
-  
-  return (
-    <section className="friendsSection">
-    <section id="friendsSectionBorder">
-      <div className="friendIcon">
-        <h4 className="friendsText">Friends</h4><FaUserFriends/>
-      </div>
-      {userFriends.map((friend, index) => (
-        <div key={index}>
-          <Link to={`/profile/${friend._id}`}>{friend.username}</Link>
-        </div>
-      ))}
-    </section>
-  </section>
-  )
-}
 export default Profile;

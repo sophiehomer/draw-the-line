@@ -83,11 +83,9 @@ input.post-title {
     /* color: #8850f7; */
 }
 
-
-
 #bad-words-warning {
     padding-top: 2%;
-    padding-left: 2%;
+    padding-left: 4%;
 }
 
 /* ------------------------------ media queries ----------------------------- */
