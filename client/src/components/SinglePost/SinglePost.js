@@ -108,8 +108,8 @@ function SinglePost() {
                         <p id="postText"> {userPost.postText}</p>
                         <div id="likesAndCommments">
                             <form id='comment-form' onSubmit={handleFormSubmitComment}>
-                                <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment...' />
-                                <button className='post-button' id='postBtnComment'>Post</button>
+                                <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
+                                <button className='post-button' id='postBtnComment'>Comment</button>
                                 <div id='waringDivComment'></div>
                                 
                                 {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><BsFillSuitHeartFill /></button>

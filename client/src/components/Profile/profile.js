@@ -26,8 +26,10 @@ function Profile() {
       {loggedIn ? (
         <>
           <Header />
+          <div className="nameAndFriends"> 
           <h1 className="profileName">{userInfo.username}</h1>
-          <h2 className="profilePostTitle">Posts</h2>
+          <h2 className="friends">Friends <FaUserFriends/> </h2> 
+          </div>
           <main className="profilePage">
             <section className="postsSection">
               {userPosts.map((post, index) => (
@@ -55,9 +57,9 @@ function Profile() {
             </section>
       
             <section className="friendsSection">
-                <div className="friendIcon">
+                {/* <div className="friendIcon">
                   <h4 className="friendsText">Friends</h4><FaUserFriends/>
-                </div>
+                </div> */}
                 {userFriends.map((friend, index) => (
                   <div key={index}>
                     <Link to={`/profile/${friend._id}`}>{friend.username}</Link>

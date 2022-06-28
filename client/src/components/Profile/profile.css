@@ -6,15 +6,30 @@
 
 }
 
+.nameAndFriends {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.friends {
+	font-size: 1.75em;
+    margin-right: 21%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #808080;
+}
+
 .profileName {
+    margin-left: 10%;
     margin-top: 2%;
-    margin-left: 7%;
-    /* padding-bottom: 2%; */
+    padding-bottom: .5%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     color: #808080;
-    /* color: #8850f7; */
-	font-size: 2em;
+	font-size: 1.75em;
 }
 
 .postsAndFriends {
@@ -23,16 +38,17 @@
     /* justify-content: space-between; */
 }
 
-.profilePostTitle {
+/* ----------------------------------- !! ----------------------------------- */
+/* .profilePostTitle {
     margin-top: 2%;
-    margin-left: 7%;
-    padding-bottom: 2%;
+    margin-left: 68%;
+    padding-bottom: 1%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     color: #808080;
-    /* color: #8850f7; */
+    color: #8850f7;
 	font-size: 1.5em;
-}
+} */
 
 .postsSection {
     display: flex;
@@ -56,6 +72,7 @@
 }
 
 .profile-discussion-post {
+    margin-left: 8%;
     display: flex;
     flex-basis: 50%;
     flex-wrap: wrap;
@@ -95,7 +112,7 @@
 .friendsSection {
     flex-basis:20%;
     height: 50%;
-    border-radius: 12px;
+    border-radius: 24px;
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%; 
