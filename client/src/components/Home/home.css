@@ -185,6 +185,7 @@ button:focus {
     flex-direction: row;
     align-items:center;
     /* color: #5290fb; */
+    padding-bottom: 1%;
 }
 
 
