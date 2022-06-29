@@ -5,7 +5,9 @@ import { useQuery, useMutation } from '@apollo/client';
 import { LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
 import { ADD_COMMENT_LIKE, DELETE_COMMENT } from '../../utils/mutations'
 import Header from '../Header/header'
-import { BsFillSuitHeartFill } from 'react-icons/bs'
+import { FaHeart } from 'react-icons/fa'
+import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
+import { BsDot } from 'react-icons/bs'
 
 import './singlePost.css';
 
@@ -63,19 +65,34 @@ function SinglePost() {
             <Header />
             <main id="single-post-page">
                 <section className='single-page-discussion-post'>
-                    <div className="nameDateDiv">
+                    {/* <div className="nameDateDiv">
                         <p id="username-post">{userPost.username}</p>
                         <p id="single-post-date">{userPost.createdAt}</p>
+                    </div> */}
+
+                    <div className="avatarNameDateContainer">
+                    <div className="avatarContainer"> 
+                    <Avatar src="john-doe.png" name={userPost.username} />
                     </div>
-                        <p id="single-post-userTitle-post">{userPost.postTitle}</p>
+                    <div className="nameDateContainer"> 
+                    <h2 id="username-post">{userPost.username}</h2> 
+                    <div className="dot"> 
+                    < BsDot />
+                    </div>
+                    <p className="postDateCreated">{userPost.createdAt}</p>
+                    </div>
+                  </div>
+                  <div className="singlePagetitleAndPost">
+                  <p id="single-post-userTitle-post">{userPost.postTitle}</p>
                         <p id="postText"> {userPost.postText}</p>
+                  </div>
                         <div id="likesAndCommments">
                             <form id='comment-form' onSubmit={handleFormSubmitComment}>
                                 <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
                                 <button className='post-button' id='postBtnComment'>Comment</button>
                                 <div id='waringDivComment'></div>
                                 
-                                {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><BsFillSuitHeartFill /></button>
+                                {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>
                                
                             </form>
                         </div>
@@ -96,7 +113,7 @@ function SinglePost() {
                                             const deletedPost = document.getElementById(index);
                                             deletedPost.remove();
                                         }}}>
-                                        <BsFillSuitHeartFill />
+                                        < FaHeart />
                                     </button>
                                     </div>
                                 </section>

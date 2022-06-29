@@ -25,7 +25,7 @@
     display: flex;
     margin: 0;
     font-size: 1.5em;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 input#postText {
@@ -39,6 +39,10 @@ p#postText {
      line-height: 1.7em;
      text-align: left;
      color: gray;
+}
+
+.singlePagetitleAndPost {
+    padding-left: 6.6%;
 }
 
 
@@ -79,6 +83,7 @@ p#postText {
     width: 50%;
     padding: 1%;
     padding-left: 2%;
+    margin-left: 6.8%;
     font-size: 1em;
     border: none;
     border-radius: 24px;
