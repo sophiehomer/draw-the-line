@@ -27,13 +27,16 @@ function SearchPeople() {
      }}
     >
      <div className="searchSection">
-      <input
-       id="search-bar"
-       type="text"
-       name="search-bar"
-       placeholder="Search friends"
-      />
-      <BsSearch size={22} />
+      <div className="searchIconContainer"> 
+        <input
+        id="search-bar"
+        type="text"
+        name="search-bar"
+        placeholder="Search friends"
+        />
+        <BsSearch size={22} />
+      </div>
+     
       <button id="search-friend-btn" type="submit">
        Search
       </button>

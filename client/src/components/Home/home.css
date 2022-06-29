@@ -129,6 +129,10 @@ a {
     width: 75%;
 }
 
+.discussion-post:last-child {
+    margin-bottom: 10%;
+}
+
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
