@@ -136,7 +136,7 @@ a {
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
 }
 
 .discussion-post h3{
@@ -184,7 +184,7 @@ button:focus {
 }
 
 #likes-dislikes {
-    margin-top: 4%;
+    margin-top: 2%;
     display: flex;
     flex-direction: row;
     align-items:center;
@@ -194,12 +194,12 @@ button:focus {
 
 
 .voteBtn {
-    font-size: 1em;
+    font-size: 1.2em;
     border: none;
     border-radius: 50px;
     margin-left: 1%;
     margin-right: 2%;
-    padding: 1.2%;
+    padding: 1%;
     background: white;
     color: #fac2da;
     display:flex;
@@ -210,14 +210,27 @@ button:focus {
     color: rgb(244, 133, 198);
 } */
 
-.accordionHeaderDiv { 
+.avatarNameDateContainer { 
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: flex-start;
 }
 
 .accordion-header {
     border: none;
+}
+
+.avatarContainer {
+    /* display: flex; */
+    background-color: orange;
+    padding: 1%;
+}
+
+.nameDateContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1%;
 }
 
 /* .accordion-body {

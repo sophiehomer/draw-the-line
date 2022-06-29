@@ -10,12 +10,6 @@ import { BsFillSuitHeartFill } from 'react-icons/bs'
 import './singlePost.css';
 
 function SinglePost() {
-    // censor filter
-    // Bad word Filter
-    // var Filter = require('bad-words'),
-    //     filter = new Filter();
-    // filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
-
     const { id: postId } = useParams()
     const { data } = useQuery(QUERY_SINGLE_POST, {
         variables: { id: postId },

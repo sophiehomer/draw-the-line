@@ -7,6 +7,7 @@ import Header from "../Header/header.js";
 import { Link } from 'react-router-dom'
 import { BsFillSuitHeartFill } from 'react-icons/bs'
 import CreatePost from '../CreatePost/createPost'
+import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
 
 
 function Home() {
@@ -35,9 +36,15 @@ function Home() {
           <section class="postsSectionHome">
               {postData.map((post, index) => (
                 <div className="discussion-post" key={index}>
-                  <div className="accordionHeaderDiv">
+                  <div className="avatarNameDateContainer">
+                    <div className="avatarContainer"> 
+                    <Avatar src="john-doe.png" name={post.username} />
+                    </div>
+                    <div className="nameDateContainer"> 
                     <h2 id="username-post">{post.username}</h2>
                     <p className="postDateCreated">{post.createdAt}</p>
+                    </div>
+                    
                   </div>
                   <div>
                     <h3 id="userTitle-post">
