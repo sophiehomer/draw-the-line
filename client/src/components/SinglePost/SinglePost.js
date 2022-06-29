@@ -12,10 +12,9 @@ import './singlePost.css';
 function SinglePost() {
     // censor filter
     // Bad word Filter
-    var Filter = require('bad-words'),
-        filter = new Filter();
-    filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
-
+    // var Filter = require('bad-words'),
+    //     filter = new Filter();
+    // filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
 
     const { id: postId } = useParams()
     const { data } = useQuery(QUERY_SINGLE_POST, {
@@ -39,37 +38,7 @@ function SinglePost() {
 
     const handleChangeComment = (event) => {
         let { name, value } = event.target;
-        // Booleans to keep name and value state
-        let cleanName;
-        let cleanText;
-        // Censor postText
-        if (value && !value.match(/^[*]{1,}/)) {
-            value = filter.clean(value)
-            if (value.match(/([*]{3,})/g)) {
-                cleanText = false;
-            } else {
-                cleanText = true
-            }
-        }
-        // Censor postTitle
-        if (name && !name.match(/^[*]{1,}/)) {
-            name = filter.clean(name)
-            if (name.match(/([*]{3,})/g)) {
-                cleanName = false
-            } else {
-                cleanName = true
-            }
-        }
-        // Get html elements and check their values to render html elements
-        const postBtn = document.getElementById('postBtnComment')
-        // const warningDiv = document.getElementById('warningDivComment');
-        if (cleanName && cleanText) {
-            // warningDiv.innerHTML = '';
-            postBtn.disabled = false;
-        } else {
-            // warningDiv.innerHTML = 'Keep it friendly';
-            postBtn.disabled = true;
-        }
+
         setFormStateComment({
             ...formStateComment,
             [name]: value,

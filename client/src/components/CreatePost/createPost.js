@@ -2,7 +2,6 @@ import Auth from '../../utils/auth';
 // import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-// import { DELETE_POST, } from '../../utils/mutations';
 import { QUERY_ME_BASIC } from '../../utils/queries';
 import { ADD_POST } from '../../utils/mutations';
 // import Header from '../Header/header.js';
@@ -11,9 +10,9 @@ import { ADD_POST } from '../../utils/mutations';
 import './createPost.css';
 
 // Bad word Filter
-var Filter = require('bad-words'),
-    filter = new Filter();
-    filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
+// var Filter = require('bad-words'),
+//     filter = new Filter();
+//     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
 
 function CreatePost() {
     // Get basic info
@@ -35,37 +34,10 @@ function CreatePost() {
     // Save users posts in a state variable
     const handleChange = (event) => {
         let { name, value } = event.target;
-        // Booleans to keep name and value state
-        let cleanName;
-        let cleanText;
-        // Censor postText
-        if (value && !value.match(/^[*]{1,}/)){
-            value = filter.clean(value)
-            if (value.match(/([*]{3,})/g)) {
-                cleanText = false;
-            } else {
-                cleanText = true
-            }
-        }
-        // Censor postTitle
-        if (name && !name.match(/^[*]{1,}/)){
-            name = filter.clean(name)
-            if (name.match(/([*]{3,})/g)) {
-                cleanName = false
-            } else {
-                cleanName = true
-            }
-        }
-        // Get html elements and check their values to render html elements
-        const postBtn = document.getElementById('post-btn')
-        const warningDiv = document.getElementById('bad-words-warning');
-        if (cleanName && cleanText) {
-            warningDiv.innerHTML = '';
-             postBtn.disabled = false;
-        } else {
-            warningDiv.innerHTML = 'No bad language. Please respect our community guidelines.';
-            postBtn.disabled = true;
-        }
+        // const postBtn = document.getElementById('post-btn')
+        // const warningDiv = document.getElementById('bad-words-warning');
+        //     warningDiv.innerHTML = '';
+        //      postBtn.disabled = false;
         setFormState({
         ...formState,
         [name]: value,
