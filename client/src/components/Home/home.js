@@ -48,7 +48,6 @@ function Home() {
                     </div>
                     <p className="postDateCreated">{post.createdAt}</p>
                     </div>
-                    
                   </div>
                   <div className="titleAndPost">
                     <h3 id="userTitle-post">

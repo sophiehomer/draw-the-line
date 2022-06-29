@@ -5,7 +5,10 @@ import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
 import { FaUserFriends } from "react-icons/fa";
-import { BsFillSuitHeartFill } from 'react-icons/bs'
+import { FaHeart } from 'react-icons/fa'
+import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
+import { BsDot } from 'react-icons/bs'
+
 
 
 function Profile() {
@@ -34,23 +37,49 @@ function Profile() {
             <section className="postsSection">
               {userPosts.map((post, index) => (
                 <section className="profile-discussion-post" key={index}>
-                  <div className="accordionHeaderDiv">
+
+                    <div className="avatarNameDateContainer">
+                    <div className="avatarContainer"> 
+                    <Avatar src="john-doe.png" name={post.username} />
+                    </div>
+                    <div className="nameDateContainer"> 
+                    <h3 id="username-post">{userInfo.username}</h3>
+                    <div className="dot"> 
+                    < BsDot />
+                    </div>
+                    <p className="postDateCreated">{post.createdAt}</p>
+                    </div>
+                  </div>
+
+                  
+                  {/* <div className="accordionHeaderDiv">
                     <h3 id="username-post">{userInfo.username}</h3>
                     <p className="postDateCreated">{post.createdAt}</p>
-                  </div>
-                  <div>
+                  </div> */}
+
+                  <div className="profTitlePost">
                     <h4 id="userTitle-post">
                       <Link to={`/Single-post/${post._id}`}>
                         {post.postTitle}
                       </Link>
                     </h4>
-                  <p id="postText">{post.postText}</p>
+                  {/* <p id="postText">{post.postText}</p>
                   </div>
                   <div id="likes-dislikes">
-                    {post.likesLength}
                     <button className="voteBtn">
-                      <BsFillSuitHeartFill />
+                    <FaHeart />
                     </button>
+                    {post.likesLength}
+                  </div> */}
+
+                    <div className="postAndLikes"> 
+                    <p id="postText">{post.postText}</p>
+                    <button className="profileVoteBtn">
+                      <FaHeart />
+                    </button>
+                    {post.likesLength}
+                    </div>
+                   
                   </div>
                 </section>
               ))}
