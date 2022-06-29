@@ -175,7 +175,7 @@ button:focus {
 #userTitle-post {
     display: flex;
     flex-direction:row;
-    /* color: #444446; */
+    color: #444446;
     margin: 0%;
     padding: 0%;
     font-size: 1em;
@@ -273,7 +273,7 @@ align-items:center;
 }
 
 #postText {
-    width: 80%;
+    width: 85%;
     margin-right: 5%;
 }
 

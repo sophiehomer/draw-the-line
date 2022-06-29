@@ -9,11 +9,6 @@ import { ADD_POST } from '../../utils/mutations';
 // Style Import
 import './createPost.css';
 
-// Bad word Filter
-// var Filter = require('bad-words'),
-//     filter = new Filter();
-//     filter.removeWords('hell', 'tit', 'tits', 'boob', 'boobs')
-
 function CreatePost() {
     // Get basic info
     const { data: basic } = useQuery(QUERY_ME_BASIC);
@@ -34,10 +29,7 @@ function CreatePost() {
     // Save users posts in a state variable
     const handleChange = (event) => {
         let { name, value } = event.target;
-        // const postBtn = document.getElementById('post-btn')
-        // const warningDiv = document.getElementById('bad-words-warning');
-        //     warningDiv.innerHTML = '';
-        //      postBtn.disabled = false;
+     
         setFormState({
         ...formState,
         [name]: value,
@@ -58,7 +50,6 @@ function CreatePost() {
         }   else {
             console.log("world")
             window.location.replace("http://localhost:3000/");
-
         }
      
     };
@@ -67,9 +58,7 @@ function CreatePost() {
     return (
         <> 
         {loggedIn ?
-            <>  
-           {/* <Header /> */}
-           {/* <main className="createPostPage"> */}
+            <> 
                 <form id='post-form' onSubmit={handleFormSubmit}>
                     <section className="writePostSection">
                         <input className="post-title" type="text" id="postTitle" name="postTitle" value={formState.postTitle} onChange={handleChange} placeholder='Subject' />
@@ -78,10 +67,8 @@ function CreatePost() {
                         <input className="writePost" type="text" id="postText" name="postText" value={formState.postText} onChange={handleChange} placeholder="What's going on?"/>
                             <button className="postButton" id="post-btn">Post</button>
                         </div>
-                        <div id="bad-words-warning"></div>
                     </section>
                 </form>
-                {/* </main> */}
                 </> 
                 :
                 <>
