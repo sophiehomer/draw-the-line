@@ -5,9 +5,10 @@ import { QUERY_ME_BASIC, GET_USER_POSTS } from "../../utils/queries";
 import Login from "../Login/login";
 import Header from "../Header/header.js";
 import { Link } from 'react-router-dom'
-import { BsFillSuitHeartFill } from 'react-icons/bs'
+import { FaHeart } from 'react-icons/fa'
 import CreatePost from '../CreatePost/createPost'
 import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
+import { BsDot } from 'react-icons/bs'
 
 
 function Home() {
@@ -41,25 +42,37 @@ function Home() {
                     <Avatar src="john-doe.png" name={post.username} />
                     </div>
                     <div className="nameDateContainer"> 
-                    <h2 id="username-post">{post.username}</h2>
+                    <h2 id="username-post">{post.username}</h2> 
+                    <div className="dot"> 
+                    < BsDot />
+                    </div>
                     <p className="postDateCreated">{post.createdAt}</p>
                     </div>
                     
                   </div>
-                  <div>
+                  <div className="titleAndPost">
                     <h3 id="userTitle-post">
                       <Link to={`/Single-post/${post._id}`}>
                         {post.postTitle}
                       </Link>
                     </h3>
-                  </div>
-                  <p id="postText">{post.postText}</p>
-                  <div id="likes-dislikes">
-                    {post.likesLength}
+
+                    <div className="postAndLikes"> 
+                    <p id="postText">{post.postText}</p>
                     <button className="voteBtn">
-                      <BsFillSuitHeartFill />
+                      <FaHeart />
                     </button>
+                    {post.likesLength}
+                    </div>
+                   
                   </div>
+                
+                  {/* <div id="likes-dislikes"> */}
+                    {/* <button className="voteBtn">
+                      <FaHeart />
+                    </button>
+                    {post.likesLength} */}
+                  {/* </div> */}
                 </div>
             ))}
           </section>
