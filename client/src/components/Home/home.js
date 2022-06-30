@@ -39,14 +39,14 @@ function Home() {
                 <div className="discussion-post" key={index}>
                   <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
-                    <Avatar src="john-doe.png" name={post.username} />
+                      <Avatar src="john-doe.png" name={post.username} />
                     </div>
                     <div className="nameDateContainer"> 
-                    <h2 id="username-post">{post.username}</h2> 
+                      <h2 id="username-post">{post.username}</h2> 
                     <div className="dot"> 
-                    < BsDot />
+                      < BsDot />
                     </div>
-                    <p className="postDateCreated">{post.createdAt}</p>
+                      <p className="postDateCreated">{post.createdAt}</p>
                     </div>
                   </div>
                   <div className="titleAndPost">
@@ -55,13 +55,12 @@ function Home() {
                         {post.postTitle}
                       </Link>
                     </h3>
-
                     <div className="postAndLikes"> 
-                    <p id="postText">{post.postText}</p>
-                    <button className="voteBtn">
-                      <FaHeart />
-                    </button>
-                    {post.likesLength}
+                      <p id="postText">{post.postText}</p>
+                        <button className="voteBtn">
+                          <FaHeart />
+                        </button>
+                          {post.likesLength}
                     </div>
                    
                   </div>

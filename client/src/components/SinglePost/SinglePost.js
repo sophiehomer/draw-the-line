@@ -92,7 +92,7 @@ function SinglePost() {
                                 <button className='post-button' id='postBtnComment'>Comment</button>
                                 <div id='waringDivComment'></div>
                                 
-                                {userPost.likesLength}<button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>
+                                <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
                                
                             </form>
                         </div>
@@ -113,11 +113,13 @@ function SinglePost() {
 
                                     {/* <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
                                     <p className='commentDate'></p> */}
-                                    <p className='commentBody'>{comment.commentBody}</p>
 
                                   <div className="commentLikesContainer">
-                                    {comment.likesLength
-                                    }<button  className='commentVoteBtn' onClick={() => {
+                                  <p className='commentBody'>{comment.commentBody}</p>
+
+                                    {/* {comment.likesLength} */}
+                                    <div className='voteContainer'> 
+                                    <button  className='commentVoteBtn' onClick={() => {
                                         addCommentLike({ variables: { commentId: comment._id } })
                                         if (comment.banMeter >= 0.6) {
                                             deleteComment({ variables: { commentId: comment._id } })
@@ -126,6 +128,9 @@ function SinglePost() {
                                         }}}>
                                         < FaHeart />
                                     </button>
+                                    {comment.likesLength} 
+                                    </div>
+                                  
                                     </div>
                                 </section>
                             ))}
