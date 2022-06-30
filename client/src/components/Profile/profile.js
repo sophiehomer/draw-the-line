@@ -6,10 +6,8 @@ import "./profile.css";
 import Header from "../Header/header.js";
 import { FaUserFriends } from "react-icons/fa";
 import { FaHeart } from 'react-icons/fa'
-import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
+import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
-
-
 
 function Profile() {
   // get ID and query a user's info
@@ -30,65 +28,43 @@ function Profile() {
         <>
           <Header />
           <div className="nameAndFriends"> 
-          <h1 className="profileName">{userInfo.username}</h1>
-          <h2 className="friends">Friends <FaUserFriends/> </h2> 
+            <h1 className="profileName">{userInfo.username}</h1>
+            <h2 className="friends">Friends <FaUserFriends/> </h2> 
           </div>
           <main className="profilePage">
             <section className="postsSection">
               {userPosts.map((post, index) => (
                 <section className="profile-discussion-post" key={index}>
-
-                    <div className="avatarNameDateContainer">
+                  <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
-                    <Avatar src="john-doe.png" name={post.username} />
+                      <Avatar src="john-doe.png" name={post.username} />
                     </div>
                     <div className="nameDateContainer"> 
-                    <h3 id="username-post">{userInfo.username}</h3>
-                    <div className="dot"> 
-                    < BsDot />
-                    </div>
-                    <p className="postDateCreated">{post.createdAt}</p>
+                      <h3 id="username-post">{userInfo.username}</h3>
+                      <div className="dot"> 
+                        < BsDot />
+                      </div>
+                      <p className="postDateCreated">{post.createdAt}</p>
                     </div>
                   </div>
-
-                  
-                  {/* <div className="accordionHeaderDiv">
-                    <h3 id="username-post">{userInfo.username}</h3>
-                    <p className="postDateCreated">{post.createdAt}</p>
-                  </div> */}
-
                   <div className="profTitlePost">
                     <h4 id="userTitle-post">
                       <Link to={`/Single-post/${post._id}`}>
                         {post.postTitle}
                       </Link>
                     </h4>
-                  {/* <p id="postText">{post.postText}</p>
-                  </div>
-                  <div id="likes-dislikes">
-                    <button className="voteBtn">
-                    <FaHeart />
-                    </button>
-                    {post.likesLength}
-                  </div> */}
-
                     <div className="postAndLikes"> 
-                    <p id="postText">{post.postText}</p>
-                    <button className="profileVoteBtn">
-                      <FaHeart />
-                    </button>
-                    {post.likesLength}
+                      <p id="postText">{post.postText}</p>
+                      <button className="profileVoteBtn">
+                        <FaHeart />
+                      </button>
+                      {post.likesLength}
                     </div>
-                   
                   </div>
                 </section>
               ))}
             </section>
-      
             <section className="friendsSection">
-                {/* <div className="friendIcon">
-                  <h4 className="friendsText">Friends</h4><FaUserFriends/>
-                </div> */}
                 {userFriends.map((friend, index) => (
                   <div key={index}>
                     <Link to={`/profile/${friend._id}`}>{friend.username}</Link>

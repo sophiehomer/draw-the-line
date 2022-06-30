@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { QUERY_SINGLE_POST } from '../../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
-import { ADD_COMMENT_LIKE, DELETE_COMMENT } from '../../utils/mutations'
+import { ADD_COMMENT_LIKE } from '../../utils/mutations'
 import Header from '../Header/header'
 import { FaHeart } from 'react-icons/fa'
-import { Avatar, AvatarGroup } from "@chakra-ui/avatar"
+import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 
 import './singlePost.css';
@@ -25,7 +25,7 @@ function SinglePost() {
     const [addLike] = useMutation(LIKE_POST);
     const [addComment] = useMutation(ADD_COMMENT);
     const [deletePost] = useMutation(DELETE_POST)
-    const [deleteComment] = useMutation(DELETE_COMMENT)
+    // const [deleteComment] = useMutation(DELETE_COMMENT)
 
     const [formStateComment, setFormStateComment] = useState({
         commentBody: '',
@@ -65,77 +65,57 @@ function SinglePost() {
             <Header />
             <main id="single-post-page">
                 <section className='single-page-discussion-post'>
-                    {/* <div className="nameDateDiv">
-                        <p id="username-post">{userPost.username}</p>
-                        <p id="single-post-date">{userPost.createdAt}</p>
-                    </div> */}
-
                     <div className="avatarNameDateContainer">
-                    <div className="avatarContainer"> 
-                    <Avatar src="john-doe.png" name={userPost.username} />
-                    </div>
-                    <div className="nameDateContainer"> 
-                    <h2 id="username-post">{userPost.username}</h2> 
-                    <div className="dot"> 
-                    < BsDot />
-                    </div>
-                    <p className="postDateCreated">{userPost.createdAt}</p>
-                    </div>
-                  </div>
-                  <div className="singlePagetitleAndPost">
-                  <p id="single-post-userTitle-post">{userPost.postTitle}</p>
-                        <p id="postText"> {userPost.postText}</p>
-                  </div>
-                        <div id="likesAndCommments">
-                            <form id='comment-form' onSubmit={handleFormSubmitComment}>
-                                <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
-                                <button className='post-button' id='postBtnComment'>Comment</button>
-                                <div id='waringDivComment'></div>
-                                
-                                <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
-                               
-                            </form>
+                        <div className="avatarContainer"> 
+                            <Avatar src="john-doe.png" name={userPost.username} />
                         </div>
-                    </section>
-                    <section className='commentSection'>
+                        <div className="nameDateContainer"> 
+                            <h2 id="username-post">{userPost.username}</h2> 
+                                <div className="dot"> 
+                                    < BsDot />
+                                </div>
+                            <p className="postDateCreated">{userPost.createdAt}</p>
+                        </div>
+                    </div>
+                    <div className="singlePagetitleAndPost">
+                        <p id="single-post-userTitle-post">{userPost.postTitle}</p>
+                        <p id="postText"> {userPost.postText}</p>
+                    </div>
+                    <div id="likesAndCommments">
+                        <form id='comment-form' onSubmit={handleFormSubmitComment}>
+                            <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
+                            <button className='post-button' id='postBtnComment'>Comment</button>
+                            <div id='waringDivComment'></div>
+                            <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
+                        </form>
+                    </div>
+                </section>
+                <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
-                                <section className='comments-container' key={index} id={index}>
-                                    <div className="avatarNameDateContainer">
-                                        <div className="avatarContainer"> 
-                                            <Avatar src="john-doe.png" name={userPost.username} />
-                                        </div>
-                                        <div className="singleUsernameDate"> 
-                                        <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
-                                        <p className='commentDate'></p>
-                                        </div>
-                                      
-                                    </div>
-
-                                    {/* <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
-                                    <p className='commentDate'></p> */}
-
-                                  <div className="commentLikesContainer">
-                                  <p className='commentBody'>{comment.commentBody}</p>
-
-                                    {/* {comment.likesLength} */}
-                                    <div className='voteContainer'> 
-                                    <button  className='commentVoteBtn' onClick={() => {
-                                        addCommentLike({ variables: { commentId: comment._id } })
-                                        if (comment.banMeter >= 0.6) {
-                                            deleteComment({ variables: { commentId: comment._id } })
-                                            const deletedPost = document.getElementById(index);
-                                            deletedPost.remove();
-                                        }}}>
-                                        < FaHeart />
-                                    </button>
-                                    {comment.likesLength} 
-                                    </div>
-                                  
-                                    </div>
-                                </section>
+                         <section className='comments-container' key={index} id={index}>
+                            <div className="avatarNameDateContainer">
+                                <div className="avatarContainer"> 
+                                    <Avatar src="john-doe.png" name={userPost.username} />
+                                </div>
+                                <div className="singleUsernameDate"> 
+                                    <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
+                                    <p className='commentDate'></p>
+                                </div>                                    
+                             </div>
+                             <div className="commentLikesContainer">
+                                <p className='commentBody'>
+                                     {comment.commentBody}
+                                </p>
+                                <button  className='commentVoteBtn' onClick={() => {
+                                 addCommentLike({ variables: { commentId: comment._id } })
+                                 }}>
+                                    < FaHeart />
+                                </button>
+                                {comment.likesLength}
+                            </div>
+                         </section>
                             ))}
-                    </section>
-                            
+                 </section>       
             </main>
         </>
     )
