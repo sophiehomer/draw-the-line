@@ -14,22 +14,22 @@
 
 .friends {
 	font-size: 1.75em;
-    margin-right: 20.26%;
+    margin-right: 21.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
     color: #808080;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .profileName {
-    margin-left: 10.65%;
+    margin-left: 10%;
     margin-top: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     color: #808080;
 	font-size: 1.75em;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 
@@ -123,7 +123,7 @@
 .friendsSection {
     flex-basis:20%;
     height: 50%;
-    border-radius: 24px;
+    border-radius: 14px;
     padding-top: 1%;
     padding-left: 2%;
     padding-right: 2%; 

@@ -45,6 +45,9 @@ p#postText {
     padding-left: 6.6%;
 }
 
+.singleUsernameDate{
+    margin-left: 2%;
+}
 
 
 .comments-container {
@@ -75,8 +78,9 @@ p#postText {
 }
 
 .commentBody {
-    margin-top:2%;
-    padding-bottom:2%;
+    margin-left: 6.7%;
+    /* margin-top:2%;
+    padding-bottom:2%; */
 }
 
 #commentBody {
