@@ -9,6 +9,11 @@
 .logoKeepinTouch {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.keepInTouchText {
+  font-size: 1.15em;
 }
 
 .aboutLoginMain {

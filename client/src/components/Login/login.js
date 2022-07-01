@@ -43,7 +43,7 @@ const Login = () => {
     <>
     <div className="logoKeepinTouch">
     <h1 className="landingPageLogo">kit</h1>
-    <p>keep in touch</p>
+    <p className="keepInTouchText">keep in touch</p>
     </div>
     <main className="aboutLoginMain">
     <section className="aboutSection">
