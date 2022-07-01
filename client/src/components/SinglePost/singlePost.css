@@ -40,11 +40,12 @@ input#postText {
 p#postText {
      line-height: 1.7em;
      text-align: left;
-     color: gray;
+     color: #444446;
+
 }
 
 .singlePagetitleAndPost {
-    padding-left: 6.6%;
+    padding-left: 6.7%;
 }
 
 .singleUsernameDate{
@@ -72,7 +73,8 @@ p#postText {
 
 .commentSection {
     margin-top: 2%;
-    /* width: 90%; */
+    /* padding-left: 5%;
+    padding-right: 5%; */
 }
 
 .commentUsername, 
@@ -116,6 +118,7 @@ p#postText {
     border-radius: 24px;
     font-size: 1em;
     cursor: pointer;
+    font-weight: 300;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
@@ -128,7 +131,7 @@ p#postText {
 }
 
 #commentText {
-    width: 71%;
+    width: 71.5%;
     margin-left: 7%;
 }
 
@@ -140,7 +143,7 @@ p#postText {
     border: none;
     padding: 1%;
     margin-left: 1%;
-    margin-right: 2%;
+    margin-right: 1%;
     background-color: white;
     color: #89898A;
     border-radius: 50%;
