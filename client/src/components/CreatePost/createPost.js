@@ -1,10 +1,8 @@
 import Auth from '../../utils/auth';
-// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME_BASIC } from '../../utils/queries';
 import { ADD_POST } from '../../utils/mutations';
-// import Header from '../Header/header.js';
 
 // Style Import
 import './createPost.css';
@@ -13,11 +11,7 @@ function CreatePost() {
     // Get basic info
     const { data: basic } = useQuery(QUERY_ME_BASIC);
     const username = basic?.me.username || '';
-    // Get user's information
-    // const { data } = useQuery(QUERY_ME);
-    // const userPosts = data?.me.posts || [];
 
-    // const [deletePost] = useMutation(DELETE_POST)
     // set up state variables for comment section
     const [formState, setFormState] = useState({
         postTitle: '',
@@ -40,8 +34,6 @@ function CreatePost() {
         await addPost({
             variables: { ...formState },
         });
-        // setUsersPosts(userPosts)
-        // window.location.reload(false);
 
         if( window.location.toString().includes("heroku")) {
             console.log("hello")

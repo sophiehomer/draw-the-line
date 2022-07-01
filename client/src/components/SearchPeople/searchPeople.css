@@ -68,20 +68,14 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
-  #search-friend-btn:hover {
-    border: 1.5px solid white;
-    color: #4A4A4A;
-    background-color: white;
-  }
-
-#foundFriendDiv {
+#foundFriendContainer {
   background-color: rgb(255, 255, 255, .3);
   display: flex; 
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   border: none;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-top: 4%;
   padding: 2%;
   width: 30%;
@@ -89,14 +83,15 @@
 
 #foundFriend {
   color: #4A4A4A;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 #addFriendBTN {
-  background-color: rgb(255, 255, 255, .3);
+  background-color: rgb(255, 255, 255);
   color: #4A4A4A;
-  border: 1.5px solid white;
+  border: none;
+  /* border: 1.5px solid white; */
   border-radius: 24px;
   margin-left: 2%;
   padding: .55em 2.5em;
@@ -104,10 +99,4 @@
   font-size: 1em;
   cursor: pointer;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#addFriendBTN:hover {
-  border: 1.5px solid white;
-  color: #4A4A4A;
-  background-color: white;
 }

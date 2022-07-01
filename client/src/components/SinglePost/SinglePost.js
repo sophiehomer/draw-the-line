@@ -93,7 +93,7 @@ function SinglePost() {
                 <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
                          <section className='comments-container' key={index} id={index}>
-                            <div className="avatarNameDateContainer">
+                            <section className="avatarNameDateContainer">
                                 <div className="avatarContainer"> 
                                     <Avatar src="john-doe.png" name={userPost.username} />
                                 </div>
@@ -101,18 +101,29 @@ function SinglePost() {
                                     <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
                                     <p className='commentDate'></p>
                                 </div>                                    
-                             </div>
-                             <div className="commentLikesContainer">
-                                <p className='commentBody'>
-                                     {comment.commentBody}
-                                </p>
-                                <button  className='commentVoteBtn' onClick={() => {
-                                 addCommentLike({ variables: { commentId: comment._id } })
-                                 }}>
-                                    < FaHeart />
-                                </button>
-                                {comment.likesLength}
-                            </div>
+                             </section>
+                             {/* <div className="commentLikesContainer">
+                             <p className='commentBody'>{comment.commentBody}</p>
+                                <div className="voteBtnLikes">
+                                    <button  className='commentVoteBtn' onClick={() => {
+                                     addCommentLike({ variables: { commentId: comment._id } })
+                                     }}>
+                                     < FaHeart />
+                                    </button>
+                                    {comment.likesLength}
+                                </div>
+                             </div> */}
+
+                    <div className="postAndLikes"> 
+                      <p id="commentText">{comment.commentBody}</p>
+                      <button  className='commentVoteBtn' onClick={() => {
+                                     addCommentLike({ variables: { commentId: comment._id } })
+                                     }}>
+                                     < FaHeart />
+                                    </button>
+                                    {comment.likesLength}
+                    </div>
+                                
                          </section>
                             ))}
                  </section>       

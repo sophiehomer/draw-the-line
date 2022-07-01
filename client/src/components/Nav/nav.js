@@ -23,10 +23,6 @@ function Nav() {
         <Link to="/search-people" className="navLink">
             Search
         </Link>
-        {/* <button onClick={() => Auth.logout()} className="logoutButton">
-            Logout
-          </button> */}
-        
     </nav>
   </>
  )
