@@ -98,10 +98,10 @@ a {
 
 .welcomeText {
     margin-top: 4%;
-    margin-left: 20%;
+    margin-left: 17%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    color: #4A4A4A;
+    color: #808080;
 	font-size: 1.5em;
     font-weight: 400;
     width: 100%;

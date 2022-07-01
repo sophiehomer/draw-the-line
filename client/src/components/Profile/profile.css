@@ -14,12 +14,12 @@
 
 .friends {
 	font-size: 1.75em;
-    margin-right: 21.5%;
+    margin-right: 24%;
     display: flex;
     flex-direction: row;
     align-items: center;
     color: #808080;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .profileName {
@@ -29,7 +29,7 @@
     animation-delay: .2s;
     color: #808080;
 	font-size: 1.75em;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 
@@ -113,7 +113,8 @@
 
 .friendsSection a {
     color: #4A4A4A;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-weight: 300;
 }
 
 .friendsSection a:hover{

@@ -4,7 +4,7 @@ import { QUERY_USER } from "../../utils/queries";
 import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
-import { FaUserFriends } from "react-icons/fa";
+// import { FaUserFriends } from "react-icons/fa";
 import { FaHeart } from 'react-icons/fa'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
@@ -29,7 +29,7 @@ function Profile() {
           <Header />
           <div className="nameAndFriends"> 
             <h1 className="profileName">{userInfo.username}</h1>
-            <h2 className="friends">Friends <FaUserFriends/> </h2> 
+            <h2 className="friends">Friends </h2> 
           </div>
           <main className="profilePage">
             <section className="postsSection">
