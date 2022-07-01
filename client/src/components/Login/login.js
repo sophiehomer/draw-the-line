@@ -41,19 +41,6 @@ const Login = () => {
   };
   return (
     <>
-    <div className="logoKeepinTouch">
-    <h1 className="landingPageLogo">kit</h1>
-    <p className="keepInTouchText">keep in touch</p>
-    </div>
-    <main className="aboutLoginMain">
-    <section className="aboutSection">
-    {/* <h1 className="debateText">Let's debate</h1> */}
-    {/* <p className="about">soapbox is a social community platform. with a zero tolerance for bullying or cursing! 
-        to engage in thought provoking debates with one another.
-    </p> */}
-
-</section>
-
     <section id="login-section">
        <form id="login-form" onSubmit={handleFormSubmit}>
           <div className="login">
@@ -81,7 +68,6 @@ const Login = () => {
           </div>
        </form>
     </section>
-    </main>
     </>
   );
 };

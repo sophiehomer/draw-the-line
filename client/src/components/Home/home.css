@@ -3,13 +3,15 @@
     margin: 0;
     box-shadow: border-box;
 }
+/* ------------------------- LOGIN ------------------------- */
 
 .loginContainer {
+    padding-top: 15%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
 }
+
 
 /* ------------------------- LOGIN BUTTON ------------------------- */
 .loginButton {
@@ -31,13 +33,6 @@ a {
     font-weight: normal;
 }
 
-/* ------------------------- TEXT ANIMATION ------------------------- */
-@keyframes line-anim{
-    to{
-        stroke-dashoffset: 0;
-    }
-}
-
 /* ------------------------- FADE-IN-UP ANIMATION ------------------------- */  
 @keyframes fade-in-up {
     from {
@@ -49,36 +44,6 @@ a {
         opacity: 1
     }
   }
-
-/* ------------------------- ABOUT ------------------------- */
-.aboutSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 50%;
-}
-
-/* .debateText {
-    text-align: center;
-    color: #4A4A4A;
-    opacity: 0;
-    animation: fade-in-up ease 0.4s forwards;  
-    animation-delay: 1.3s;
-    font-size: 22px;
-    line-height: 2.7;
-    padding-top: 5%;
-} */
-
-.about {
-    text-align: center;
-    color: #4A4A4A;
-    opacity: 0;
-    animation: fade-in-up ease 0.4s forwards;  
-    animation-delay: .2s;
-    font-size: 18px;
-    line-height: 1.7;
-    width: 100%;
-}
         
 /* LOGGED IN VIEW */
 
@@ -168,8 +133,6 @@ button:focus {
     font-size: 1em;
     margin:0;
     padding: 0;
-    /* font-weight: 400; */
-    /* height: 50% */
 }
 
 #userTitle-post a {

@@ -70,9 +70,9 @@ function Home() {
         </>
       ) : (
         <>
-          <div className="loginContainer">
+          <main className="loginContainer">
             <Login />
-          </div>
+          </main>
         </>
       )}
     </>
