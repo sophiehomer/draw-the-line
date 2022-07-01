@@ -4,7 +4,6 @@ import { LOGIN_USER } from '../../utils/mutations'
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth'
 import "./login.css"
-// import logoImage from '../../assets/images/logo.png'
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -42,21 +41,22 @@ const Login = () => {
   };
   return (
     <>
+    <div className="logoKeepinTouch">
     <h1 className="landingPageLogo">kit</h1>
-    {/* <img src={ logoImage } className="logoImg" style={{ width: "10%" }} alt="logo" /> */}
+    <p>keep in touch</p>
+    </div>
     <main className="aboutLoginMain">
     <section className="aboutSection">
     {/* <h1 className="debateText">Let's debate</h1> */}
     {/* <p className="about">soapbox is a social community platform. with a zero tolerance for bullying or cursing! 
         to engage in thought provoking debates with one another.
     </p> */}
-    {/* <AiOutlineDown className="downArrow" size={25} /> */}
+
 </section>
 
     <section id="login-section">
        <form id="login-form" onSubmit={handleFormSubmit}>
           <div className="login">
-            {/* <label htmlFor="chk" aria-hidden="true" className="loginLabel"></label> */}
               <input
                 placeholder="Email"
                 className="loginEmail"

@@ -102,28 +102,15 @@ function SinglePost() {
                                     <p className='commentDate'></p>
                                 </div>                                    
                              </section>
-                             {/* <div className="commentLikesContainer">
-                             <p className='commentBody'>{comment.commentBody}</p>
-                                <div className="voteBtnLikes">
-                                    <button  className='commentVoteBtn' onClick={() => {
-                                     addCommentLike({ variables: { commentId: comment._id } })
-                                     }}>
-                                     < FaHeart />
-                                    </button>
-                                    {comment.likesLength}
-                                </div>
-                             </div> */}
-
-                    <div className="postAndLikes"> 
-                      <p id="commentText">{comment.commentBody}</p>
-                      <button  className='commentVoteBtn' onClick={() => {
-                                     addCommentLike({ variables: { commentId: comment._id } })
-                                     }}>
-                                     < FaHeart />
-                                    </button>
-                                    {comment.likesLength}
-                    </div>
-                                
+                            <div className="postAndLikes"> 
+                                <p id="commentText">{comment.commentBody}</p>
+                                <button  className='commentVoteBtn' onClick={() => {
+                                    addCommentLike({ variables: { commentId: comment._id } })
+                                    }}>
+                                    < FaHeart />
+                                </button>
+                                {comment.likesLength}
+                            </div>    
                          </section>
                             ))}
                  </section>       

@@ -1,13 +1,16 @@
 #single-post-page{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
     opacity: 0;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     margin-top: 4%;
-    padding: 2%;
+    /* padding: 2%; */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
 }
 
 .nameDateDiv {
@@ -69,6 +72,7 @@ p#postText {
 
 .commentSection {
     margin-top: 2%;
+    /* width: 90%; */
 }
 
 .commentUsername, 
@@ -98,7 +102,7 @@ p#postText {
     background-color: rgb(255, 255, 255, .3);
     text-align: center;
     padding: 3%;
-    width: 80%;
+    /* width: 80%; */
     color: #4A4A4A;
 }
 

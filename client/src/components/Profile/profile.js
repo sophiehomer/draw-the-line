@@ -37,7 +37,7 @@ function Profile() {
                 <section className="profile-discussion-post" key={index}>
                   <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
-                      <Avatar src="john-doe.png" name={post.username} />
+                      <Avatar src="john-doe.png" name={userInfo.username} />
                     </div>
                     <div className="nameDateContainer"> 
                       <h3 id="username-post">{userInfo.username}</h3>
