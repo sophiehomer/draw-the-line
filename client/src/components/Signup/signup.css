@@ -55,8 +55,7 @@ input:-webkit-autofill:active  {
 }
 
 ::placeholder {
-  color: #4A4A4A;
-}
+  color: rgb(170, 169, 169);}
 
 .signupText {
   margin-bottom: 15px;

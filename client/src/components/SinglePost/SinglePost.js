@@ -86,8 +86,12 @@ function SinglePost() {
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
                             <button className='post-button' id='postBtnComment'>Comment</button>
                             <div id='waringDivComment'></div>
-                            <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
+                            {/* <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength} */}
                         </form>
+                        <div className='voteBtnClickableContainer'>
+                        <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
+                        </div>
+
                     </div>
                 </section>
                 <section className='commentSection'>
