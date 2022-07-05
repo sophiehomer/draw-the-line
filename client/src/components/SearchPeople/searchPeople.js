@@ -25,7 +25,7 @@ function SearchPeople() {
      >
      <div className="searchSection">
       <div className="searchIconContainer"> 
-        <input id="search-bar" type="text" name="search-bar" placeholder="Search friends"/> <BsSearch size={22} />
+      <BsSearch size={22} /> <input id="search-bar" type="text" name="search-bar" placeholder="Search friends"/> 
       </div>
       <button id="search-friend-btn" type="submit">
        Search
