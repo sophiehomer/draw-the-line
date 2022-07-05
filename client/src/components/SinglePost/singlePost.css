@@ -38,7 +38,7 @@ input#postText {
 }
 
 p#postText {
-     line-height: 1.7em;
+     /* line-height: 1.7em; */
      text-align: left;
      color: #444446;
 
