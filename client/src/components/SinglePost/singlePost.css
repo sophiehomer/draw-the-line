@@ -32,9 +32,13 @@
 
 input#postText {
     text-align: left;
-    padding: 1%;
-    padding-left:2%;
+    margin-left: -1%;
+    /* background-color: orange; */
+    /* border: 1.5px solid rgb(170, 169, 169); */
+    border: none;
     outline: none;
+    width: 85%;
+    
 }
 
 p#postText {

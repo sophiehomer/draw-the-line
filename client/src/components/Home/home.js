@@ -28,7 +28,7 @@ function Home() {
           <Header />
           <main id="loggedInView">
             <section class="welcomeandPostSection">
-              <h1 className="welcomeText">Welcome, {username}!</h1>
+              <h1 className="welcomeText">Hi, {username}!</h1>
               <div className="createPostDiv">
                 <CreatePost />
               </div>
