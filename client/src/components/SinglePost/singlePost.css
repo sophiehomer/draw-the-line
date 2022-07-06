@@ -179,15 +179,14 @@ p#postText {
     padding: 1%;
     margin-left: 1%;
     margin-right: 1%;
-    background-color: white;
-    /* color: #89898A; */
-    color: #cc1a1d;
+    background: white;
+    color: #f599c1;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .commentVoteBtn:hover {
-    color: #fac2da;
+    color: #f877af;
 }
 
 .voteBtnClickable {
@@ -198,13 +197,13 @@ p#postText {
   margin-left: 1%;
   margin-right: 35%;
   display:flex;
-  background-color: white;
-  color: #89898A;
+  background: white;
+  color: #f599c1;
   border-radius: 50px;
   cursor: pointer;
 }
 
 .voteBtnClickable:hover {
-    color: #fac2da;
+    color: #f877af;
 }
 

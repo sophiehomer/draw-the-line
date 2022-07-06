@@ -23,6 +23,10 @@ function SearchPeople() {
       console.log(user)
      }}
      >
+
+      <p className="searchInstructions">
+      Search and add friends. Please note the search is case-sensitive.
+      </p>
      <div className="searchSection">
       <div className="searchIconContainer"> 
       <BsSearch size={22} /> <input id="search-bar" type="text" name="search-bar" placeholder="Search friends"/> 
