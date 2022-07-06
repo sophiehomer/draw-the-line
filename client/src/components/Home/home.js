@@ -23,6 +23,9 @@ function Home() {
   const loggedIn = Auth.loggedIn();
   return (
     <>
+    {/* <div>
+      <img src={logo3} className='logoImg' alt='kit'/>
+    </div> */}
       {loggedIn ? (
         <>
           <Header />
