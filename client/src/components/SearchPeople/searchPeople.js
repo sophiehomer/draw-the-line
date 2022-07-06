@@ -31,7 +31,7 @@ function SearchPeople() {
        Search
       </button>
      </div>
-     {data && data.userByName === null && <p>User does not exist</p>}
+     {data && data.userByName === null && <p className="searchWarning">It appears this user doesn't exist. Note the search is case-sensitive. Please check to make sure the correct username was entered.</p>}
     </form>
     {data && data.userByName !== null && (
      <>
