@@ -42,7 +42,7 @@ input#postText {
 }
 
 p#postText {
-     /* line-height: 1.7em; */
+     line-height: 1.3em;
      text-align: left;
      color: #444446;
 
@@ -72,7 +72,7 @@ p#postText {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /* margin-top: 4%; */
+    padding: .25%;
     background-color: rgb(255, 255, 255);
     border-radius: 24px;
     width: 72%;
@@ -83,7 +83,6 @@ p#postText {
 
 #Comment {
     background-color: transparent;
-    /* color: #4A4A4A; */
     color: #999498;
     font-weight: 300;
     border: 1.5px solid #dad9d9;
@@ -97,8 +96,6 @@ p#postText {
 
 .commentSection {
     margin-top: 2%;
-    /* padding-left: 5%;
-    padding-right: 5%; */
 }
 
 .commentUsername, 
@@ -106,16 +103,10 @@ p#postText {
     color: #818181;
 }
 
-/* .commentBody {
-    margin-left: 6.7%;
-  
-} */
-
 #commentBody {
     width: 77.75%;
     padding: 1%;
     padding-left: 2%;
-    /* margin-left: 6.8%; */
     font-size: 1em;
     border: none;
     outline: none;
@@ -124,7 +115,6 @@ p#postText {
     font-size: 1em;
     padding: 1.5%;
     padding-left: 3.2%;
-    /* width: 90%; */
 }
 
 #commentBody::placeholder {
@@ -135,17 +125,14 @@ p#postText {
     background-color: rgb(255, 255, 255, .3);
     text-align: center;
     padding: 3%;
-    /* width: 80%; */
     color: #4A4A4A;
 }
 
 .post-button {
-    margin-left: 2%;
-    margin-right: .55%;
+    margin-right: .2%;
     background-color: rgb(255, 255, 255);
     color: #999498;
-    /* border: none; */
-    padding: .3em 1.5em;
+    padding: .38em 1.5em;
     border: 1.5px solid #dad9d9;
     border-radius: 24px;
     font-size: 1em;
