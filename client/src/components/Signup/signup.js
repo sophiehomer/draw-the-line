@@ -4,6 +4,8 @@ import { ADD_USER } from '../../utils/mutations';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 import './signup.css';
+import Header from "../Header/header.js";
+
 // import{useState} from 'react';
 
 function Signup() {
@@ -46,6 +48,7 @@ function Signup() {
     return (
         
         <>
+        <Header />
       <main className="signupPage"> 
         <section id="sign-up-section">
             <form id="signup-form" onSubmit={handleFormSubmit}>
