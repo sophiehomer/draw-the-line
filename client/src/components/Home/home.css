@@ -145,7 +145,7 @@ button:focus {
     display: flex;
     flex-direction:row;
     color: gray;
-    margin: 0%;
+    margin-left: -.5%;
     padding: 0%;
     font-size: 1em;
     font-weight: 300;

@@ -79,7 +79,7 @@ function SinglePost() {
                     </div>
                     <div className="singlePagetitleAndPost">
                         <p id="single-post-userTitle-post">{userPost.postTitle}</p>
-                        <p id="postText"> {userPost.postText}</p>
+                        <p id="singlePagePostText"> {userPost.postText}</p>
                     </div>
                     <div id="likesAndCommments">
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>

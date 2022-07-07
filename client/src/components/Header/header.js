@@ -3,7 +3,7 @@ import './header.css'
 import Nav from '../Nav/nav.js'
 // import { Link } from 'react-router-dom'
 import Auth from '../../utils/auth'
-import logo from '../../assets/images/lt_logo_caps.png'
+import logo from '../../assets/images/logo.png'
 
 const Header = () => {
   return (
