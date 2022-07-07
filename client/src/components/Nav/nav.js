@@ -24,6 +24,8 @@ function Nav() {
             Search
         </Link>
     </nav>
+ 
+
   </>
  )
 }

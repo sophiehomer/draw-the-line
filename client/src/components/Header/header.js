@@ -12,11 +12,14 @@ const Header = () => {
           <h1 className="logo">kit</h1>
         </Link> */}
 
-      <img src={logo} className='logoImg' alt='kit'/>
-        <Nav/>
-        <button onClick={() => Auth.logout()} className="logoutButton">
-            Logout
-          </button>
+       <img src={logo} className='logoImg' alt='kit'/>
+        { Auth.loggedIn() &&
+        <div className='logoutContainer'> 
+         <Nav/>
+            <button onClick={() => Auth.logout()} className="logoutButton">
+             Logout
+            </button>
+        </div>}
          
     </header>
   )

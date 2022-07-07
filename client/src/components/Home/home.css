@@ -7,9 +7,7 @@
 
 .logoImg {
     max-width: 5%;
-    /* margin-left: 6%;
-    margin-top: 4%; */
-    /* color: white; */
+    margin-right: 30%;
 }
 /* ------------------------- LOGIN ------------------------- */
 
@@ -230,14 +228,6 @@ align-items: center;
     flex-direction: row;
     align-items: center;
 }
-
-#postText {
-    width: 85%;
-    margin-right: 5%;
-}
-
-
-
 
 /* ------------------------------ MEDIA QUERIES ----------------------------- */
 @media only screen and (max-width: 600px) {

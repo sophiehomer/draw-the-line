@@ -9,6 +9,7 @@ import { FaHeart } from 'react-icons/fa'
 import CreatePost from '../CreatePost/createPost'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
+// import logo from '../../assets/images/lt_logo_caps.png'
 
 
 function Home() {
@@ -23,12 +24,11 @@ function Home() {
   const loggedIn = Auth.loggedIn();
   return (
     <>
-    {/* <div>
-      <img src={logo3} className='logoImg' alt='kit'/>
-    </div> */}
+      {/* {!loggedIn && <img src={logo} className='logo' alt='kit'/>}  */}
+      <Header />
+
       {loggedIn ? (
         <>
-          <Header />
           <main id="loggedInView">
             <section class="welcomeandPostSection">
               <h1 className="welcomeText">Hi, {username}!</h1>
