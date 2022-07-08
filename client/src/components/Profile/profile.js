@@ -29,7 +29,7 @@ function Profile() {
           <Header />
           <div className="nameAndFriends"> 
             <h1 className="profileName">{userInfo.username}</h1>
-            <h2 className="friends">Friends </h2> 
+            {/* <h2 className="friends">Friends </h2>  */}
           </div>
           <main className="profilePage">
             <section className="postsSection">
@@ -65,6 +65,7 @@ function Profile() {
               ))}
             </section>
             <section className="friendsSection">
+              <h2 className="friends"> Friends </h2>
                 {userFriends.map((friend, index) => (
                   <div className="profileFriendAvatar" key={index}>
                     <Link to={`/profile/${friend._id}`}> 

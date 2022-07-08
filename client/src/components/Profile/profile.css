@@ -23,7 +23,7 @@
 }
 
 .friends {
-	font-size: 1.75em;
+	font-size: 1em;
     margin-right: 21.5%;
     display: flex;
     flex-direction: row;
@@ -37,7 +37,6 @@
 .profileName {
     margin-left: 12.23%;
     margin-top: 2%;
-    /* animation: fadeinup ease 0.4s forwards;   */
     animation-delay: .2s;
     color: #808080;
 	font-size: 1.75em;
@@ -49,25 +48,11 @@
 .postsAndFriends {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
 }
 
 .profTitlePost {
-    /* background-color: orange; */
     margin-left: 8%;
 }
-
-/* ----------------------------------- !! ----------------------------------- */
-/* .profilePostTitle {
-    margin-top: 2%;
-    margin-left: 68%;
-    padding-bottom: 1%;
-    animation: fadeinup ease 0.4s forwards;  
-    animation-delay: .2s;
-    color: #808080;
-    color: #8850f7;
-	font-size: 1.5em;
-} */
 
 .postsSection {
     display: flex;
@@ -157,7 +142,7 @@
 }
 
 .friendsSection {
-    flex-basis:15%;
+    flex-basis: 18%;
     height: 50%;
     border-radius: 14px;
     padding-top: 1%;

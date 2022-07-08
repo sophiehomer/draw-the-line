@@ -7,9 +7,11 @@ justify-content: space-between;
 
 
 .navLink {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #808080;
+  font-size: 1em;
+  font-weight: 450;
+  margin-top: 2%;
+  /* color: #808080; */
+  color: white;
 }
 
 .navLink:hover {
@@ -18,9 +20,12 @@ justify-content: space-between;
 
 
 .logoutButton {
-  background-color: transparent;
-  color: #808080;
-  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: .5em 1em;
+  border-radius: 24px;
+  /* color: #808080; */
+  color: white;
+  font-size: 1em;
   font-weight: 300;
   border: none;
   cursor: pointer;
