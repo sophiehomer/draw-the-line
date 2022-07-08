@@ -14,12 +14,17 @@ const Header = () => {
 
        <img src={logo} className='logoImg' alt='kit'/>
         { Auth.loggedIn() &&
-        <div className='logoutContainer'> 
+        // <div className='logoutContainer'> 
          <Nav/>
-            <button onClick={() => Auth.logout()} className="logoutButton">
-             Logout
-            </button>
-        </div>}
+          
+        // </div>
+        }
+
+        { Auth.loggedIn() && 
+          <button onClick={() => Auth.logout()} className="logoutButton">
+            Logout
+          </button>
+        }
          
     </header>
   )

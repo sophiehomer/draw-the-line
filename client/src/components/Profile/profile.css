@@ -19,7 +19,7 @@
 
 .friends {
 	font-size: 1.75em;
-    margin-right: 24%;
+    margin-right: 21.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,7 +30,7 @@
 }
 
 .profileName {
-    margin-left: 10%;
+    margin-left: 12.23%;
     margin-top: 2%;
     /* animation: fadeinup ease 0.4s forwards;   */
     animation-delay: .2s;
@@ -130,7 +130,7 @@
 }
 
 .friendsSection {
-    flex-basis:20%;
+    flex-basis:15%;
     height: 50%;
     border-radius: 14px;
     padding-top: 1%;

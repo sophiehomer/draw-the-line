@@ -11,8 +11,8 @@
 
 input.post-title {
     width: 30%;
-    padding: 1.55%;
-    padding-left: 2.5%;
+    padding: 1.45%;
+    padding-left: 2.4%;
     border: none;
     border-radius: 24px;
     font-size: 1em;
@@ -31,7 +31,7 @@ input.post-title::placeholder {
     align-items: center;
     margin-top: 1.5%;
     border-radius: 24px;
-    padding: .25em .25em;
+    padding: .25em .35em;
     background-color: rgb(255, 255, 255);
 }
 
