@@ -28,7 +28,7 @@ function Profile() {
         <>
           <Header />
           <div className="nameAndFriends"> 
-            <h1 className="profileName">{userInfo.username}</h1>
+            {/* <h1 className="profileName">{userInfo.username}</h1> */}
             {/* <h2 className="friends">Friends </h2>  */}
           </div>
           <main className="profilePage">
