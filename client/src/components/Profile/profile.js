@@ -66,8 +66,12 @@ function Profile() {
             </section>
             <section className="friendsSection">
                 {userFriends.map((friend, index) => (
-                  <div key={index}>
-                    <Link to={`/profile/${friend._id}`}>{friend.username}</Link>
+                  <div className="profileFriendAvatar" key={index}>
+                    <Link to={`/profile/${friend._id}`}> 
+                      <div className="profileAvatarContainer"> 
+                        <Avatar src="john-doe.png" name={friend.username} />
+                      </div>{friend.username}
+                    </Link>
                   </div>
                 ))}
             </section>
