@@ -153,6 +153,7 @@ button:focus {
     color: gray;
     padding: 0%;
     font-size: 1.1em;
+    font-style: normal;
     letter-spacing: .02em;
     font-weight: 300;
 }

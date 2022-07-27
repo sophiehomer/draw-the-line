@@ -7,9 +7,12 @@
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     margin-top: 4%;
-    padding-left: 10%;
-    padding-right: 10%;
+    /* padding-left: 10%;
+    padding-right: 10%; */
+    margin: auto;
+    width: 80%;
     padding-bottom: 5%;
+    /* background-color: blue; */
 }
 
 .nameDateDiv {
@@ -71,7 +74,6 @@ p#postText {
     padding-left: 3%;
     padding-bottom:2%;
     margin-bottom: 2%;
-    width: 78%;
 }
 
 #comment-form {
@@ -128,7 +130,7 @@ p#postText {
     text-align: center;
     padding: 3%;
     color: #4A4A4A;
-    width: 75%;
+    /* width: 100%; */
 }
 
 .post-button {
