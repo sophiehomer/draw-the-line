@@ -39,7 +39,7 @@
   padding-left: 4%;
   width: 70%;
   justify-content: center;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   font-size: 1em;
   letter-spacing: .02em;
   border: 1.5px solid white;
@@ -74,12 +74,12 @@ input:-webkit-autofill:active  {
 }
 
 #signup-button {
-  margin-top: 5%;
+  margin-top: 10%;
   color: #444446;
   background-color: rgb(255, 255, 255, .3);
   border: 1.5px solid white;
   border-radius: 24px;  
-  padding: .5em 6.5em;
+  padding: .5em 6.55em;
   font-size: 1em;
   letter-spacing: .02em;
   cursor: pointer;

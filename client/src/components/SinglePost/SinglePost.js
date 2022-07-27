@@ -8,8 +8,8 @@ import Header from '../Header/header'
 import { FaHeart } from 'react-icons/fa'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
-
 import './singlePost.css';
+
 
 function SinglePost() {
     const { id: postId } = useParams()
@@ -52,12 +52,15 @@ function SinglePost() {
 
     // Like click function
     function likeClick() {
-        addLike({ variables: { postId: userPost._id } })
-        if (userPost.banMeter >= 0.6) {
-            deletePost({ variables: { postId: userPost._id } })
-            const deletedPost = document.getElementById('single-post-page');
-            deletedPost.remove();
-        }
+        console.log('hello')
+            addLike({ variables: { postId: userPost._id } })
+            if (userPost.banMeter >= 0.6) {
+                deletePost({ variables: { postId: userPost._id } })
+                const deletedPost = document.getElementById('single-post-page');
+                deletedPost.remove();
+            }
+       
+       
     }
 
     return (
@@ -86,28 +89,20 @@ function SinglePost() {
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
                             <button className='post-button' id='postBtnComment'>Comment</button>
                             <div id='waringDivComment'></div>
-                            {/* <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength} */}
                         </form>
-                        {/* <div className='voteBtnClickableContainer'> */}
                         <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
-                        {/* </div> */}
 
                     </div>
                 </section>
                 <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
                          <section className='comments-container' key={index} id={index}>
-                            {/* <section className="avatarNameDateContainer"> */}
-                                {/* <div className="avatarContainer"> 
-                                    <Avatar src="john-doe.png" name={userPost.username} />
-                                </div> */}
                                 <div className="singleUsernameDate"> 
                                     <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
                                     <p className='commentDate'></p>
-                                </div>                                    
-                             {/* </section> */}
+                                </div> 
+                                <p id="commentText">{comment.commentBody}</p>                                   
                             <div className="postAndLikes"> 
-                                <p id="commentText">{comment.commentBody}</p>
                                 <button  className='commentVoteBtn' onClick={() => {
                                     addCommentLike({ variables: { commentId: comment._id } })
                                     }}>
