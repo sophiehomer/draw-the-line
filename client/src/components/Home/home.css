@@ -101,7 +101,7 @@ a {
     padding: 2%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    width: 64%;
+    width: 59%;
 }
 
 .discussion-post:last-child {
@@ -110,7 +110,8 @@ a {
 
 .postDateCreated {
     color: gray !important;
-    font-size: 1em !important;
+    font-size: 1em;
+    margin-top: .5%;
     letter-spacing: .02em;
 }
 
@@ -137,7 +138,7 @@ button:focus {
 
 #username-post {
     color: #444446;
-    font-size: 1em;
+    font-size: 1.2em;
     letter-spacing: .02em;
     margin:0;
     padding: 0;
@@ -147,9 +148,8 @@ button:focus {
     display: flex;
     flex-direction:row;
     color: gray;
-    margin-left: -.5%;
     padding: 0%;
-    font-size: 1em;
+    font-size: 1.1em;
     letter-spacing: .02em;
     font-weight: 300;
 }
@@ -180,7 +180,7 @@ button:focus {
     border: none;
     border-radius: 50%;
     margin-right: 1%;
-    margin-left: 2%;
+    margin-top: 2%;
     padding: 1.2%;
     background: white;
     color: #f599c1;
@@ -220,6 +220,7 @@ align-items: center;
 }
 
 .dot {
+    margin-top: .5%;
     font-size: .85em;
     color: gray;
     display: flex;
@@ -230,7 +231,8 @@ align-items: center;
 .postAndLikes {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
+    color: gray;
 }
 
 /* ------------------------------ MEDIA QUERIES ----------------------------- */

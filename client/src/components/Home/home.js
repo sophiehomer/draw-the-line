@@ -58,8 +58,8 @@ function Home() {
                         {post.postTitle}
                       </Link>
                     </h3>
-                    <div className="postAndLikes"> 
                       <p id="postText">{post.postText}</p>
+                        <div className="postAndLikes"> 
                         <button className="voteBtn">
                           <FaHeart />
                         </button>

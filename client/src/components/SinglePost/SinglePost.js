@@ -88,9 +88,9 @@ function SinglePost() {
                             <div id='waringDivComment'></div>
                             {/* <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength} */}
                         </form>
-                        <div className='voteBtnClickableContainer'>
+                        {/* <div className='voteBtnClickableContainer'> */}
                         <button className='voteBtnClickable' onClick={likeClick}><FaHeart /></button>{userPost.likesLength}
-                        </div>
+                        {/* </div> */}
 
                     </div>
                 </section>
