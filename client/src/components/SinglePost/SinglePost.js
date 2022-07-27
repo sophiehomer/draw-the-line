@@ -97,15 +97,15 @@ function SinglePost() {
                 <section className='commentSection'>
                         {userComments && userComments.map((comment, index) => (
                          <section className='comments-container' key={index} id={index}>
-                            <section className="avatarNameDateContainer">
-                                <div className="avatarContainer"> 
+                            {/* <section className="avatarNameDateContainer"> */}
+                                {/* <div className="avatarContainer"> 
                                     <Avatar src="john-doe.png" name={userPost.username} />
-                                </div>
+                                </div> */}
                                 <div className="singleUsernameDate"> 
                                     <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
                                     <p className='commentDate'></p>
                                 </div>                                    
-                             </section>
+                             {/* </section> */}
                             <div className="postAndLikes"> 
                                 <p id="commentText">{comment.commentBody}</p>
                                 <button  className='commentVoteBtn' onClick={() => {

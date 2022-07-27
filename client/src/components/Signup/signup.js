@@ -82,7 +82,7 @@ function Signup() {
                     />
                      {error && <div className="error">Sign up failed</div>}
                     <button id="signup-button" type="submit" value="signup">Sign up</button>
-                    <p className="loginLinkText">Have an account? <br></br><Link to="/" className="link">Login here.</Link></p>
+                    <p className="loginLinkText">Have an account?<Link to="/" className="link"> <br></br>Login here.</Link></p>
                 </div>
             </form>
         </section>

@@ -15,9 +15,6 @@ function SearchPeople() {
   <>
    <Header />
    <main className="search-friend-section">
-   {/* <p className="searchInstructions">
-            Search and add friends
-      </p> */}
     <form
      id="search-friend-form" onSubmit={async (e) => {e.preventDefault()
       const inquiryUser = await document.getElementById('search-bar').value
@@ -38,8 +35,7 @@ function SearchPeople() {
             *Please note the search is case-sensitive*
       </p>
      {data && data.userByName === null && <p className="searchWarning">It appears this user doesn't exist. Note the search is case-sensitive. Please check to make sure the correct username was entered.</p>}
-    </form>
-    {data && data.userByName !== null && (
+     {data && data.userByName !== null && (
      <>
       <div id="foundFriendContainer">
        <p id="foundFriend">{data.userByName.username}</p>
@@ -57,8 +53,26 @@ function SearchPeople() {
       </div>
      </>
     )}
+    </form>
+    {/* {data && data.userByName !== null && (
+     <>
+      <div id="foundFriendContainer">
+       <p id="foundFriend">{data.userByName.username}</p>
+       <button id="addFriendBTN" onClick={() => { try {
+        addFriend({ variables: { friendId: data.userByName._id } })
+        alert('friend has been added!')
+       } catch (e) {
+        console.log(e)
+        alert('You are already friends')
+       }
+       }}
+       >
+        Add Friend
+       </button>
+      </div>
+     </>
+    )} */}
    </main>
-   {/* <div></div> */}
   </>
  )
 }

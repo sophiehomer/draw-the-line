@@ -27,10 +27,6 @@ function Profile() {
       {loggedIn ? (
         <>
           <Header />
-          <div className="nameAndFriends"> 
-            {/* <h1 className="profileName">{userInfo.username}</h1> */}
-            {/* <h2 className="friends">Friends </h2>  */}
-          </div>
           <main className="profilePage">
             <section className="postsSection">
               {userPosts.map((post, index) => (

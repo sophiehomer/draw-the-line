@@ -24,7 +24,7 @@
 
 .friends {
 	font-size: 1.2em;
-    /* margin-right: 21.5%; */
+    margin-right: 76%;
     padding-bottom: 3%;
     display: flex;
     flex-direction: row;
@@ -86,7 +86,7 @@
 }
 
 .profile-discussion-post {
-    margin-left: 8%;
+    /* margin-left: 8%; */
     display: flex;
     flex-basis: 50%;
     flex-wrap: wrap;
@@ -100,7 +100,7 @@
     padding: 4%;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    width: 100%;
+    width: 110%;
 }
 
 .profile-discussion-post:last-child {
@@ -155,12 +155,6 @@
 .friendsSection {
     flex-basis: 18%;
     height: 50%;
-    border-radius: 14px;
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-right: 2%; 
-    padding-bottom:1%;
-    background-color: rgb(255, 255, 255, .3);
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     line-height: 1.7em;

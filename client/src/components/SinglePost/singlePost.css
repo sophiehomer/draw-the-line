@@ -26,9 +26,9 @@
 #single-post-userTitle-post {
     display: flex;
     margin-left: -.2%;
-    font-size: 1.5em;
+    font-size: 1.2em;
     letter-spacing: .02em;
-    /* margin-bottom: 1.5%; */
+    margin-bottom: 1%;
     color: gray;
 
 }
@@ -63,11 +63,6 @@ p#postText {
     padding-left: 6.7%;
 }
 
-.singleUsernameDate{
-    margin-left: 2%;
-}
-
-
 .comments-container {
     background-color: rgb(255, 255, 255, .3);
     color: #4A4A4A;
@@ -76,7 +71,7 @@ p#postText {
     padding-left: 3%;
     padding-bottom:2%;
     margin-bottom: 2%;
-    width: 83%;
+    width: 78%;
 }
 
 #comment-form {
@@ -133,7 +128,7 @@ p#postText {
     text-align: center;
     padding: 3%;
     color: #4A4A4A;
-    width: 80%;
+    width: 75%;
 }
 
 .post-button {
@@ -173,8 +168,7 @@ p#postText {
 }
 
 #commentText {
-    width: 71.5%;
-    margin-left: 7%;
+    width: 78.2%;
     letter-spacing: .02em;
     color: #4A4A4A;
 }
