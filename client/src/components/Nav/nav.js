@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom'
-// import { useLocation } from 'react-router'
-// import { useState } from 'react'
 import './nav.css'
 import { QUERY_ME_BASIC } from '../../utils/queries'
 import { useQuery } from '@apollo/client'
-// import Auth from '../../utils/auth'
 
 
 

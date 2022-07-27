@@ -76,6 +76,7 @@ a {
     animation-delay: .2s;
     color: #808080;
 	font-size: 1.5em;
+    letter-spacing: .02em;
     font-weight: 300;
     width: 100%;
     opacity: 0;
@@ -111,8 +112,7 @@ a {
 .postDateCreated {
     color: gray !important;
     font-size: 1em !important;
-    /* margin-bottom: 10%; */
-    /* margin-left: 1%; */
+    letter-spacing: .02em;
 }
 
 /* .discussion-post h3{
@@ -139,6 +139,7 @@ button:focus {
 #username-post {
     color: #444446;
     font-size: 1em;
+    letter-spacing: .02em;
     margin:0;
     padding: 0;
 }
@@ -150,6 +151,7 @@ button:focus {
     margin-left: -.5%;
     padding: 0%;
     font-size: 1em;
+    letter-spacing: .02em;
     font-weight: 300;
 }
 

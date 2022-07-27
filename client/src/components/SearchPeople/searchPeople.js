@@ -15,6 +15,9 @@ function SearchPeople() {
   <>
    <Header />
    <main className="search-friend-section">
+   {/* <p className="searchInstructions">
+            Search and add friends
+      </p> */}
     <form
      id="search-friend-form" onSubmit={async (e) => {e.preventDefault()
       const inquiryUser = await document.getElementById('search-bar').value
@@ -23,10 +26,6 @@ function SearchPeople() {
       console.log(user)
      }}
      >
-
-      <p className="searchInstructions">
-      Search and add friends. Please note the search is case-sensitive.
-      </p>
      <div className="searchSection">
       <div className="searchIconContainer"> 
       <BsSearch size={22} /> <input id="search-bar" type="text" name="search-bar" placeholder="Search friends"/> 
@@ -35,6 +34,9 @@ function SearchPeople() {
        Search
       </button>
      </div>
+     <p className="searchNote">
+            *Please note the search is case-sensitive*
+      </p>
      {data && data.userByName === null && <p className="searchWarning">It appears this user doesn't exist. Note the search is case-sensitive. Please check to make sure the correct username was entered.</p>}
     </form>
     {data && data.userByName !== null && (
