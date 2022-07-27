@@ -29,7 +29,8 @@
     margin-left: -.2%;
     font-size: 1.5em;
     letter-spacing: .02em;
-    margin-bottom: 1.5%;
+    /* margin-bottom: 1.5%; */
+    color: gray;
 
 }
 

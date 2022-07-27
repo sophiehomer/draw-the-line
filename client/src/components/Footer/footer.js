@@ -3,7 +3,6 @@ import './footer.css'
 import { AiFillInstagram } from 'react-icons/ai';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md'
-// import { AiFillMail } from 'react-icons/ai';
 
 
 const Footer = () => {

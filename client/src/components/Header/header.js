@@ -8,16 +8,10 @@ import logo from '../../assets/images/logo.png'
 const Header = () => {
   return (
     <header>
-        {/* <Link to="/" >
-          <h1 className="logo">kit</h1>
-        </Link> */}
-
        <img src={logo} className='logoImg' alt='kit'/>
         { Auth.loggedIn() &&
-        // <div className='logoutContainer'> 
          <Nav/>
           
-        // </div>
         }
 
         { Auth.loggedIn() && 

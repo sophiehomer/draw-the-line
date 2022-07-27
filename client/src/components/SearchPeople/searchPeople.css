@@ -29,18 +29,6 @@
   padding-left: 3%;
 }
 
-.searchInstructions {
- /* color: #4A4A4A; */
- padding-top: 2%;
- padding-bottom: 1%;
- font-size: 2em;
- /* background: -webkit-linear-gradient(#eee, rgb(154, 153, 249)); */
- background: -webkit-linear-gradient(#eee, rgb(105, 102, 108));
-
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
-}
-
 .searchNote {
   color: #4A4A4A;
   font-size: .8em;
@@ -53,7 +41,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  /* justify-content: center; */
   align-items: center;
   animation: fadeinup ease 0.4s forwards;  
   animation-delay: .2s;
@@ -92,8 +79,6 @@
     background-color:#dad9d9;
     color: white;
   }
-
-
 
 .searchWarning {
  max-width: 80%;
