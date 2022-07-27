@@ -101,8 +101,8 @@ function SinglePost() {
                                     <p className='commentUsername'>{comment.username} commented on {comment.createdAt}</p>
                                     <p className='commentDate'></p>
                                 </div> 
-                                <p id="commentText">{comment.commentBody}</p>                                   
                             <div className="postAndLikes"> 
+                            <p id="commentText">{comment.commentBody}</p>                                   
                                 <button  className='commentVoteBtn' onClick={() => {
                                     addCommentLike({ variables: { commentId: comment._id } })
                                     }}>

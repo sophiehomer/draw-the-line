@@ -49,8 +49,8 @@ function Profile() {
                         {post.postTitle}
                       </Link>
                     </h4>
-                    <p id="postText">{post.postText}</p>
                     <div className="profilePostAndLikes"> 
+                    <p id="postText">{post.postText}</p>
                       <button className="profileVoteBtn">
                         <FaHeart />
                       </button>

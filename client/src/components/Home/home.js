@@ -58,8 +58,8 @@ function Home() {
                         {post.postTitle}
                       </Link>
                     </h3>
-                      <p id="postText">{post.postText}</p>
                         <div className="postAndLikes"> 
+                        <p id="postText">{post.postText}</p>
                         <button className="voteBtn" onClick={() => {alert("Please click on the post title to like and comment on this post.")}}>
                           <FaHeart />
                         </button>

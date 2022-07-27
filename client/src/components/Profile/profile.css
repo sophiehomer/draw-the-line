@@ -39,9 +39,9 @@
 .profilePostAndLikes {
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: flex-end;
     color: gray;
-    margin-top: 2%;
+    padding-bottom: 1em;
 }
 
 .profileName {
@@ -86,7 +86,6 @@
 }
 
 .profile-discussion-post {
-    /* margin-left: 8%; */
     display: flex;
     flex-basis: 50%;
     flex-wrap: wrap;
@@ -97,11 +96,10 @@
     border-radius: 25px;
     text-align: center;
     margin-bottom: 4%;
-    /* padding: 4%; */
     padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
     width: 110%;
