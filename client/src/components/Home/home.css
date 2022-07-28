@@ -203,7 +203,7 @@ align-items: center;
 }
 
 .avatarContainer {
-    font-size: 20px;
+    font-size: 1em;
     height: 25px;
     width: 27px;
     border-radius: 50%;
