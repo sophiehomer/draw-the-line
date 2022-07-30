@@ -82,7 +82,6 @@ p#postText {
     padding: .25%;
     background-color: rgb(255, 255, 255);
     border-radius: 24px;
-    margin-left: 6%;
 }
 
 #Comment {
@@ -108,7 +107,6 @@ p#postText {
 }
 
 #commentBody {
-    /* width: 77.75%; */
     padding: .5em 22.3em;
     padding-left: 2%;
     font-size: 1em;

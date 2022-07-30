@@ -9,7 +9,7 @@ import Header from '../Header/header'
 import Comment from '../Comment/comment'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
-import './singlePost.css';
+// import './singlePost.css';
 
 
 function SinglePost() {

@@ -8,12 +8,11 @@ const resolvers = {
         // Get Logged In User Information
         me: async (parent, args, context) => {
           if (context.user) {
+            const options = { sort: [['createdAt', 'desc' ]] };
             const userData = await User.findOne({ _id: context.user._id })
               .select('-__v -password')
-              .populate('posts')
-              .sort({ createdAt: -1 })
               .populate('friends');
-    
+              console.log(userData);
             return userData;
           }
     
@@ -24,7 +23,6 @@ const resolvers = {
           return User.find()
             .select('-__v -password')
             .populate('posts')
-            .sort({ createdAt: -1 })
             .populate('friends');
         },
         // Get single User by ID
@@ -32,15 +30,13 @@ const resolvers = {
           return User.findOne({ _id })
             .select('-__v -password')
             .populate('friends')
-            .populate('posts')
-            .sort({ createdAt: -1 });
+            .populate({path: 'posts', options: { sort: { 'createdAt': -1 } }});
         },
         // Get single User by Username
         userByName: async (parent, { username }) => {
           return User.findOne({ username })
             .select('-__v -password')
             .populate('friends')
-            .sort({ createdAt: -1 })
             .populate('posts');
         },
         // Get all  Posts
@@ -169,38 +165,38 @@ const resolvers = {
           throw new AuthenticationError('You need to be logged in!');
         },
         // Add a dislike to a comment
-        addCommentDislike: async (parent, { commentId }, context) => {
-          if(context.user) {
-            const updateComment = await Comment.findOneAndUpdate(
-              { _id: commentId },
-              { $addToSet: {'dislikes': context.user._id } },
-              { new: true }
-            );
-            console.log(updateComment)
-            return updateComment;
-          }
-          throw new AuthenticationError('You need to be logged in!');
-        },
+        // addCommentDislike: async (parent, { commentId }, context) => {
+        //   if(context.user) {
+        //     const updateComment = await Comment.findOneAndUpdate(
+        //       { _id: commentId },
+        //       { $addToSet: {'dislikes': context.user._id } },
+        //       { new: true }
+        //     );
+        //     console.log(updateComment)
+        //     return updateComment;
+        //   }
+        //   throw new AuthenticationError('You need to be logged in!');
+        // }
         // Delete a Post
-        deletePost: async(parent, { postId }, context) => {
-          if(context.user) {
-            const deletedPost = await Post.findOneAndDelete(
-              { _id: postId }
-            );
-            return deletedPost
-          }
-          throw new AuthenticationError('You need to be logged in!')
-        },
+        // deletePost: async(parent, { postId }, context) => {
+        //   if(context.user) {
+        //     const deletedPost = await Post.findOneAndDelete(
+        //       { _id: postId }
+        //     );
+        //     return deletedPost
+        //   }
+        //   throw new AuthenticationError('You need to be logged in!')
+        // },
         // Delete Comment
-        deleteComment: async(parent, { commentId }, context) => {
-          if(context.user) {
-            const deletedComment = await Comment.findOneAndDelete(
-              { _id: commentId }
-            );
-            return deletedComment
-          }
-          throw new AuthenticationError('You need to be logged in!')
-        }
+        // deleteComment: async(parent, { commentId }, context) => {
+        //   if(context.user) {
+        //     const deletedComment = await Comment.findOneAndDelete(
+        //       { _id: commentId }
+        //     );
+        //     return deletedComment
+        //   }
+        //   throw new AuthenticationError('You need to be logged in!')
+        // }
     }
 }
 
