@@ -47,15 +47,15 @@ const postSchema = new Schema(
   }
 );
 
-postSchema.virtual('banMeter').get(function() {
-  if(isNaN(this.dislikes.length / this.likes.length)) {
-    return 0;
-  } else if (this.dislikes.length + this.likes.length >= 3) {
-    return this.dislikes.length / this.likes.length; 
-  } else {
-    return 0;
-  }
-})
+// postSchema.virtual('banMeter').get(function() {
+//   if(isNaN(this.dislikes.length / this.likes.length)) {
+//     return 0;
+//   } else if (this.dislikes.length + this.likes.length >= 3) {
+//     return this.dislikes.length / this.likes.length; 
+//   } else {
+//     return 0;
+//   }
+// })
 
 postSchema.virtual('likesLength').get(function() {
   return this.likes.length;

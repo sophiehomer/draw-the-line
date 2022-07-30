@@ -4,22 +4,20 @@ import { QUERY_SINGLE_POST } from '../../utils/queries';
 import { useQuery, useMutation } from '@apollo/client';
 import { LIKE_POST, DELETE_POST, ADD_COMMENT } from '../../utils/mutations';
 import { ADD_COMMENT_LIKE } from '../../utils/mutations'
-import Header from '../Header/header'
-// import { FaHeart } from 'react-icons/fa'
-import Comment from '../Comment/comment'
-import { Avatar } from "@chakra-ui/avatar"
-import { BsDot } from 'react-icons/bs'
-import './singlePost.css';
+import { FaHeart } from 'react-icons/fa'
+import './comment.css';
 
 
-function SinglePost() {
+function Comment({post_id}) {
     const { id: postId } = useParams()
     const { data } = useQuery(QUERY_SINGLE_POST, {
-        variables: { id: postId },
+        variables: { id: postId || post_id },
     });
 
     const userPost = data?.post || [];
+    console.log(userPost)
     const userComments = data?.post?.comments || [];
+    console.log(userComments)
 
     // Mutations
     const [addCommentLike] = useMutation(ADD_COMMENT_LIKE)
@@ -30,7 +28,7 @@ function SinglePost() {
 
     const [formStateComment, setFormStateComment] = useState({
         commentBody: '',
-        postId: postId,
+        postId: postId || post_id,
     });
 
     const handleChangeComment = (event) => {
@@ -44,6 +42,8 @@ function SinglePost() {
 
     const handleFormSubmitComment = async (event) => {
         event.preventDefault();
+        console.log(formStateComment);
+        console.log(post_id)
         await addComment({
             variables: { ...formStateComment },
 
@@ -66,26 +66,9 @@ function SinglePost() {
 
     return (
         <>
-            <Header />
             <main id="single-post-page">
                 <section className='single-page-discussion-post'>
-                    <div className="avatarNameDateContainer">
-                        <div className="avatarContainer"> 
-                            <Avatar src="john-doe.png" name={userPost.username} />
-                        </div>
-                        <div className="nameDateContainer"> 
-                            <h2 id="username-post">{userPost.username}</h2> 
-                                <div className="dot"> 
-                                    < BsDot />
-                                </div>
-                            <p className="postDateCreated">{userPost.createdAt}</p>
-                        </div>
-                    </div>
-                    <div className="singlePagetitleAndPost">
-                        <p id="single-post-userTitle-post">{userPost.postTitle}</p>
-                        <p id="singlePagePostText"> {userPost.postText}</p>
-                    </div>
-                    {/* <div id="likesAndCommments">
+                    <div id="likesAndCommments">
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
                             <input method="post" className='post-tile' type="text" id="commentBody" name="commentBody" value={formStateComment.commentBody} onChange={handleChangeComment} placeholder='Leave a comment' />
                             <button className='post-button' id='postBtnComment'>Comment</button>
@@ -112,13 +95,12 @@ function SinglePost() {
                                 {comment.likesLength}
                             </div>    
                          </section>
-                            ))} */}
-                            < Comment/>
+                            ))}
                  </section>       
             </main>
         </>
     )
 }
 
-export default SinglePost;
+export default Comment;
 

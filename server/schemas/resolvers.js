@@ -11,6 +11,7 @@ const resolvers = {
             const userData = await User.findOne({ _id: context.user._id })
               .select('-__v -password')
               .populate('posts')
+              .sort({ createdAt: -1 })
               .populate('friends');
     
             return userData;
@@ -23,6 +24,7 @@ const resolvers = {
           return User.find()
             .select('-__v -password')
             .populate('posts')
+            .sort({ createdAt: -1 })
             .populate('friends');
         },
         // Get single User by ID
@@ -30,13 +32,15 @@ const resolvers = {
           return User.findOne({ _id })
             .select('-__v -password')
             .populate('friends')
-            .populate('posts');
+            .populate('posts')
+            .sort({ createdAt: -1 });
         },
         // Get single User by Username
         userByName: async (parent, { username }) => {
           return User.findOne({ username })
             .select('-__v -password')
             .populate('friends')
+            .sort({ createdAt: -1 })
             .populate('posts');
         },
         // Get all  Posts

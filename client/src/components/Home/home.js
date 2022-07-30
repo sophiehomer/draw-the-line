@@ -9,6 +9,7 @@ import { FaHeart } from 'react-icons/fa'
 import CreatePost from '../CreatePost/createPost'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
+import Comment from '../Comment/comment'
 // import logo from '../../assets/images/lt_logo_caps.png'
 
 
@@ -39,7 +40,7 @@ function Home() {
            
           <section class="postsSectionHome">
               {postData.map((post, index) => (
-                <div className="discussion-post" key={index}>
+                <div className="discussion-post" key={post._id}>
                   <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
                       <Avatar src="john-doe.png" name={post.username} />
@@ -65,6 +66,7 @@ function Home() {
                         </button>
                           {post.likesLength}
                     </div>
+                    < Comment post_id={post._id} />
                   </div>
                 </div>
             ))}
