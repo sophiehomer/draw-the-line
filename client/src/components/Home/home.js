@@ -64,6 +64,7 @@ function Home() {
                     </div>
                     < Comment post_id={post._id} />
                   </div>
+                  
                 </div>
             ))}
           </section>

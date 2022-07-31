@@ -8,7 +8,7 @@
     animation-delay: .2s;
     margin-top: 2%;
     /* margin: auto; */
-    width: 70%;
+    /* width: 70%; */
     padding-bottom: 1%;
 }
 
@@ -34,13 +34,13 @@
 }
 
 input#postText {
-    width: 37em;
+    /* width: 37em; */
     padding-left:2%;
     font-size: 1em;
     text-align: left;
     border: none;
     outline: none;
-    /* width: 85%; */
+    width: 85%;
     letter-spacing: .02em;
     
 }
@@ -52,7 +52,7 @@ p#postText {
      color: #444446;
      width: 100%;
      margin-top: 1%;
-     /* padding-bottom: 1em; */
+     padding-bottom: 1%;
 }
 
 #singlePagePostText {
@@ -72,11 +72,7 @@ p#postText {
     background-color: rgb(255, 255, 255, .3);
     color: #4A4A4A;
     border-radius: 24px;
-    padding-top: 2%;
-    padding-left: 4%;
-    padding-bottom: 2%;
-    padding-right: 4%;
-    width: 40em;
+    padding: 2%;
     margin-bottom: 2%;
 }
 
@@ -88,6 +84,7 @@ p#postText {
     padding: .25%;
     background-color: rgb(255, 255, 255);
     border-radius: 24px;
+    width: 88.5%;
 }
 
 #Comment {
@@ -113,7 +110,7 @@ p#postText {
 }
 
 #commentBody {
-    width: 35em;
+    width: 100%;
     padding-left: 2%;
     font-size: 1em;
     border: none;
