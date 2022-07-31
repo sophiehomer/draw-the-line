@@ -61,10 +61,6 @@ function Home() {
                     </h3>
                         <div className="postAndLikes"> 
                         <p id="postText">{post.postText}</p>
-                        <button className="voteBtn" onClick={() => {alert("Please click on the post title to like and comment on this post.")}}>
-                          <FaHeart />
-                        </button>
-                          {post.likesLength}
                     </div>
                     < Comment post_id={post._id} />
                   </div>

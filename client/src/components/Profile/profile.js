@@ -8,6 +8,8 @@ import Header from "../Header/header.js";
 import { FaHeart } from 'react-icons/fa'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
+import Comment from '../Comment/comment'
+
 
 function Profile() {
   // get ID and query a user's info
@@ -51,11 +53,12 @@ function Profile() {
                     </h4>
                     <div className="profilePostAndLikes"> 
                     <p id="postText">{post.postText}</p>
-                      <button className="profileVoteBtn">
+                      {/* <button className="profileVoteBtn">
                         <FaHeart />
                       </button>
-                      {post.likesLength}
+                      {post.likesLength} */}
                     </div>
+                    < Comment post_id={post._id} />
                   </div>
                 </section>
               ))}

@@ -6,8 +6,8 @@
     opacity: 0;
     animation: fadeinup ease 0.4s forwards;  
     animation-delay: .2s;
-    margin-top: 4%;
-    margin: auto;
+    margin-top: 2%;
+    /* margin: auto; */
     width: 70%;
     padding-bottom: 5%;
 }
@@ -34,10 +34,14 @@
 }
 
 input#postText {
+    width: 37em;
+    padding-left:2%;
+    font-size: 1em;
     text-align: left;
     border: none;
     outline: none;
-    width: 85%;
+    /* width: 85%; */
+    letter-spacing: .02em;
     
 }
 
@@ -69,8 +73,10 @@ p#postText {
     color: #4A4A4A;
     border-radius: 24px;
     padding-top: 2%;
-    padding-left: 3%;
-    padding-bottom:2%;
+    padding-left: 4%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    width: 40em;
     margin-bottom: 2%;
 }
 
@@ -107,7 +113,7 @@ p#postText {
 }
 
 #commentBody {
-    padding: .5em 22.3em;
+    width: 35em;
     padding-left: 2%;
     font-size: 1em;
     border: none;
@@ -122,15 +128,15 @@ p#postText {
 
 .single-page-discussion-post {
     border-radius: 25px;
-    background-color: rgb(255, 255, 255, .3);
+    /* background-color: rgb(255, 255, 255, .3); */
     text-align: center;
-    padding: 3%;
+    /* padding: 3%; */
     color: #4A4A4A;
     /* width: 100%; */
 }
 
 .post-button {
-    margin-right: .2%;
+    /* margin-left: 2%; */
     background-color: rgb(255, 255, 255);
     color: #999498;
     padding: .38em 1.5em;
@@ -153,7 +159,7 @@ p#postText {
  display: flex;
  flex-direction: row;
  align-items: center;
- padding-top: 3%;
+ /* padding-top: 3%; */
  color: gray;
 }
 
@@ -166,9 +172,16 @@ p#postText {
 }
 
 #commentText {
-    width: 78.2%;
+    /* width: 78.2%; */
     letter-spacing: .02em;
     color: #4A4A4A;
+}
+
+.likeButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
 }
 
 .commentVoteBtn {
@@ -196,7 +209,7 @@ p#postText {
   border: none;
   border-radius: 12px;
   padding: 1%;
-  margin-left: 1%;
+  margin-left: 3%;
   margin-right: 1%;
   display:flex;
   background: white;

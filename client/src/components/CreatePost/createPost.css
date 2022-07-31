@@ -11,7 +11,7 @@
 
 input.post-title {
     width: 30%;
-    padding: 1.45%;
+    padding: 1.15%;
     padding-left: 2.4%;
     border: none;
     border-radius: 24px;
@@ -27,18 +27,19 @@ input.post-title::placeholder {
 }
 
 .writePostDiv {
+    width: 86.4%;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 1.5%;
     border-radius: 24px;
-    padding: .25em .25em;
+    padding: .25%;
     background-color: rgb(255, 255, 255);
 }
 
 .writePost {
     width: 60%;
-    padding: 1%;
+    /* padding: 1%; */
     padding-left: 2%;
 
     border-radius: 24px;

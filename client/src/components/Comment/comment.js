@@ -66,7 +66,7 @@ function Comment({post_id}) {
 
     return (
         <>
-            <main id="single-post-page">
+            <section id="single-post-page">
                 <section className='single-page-discussion-post'>
                     <div id="likesAndCommments">
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
@@ -86,18 +86,21 @@ function Comment({post_id}) {
                                     <p className='commentDate'></p>
                                 </div> 
                             <div className="postAndLikes"> 
-                            <p id="commentText">{comment.commentBody}</p>                                   
-                                <button  className='commentVoteBtn' onClick={() => {
+                            <p id="commentText">{comment.commentBody}</p>   
+                            <div className="likeButtonContainer">
+                            <button  className='commentVoteBtn' onClick={() => {
                                     addCommentLike({ variables: { commentId: comment._id } })
                                     }}>
                                     < FaHeart />
                                 </button>
                                 {comment.likesLength}
+                            </div>                                
+                              
                             </div>    
                          </section>
                             ))}
                  </section>       
-            </main>
+            </section>
         </>
     )
 }
