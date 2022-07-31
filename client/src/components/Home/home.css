@@ -234,7 +234,7 @@ align-items: center;
 
 .postAndLikes {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     color: gray;
     /* margin-bottom: 10%; */
