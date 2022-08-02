@@ -82,7 +82,7 @@ p#postText {
     justify-content: flex-start;
     align-items: center;
     padding: .25%;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%; */
     background-color: rgb(255, 255, 255);
     border-radius: 24px;
     width: 88.05%;

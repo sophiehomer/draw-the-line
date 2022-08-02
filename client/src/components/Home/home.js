@@ -4,8 +4,8 @@ import { useQuery } from "@apollo/client";
 import { QUERY_ME_BASIC, GET_USER_POSTS } from "../../utils/queries";
 import Login from "../Login/login";
 import Header from "../Header/header.js";
-import { Link } from 'react-router-dom'
-import { FaHeart } from 'react-icons/fa'
+// import { Link } from 'react-router-dom'
+// import { FaHeart } from 'react-icons/fa'
 import CreatePost from '../CreatePost/createPost'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
@@ -55,9 +55,7 @@ function Home() {
                   </div>
                   <div className="titleAndPost">
                     <h3 id="userTitle-post">
-                      <Link to={`/Single-post/${post._id}`}>
-                        {post.postTitle}
-                      </Link>
+                    {post.postTitle}
                     </h3>
                         <div className="postAndLikes"> 
                         <p id="postText">{post.postText}</p>

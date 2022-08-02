@@ -5,7 +5,7 @@ import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
 // import { FaUserFriends } from "react-icons/fa";
-import { FaHeart } from 'react-icons/fa'
+// import { FaHeart } from 'react-icons/fa'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 import Comment from '../Comment/comment'
@@ -47,18 +47,12 @@ function Profile() {
                   </div>
                   <div className="profTitlePost">
                     <h4 id="userTitle-post">
-                      <Link to={`/Single-post/${post._id}`}>
-                        {post.postTitle}
-                      </Link>
+                    {post.postTitle}
                     </h4>
                     <div className="profilePostAndLikes"> 
                     <p id="postText">{post.postText}</p>
-                      {/* <button className="profileVoteBtn">
-                        <FaHeart />
-                      </button>
-                      {post.likesLength} */}
                     </div>
-                    < Comment post_id={post._id} />
+                    < Comment post_id={post._id}  isProfile={true}/>
                   </div>
                 </section>
               ))}

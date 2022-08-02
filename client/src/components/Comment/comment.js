@@ -8,22 +8,25 @@ import { FaHeart } from 'react-icons/fa'
 import './comment.css';
 
 
-function Comment({post_id}) {
-    const { id: postId } = useParams()
+function Comment({post_id, isProfile}) {
+    console.log(isProfile)
+    let postId;
+    const { id } = useParams()  
+    console.log(useParams())
     const { data } = useQuery(QUERY_SINGLE_POST, {
         variables: { id: postId || post_id },
     });
-
+    console.log(postId);
     const userPost = data?.post || [];
     console.log(userPost)
     const userComments = data?.post?.comments || [];
     console.log(userComments)
 
     // Mutations
-    const [addCommentLike] = useMutation(ADD_COMMENT_LIKE)
+    const [addCommentLike] = useMutation(ADD_COMMENT_LIKE);
     const [addLike] = useMutation(LIKE_POST);
     const [addComment] = useMutation(ADD_COMMENT);
-    const [deletePost] = useMutation(DELETE_POST)
+    const [deletePost] = useMutation(DELETE_POST);
     // const [deleteComment] = useMutation(DELETE_COMMENT)
 
     const [formStateComment, setFormStateComment] = useState({
@@ -44,6 +47,7 @@ function Comment({post_id}) {
         event.preventDefault();
         console.log(formStateComment);
         console.log(post_id)
+        console.log(userComments)
         await addComment({
             variables: { ...formStateComment },
 
@@ -66,7 +70,7 @@ function Comment({post_id}) {
 
     return (
         <>
-            <section id="single-post-page">
+            <section className="comment__section" id="single-post-page">
                 <section className='single-page-discussion-post'>
                     <div id="likesAndCommments">
                         <form id='comment-form' onSubmit={handleFormSubmitComment}>
