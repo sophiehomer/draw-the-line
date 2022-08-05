@@ -12,13 +12,13 @@ function Nav() {
   <>
     <nav>
         <Link to="/" className="navLink">
-            Home
+            HOME
         </Link>
         <Link to={`/profile/${userId}`} className="navLink">
-            My profile
+            MY PROFILE
         </Link>
         <Link to="/search-people" className="navLink">
-            Search
+            SEARCH
         </Link>
     </nav>
  

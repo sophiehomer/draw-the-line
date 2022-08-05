@@ -16,7 +16,7 @@ const Header = () => {
 
         { Auth.loggedIn() && 
           <button onClick={() => Auth.logout()} className="logoutButton">
-            Logout
+            LOGOUT
           </button>
         }
          
