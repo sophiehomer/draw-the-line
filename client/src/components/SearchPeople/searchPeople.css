@@ -41,9 +41,6 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  animation: fadeinup ease 0.4s forwards;  
-  animation-delay: .2s;
-  opacity: 0;
   padding-bottom: 30%;
 }
 

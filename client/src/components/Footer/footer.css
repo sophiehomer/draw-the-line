@@ -4,23 +4,17 @@ footer {
    bottom:0;
    right: 0;
    width:100%;
-   /* text-align: center; */
    padding-bottom: 4%;
    padding-top: 4%;
    background-color: rgb(255, 255, 255, .3);
 
 }
 
-/* .contactContainer {
-   margin-top: 2%;
-} */
-
 .contact {
    font-style: normal;
    font-size: 14px !important;
    font-weight: 450;
    letter-spacing: .05em;
-   /* color: #808080; */
    color: #4A4A4A;
 }
 
@@ -29,7 +23,6 @@ footer {
    flex-direction: row;
    justify-content: space-evenly;
    align-items: center;
-
 }
 
 .socialContainer {
@@ -41,14 +34,10 @@ footer {
    margin-right: 20%;
    transition: transform .2s;
    cursor: pointer;
-   /* color: #808080; */
    color: #4A4A4A;
-
-
 }
 
 .tiktokIcon {
-   /* color: #808080; */
    color: #4A4A4A;
 }
 
@@ -57,7 +46,6 @@ footer {
 }
 
 .copyright {
-   /* color: #808080; */
    color: #4A4A4A;
    font-size: 14px;
 }

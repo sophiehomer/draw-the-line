@@ -64,7 +64,7 @@ const Login = () => {
                 onChange={handleChange}
               />
               {error && <div className="error">Log in failed</div>}
-              <button className="login-button" type="submit">Log in</button>
+              <button className="login-button" type="submit">Login</button>
           <p className="signupLinkText">Don't have an account?<Link to="/signup" className="link"><br></br> Create one here.</Link></p>
           </div>
        </form>
