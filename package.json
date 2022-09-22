@@ -15,14 +15,5 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "apollo-server-express": "^3.8.1",
-    "bad-words": "^3.0.4",
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "mongoose": "^5.9.9",
-    "react-icons": "^4.4.0"
   }
 }

@@ -4,8 +4,6 @@ import { QUERY_USER } from "../../utils/queries";
 import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
-// import { FaUserFriends } from "react-icons/fa";
-// import { FaHeart } from 'react-icons/fa'
 import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 import Comment from '../Comment/comment'
