@@ -7,7 +7,7 @@ import { ADD_COMMENT_LIKE } from '../../utils/mutations'
 import Header from '../Header/header'
 // import { FaHeart } from 'react-icons/fa'
 import Comment from '../Comment/comment'
-import { Avatar } from "@chakra-ui/avatar"
+// import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 // import './singlePost.css';
 
@@ -71,7 +71,7 @@ function SinglePost() {
                 <section className='single-page-discussion-post'>
                     <div className="avatarNameDateContainer">
                         <div className="avatarContainer"> 
-                            <Avatar src="john-doe.png" name={userPost.username} />
+                            {/* <Avatar src="john-doe.png" name={userPost.username} /> */}
                         </div>
                         <div className="nameDateContainer"> 
                             <h2 id="username-post">{userPost.username}</h2> 

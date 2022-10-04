@@ -4,7 +4,7 @@ import { QUERY_USER } from "../../utils/queries";
 import { useQuery} from "@apollo/client";
 import "./profile.css";
 import Header from "../Header/header.js";
-import { Avatar } from "@chakra-ui/avatar"
+// import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 import Comment from '../Comment/comment'
 
@@ -33,7 +33,7 @@ function Profile() {
                 <section className="profile-discussion-post" key={index}>
                   <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
-                      <Avatar src="john-doe.png" name={userInfo.username} />
+                      {/* <Avatar src="john-doe.png" name={userInfo.username} /> */}
                     </div>
                     <div className="nameDateContainer"> 
                       <h3 id="username-post">{userInfo.username}</h3>
@@ -61,7 +61,7 @@ function Profile() {
                   <div className="profileFriendAvatar" key={index}>
                     <Link to={`/profile/${friend._id}`}> 
                       <div className="profileAvatarContainer"> 
-                        <Avatar src="john-doe.png" name={friend.username} />
+                        {/* <Avatar src="john-doe.png" name={friend.username} /> */}
                       </div>{friend.username}
                     </Link>
                   </div>

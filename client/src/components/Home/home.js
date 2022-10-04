@@ -7,7 +7,7 @@ import Header from "../Header/header.js";
 // import { Link } from 'react-router-dom'
 // import { FaHeart } from 'react-icons/fa'
 import CreatePost from '../CreatePost/createPost'
-import { Avatar } from "@chakra-ui/avatar"
+// import { Avatar } from "@chakra-ui/avatar"
 import { BsDot } from 'react-icons/bs'
 import Comment from '../Comment/comment'
 // import logo from '../../assets/images/lt_logo_caps.png'
@@ -43,7 +43,7 @@ function Home() {
                 <div className="discussion-post" key={post._id}>
                   <div className="avatarNameDateContainer">
                     <div className="avatarContainer"> 
-                      <Avatar src="john-doe.png" name={post.username} />
+                      {/* <Avatar src="john-doe.png" name={post.username} /> */}
                     </div>
                     <div className="nameDateContainer"> 
                       <h2 id="username-post">{post.username}</h2> 
